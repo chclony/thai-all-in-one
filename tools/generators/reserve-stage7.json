@@ -1,0 +1,142 @@
+{
+ "note": "Hasła gotowe, odłożone na etap 7 (cel 10 200 osiągnięty).",
+ "count": 17,
+ "records": [
+  {
+   "polish": "Ile kosztują te krótkie spodenki?",
+   "thaiPhonetic": "kaang keeng khǎa sân raa-khaa thâo rài khráp",
+   "ttsThai": "กางเกงขาสั้นราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztują te skarpetki?",
+   "thaiPhonetic": "thǔng tháo raa-khaa thâo rài khráp",
+   "ttsThai": "ถุงเท้าราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztuje ta łódź?",
+   "thaiPhonetic": "ruea raa-khaa thâo rài khráp",
+   "ttsThai": "เรือราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztuje ten minibus?",
+   "thaiPhonetic": "rót tûu raa-khaa thâo rài khráp",
+   "ttsThai": "รถตู้ราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztuje ta przejściówka?",
+   "thaiPhonetic": "hǔa plaeng raa-khaa thâo rài khráp",
+   "ttsThai": "หัวแปลงราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztuje ten router?",
+   "thaiPhonetic": "ráo-tôe raa-khaa thâo rài khráp",
+   "ttsThai": "เราเตอร์ราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Ile kosztuje ta mapa?",
+   "thaiPhonetic": "phǎen thîi raa-khaa thâo rài khráp",
+   "ttsThai": "แผนที่ราคาเท่าไหร่ครับ",
+   "category": "Zakupy i pieniądze",
+   "subcategory": "Cena",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą się rejestrować?",
+   "thaiPhonetic": "thúk khon tâwng sen chûe mǎi khráp",
+   "ttsThai": "ทุกคนต้องเซ็นชื่อไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą płacić?",
+   "thaiPhonetic": "thúk khon tâwng jàai mǎi khráp",
+   "ttsThai": "ทุกคนต้องจ่ายไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą czekać?",
+   "thaiPhonetic": "thúk khon tâwng raw mǎi khráp",
+   "ttsThai": "ทุกคนต้องรอไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą rezerwować?",
+   "thaiPhonetic": "thúk khon tâwng jawng mǎi khráp",
+   "ttsThai": "ทุกคนต้องจองไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą wysiadać?",
+   "thaiPhonetic": "thúk khon tâwng long mǎi khráp",
+   "ttsThai": "ทุกคนต้องลงไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą się przesiadać?",
+   "thaiPhonetic": "thúk khon tâwng plìan rót mǎi khráp",
+   "ttsThai": "ทุกคนต้องเปลี่ยนรถไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą pokazać dokument?",
+   "thaiPhonetic": "thúk khon tâwng hâi duu mǎi khráp",
+   "ttsThai": "ทุกคนต้องให้ดูไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą wypełnić formularz?",
+   "thaiPhonetic": "thúk khon tâwng kràwk fawm mǎi khráp",
+   "ttsThai": "ทุกคนต้องกรอกฟอร์มไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą wracać?",
+   "thaiPhonetic": "thúk khon tâwng klàp mǎi khráp",
+   "ttsThai": "ทุกคนต้องกลับไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  },
+  {
+   "polish": "Czy wszyscy muszą wejść?",
+   "thaiPhonetic": "thúk khon tâwng khâo mǎi khráp",
+   "ttsThai": "ทุกคนต้องเข้าไหมครับ",
+   "category": "Pytania",
+   "subcategory": "Zasady",
+   "level": "A2"
+  }
+ ]
+}

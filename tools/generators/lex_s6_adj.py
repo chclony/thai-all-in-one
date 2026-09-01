@@ -1,0 +1,218 @@
+# -*- coding: utf-8 -*-
+"""Leksyka etapu 6 — praktyczne przymiotniki, przyslowki i okreslenia czasu.
+
+Zakres dobrany pod uzycie codzienne: ocena rzeczy i uslug, stopien i miara,
+czestotliwosc, kolejnosc zdarzen, pory dnia i punkty na osi czasu.
+
+Krotka: (poziom, polski, fonetyka, tajski, kategoria, podkategoria, typ,
+         freq, rejestr, notatka, znaczenie doslowne, przyklad)
+"""
+
+ADJ = [
+
+# =====================================================================
+# OCENA RZECZY I USLUG
+# =====================================================================
+("A2", "wygodny", "sà-baai", "สบาย", "Cechy i opinie", "Ocena", "adjective", 4, "n",
+ "„sà-baai” opisuje wygodę fizyczną i spokój ducha jednocześnie.", "",
+ ("To krzesło jest wygodne.", "kâo-îi tua níi sà-baai dii khráp", "เก้าอี้ตัวนี้สบายดีครับ")),
+("A2", "niewygodny", "mâi sà-baai tua", "ไม่สบายตัว", "Cechy i opinie", "Ocena", "phrase", 3, "n",
+ "Samo „mâi sà-baai” znaczy „chory”. Żeby powiedzieć „niewygodnie”, dodaj „tua” (ciało).", "nie wygodnie ciało",
+ ("Niewygodnie mi się tu siedzi.", "nâng trong níi mâi sà-baai tua khráp", "นั่งตรงนี้ไม่สบายตัวครับ")),
+("A2", "wygodny w użyciu", "chái ngâai", "ใช้ง่าย", "Cechy i opinie", "Ocena", "phrase", 3, "n",
+ "Para „ngâai / yâak” (łatwy / trudny) doczepia się do czasownika i tworzy oceny.", "używać łatwo",
+ ("Ta aplikacja jest prosta w obsłudze.", "áep níi chái ngâai dii khráp", "แอปนี้ใช้ง่ายดีครับ")),
+("A2", "solidny, mocny", "khǎeng raeng", "แข็งแรง", "Cechy i opinie", "Ocena", "adjective", 3, "n",
+ "O rzeczach znaczy „wytrzymały”, o ludziach „zdrowy i silny”.", "twardy siła",
+ ("Ta torba jest solidna.", "krà-pǎo bai níi khǎeng raeng dii khráp", "กระเป๋าใบนี้แข็งแรงดีครับ")),
+("A2", "delikatny, kruchy", "bàwp baang", "บอบบาง", "Cechy i opinie", "Ocena", "adjective", 2, "n",
+ "Przydaje się przy nadawaniu paczki i przy pakowaniu pamiątek.", "",
+ ("To jest delikatne, proszę uważać.", "an níi bàwp baang chûai rá-wang nòi khráp", "อันนี้บอบบาง ช่วยระวังหน่อยครับ")),
+("A2", "brudny", "sòk-kà-pròk", "สกปรก", "Cechy i opinie", "Ocena", "adjective", 3, "n",
+ "Słowo mocne — w hotelu lepiej powiedzieć „mâi khâwi sà-àat” (niezbyt czysto).", "",
+ ("Łazienka jest brudna.", "hâwng náam sòk-kà-pròk khráp", "ห้องน้ำสกปรกครับ")),
+("A2", "niezbyt czysto", "mâi khâwi sà-àat", "ไม่ค่อยสะอาด", "Hotel", "Reklamacje", "phrase", 3, "f",
+ "Tajska uprzejmość woli zaprzeczenie zalety od nazwania wady. To zdanie załatwia sprawę bez konfliktu.", "nie bardzo czysto",
+ ("Pokój jest niezbyt czysty.", "hâwng mâi khâwi sà-àat khráp", "ห้องไม่ค่อยสะอาดครับ")),
+("A2", "zepsuty", "sǐa", "เสีย", "Awarie i pomoc", "Usterki", "adjective", 4, "n",
+ "„sǐa” to zarówno zepsuty, jak i stracony czy nieświeży — o jedzeniu też.", "",
+ ("Klimatyzacja jest zepsuta.", "ae sǐa khráp", "แอร์เสียครับ")),
+("A2", "nieświeży, zepsuty (o jedzeniu)", "bùut", "บูด", "Jedzenie i napoje", "Jakość", "adjective", 3, "n",
+ "Osobne słowo dla jedzenia, które skwaśniało. „sǐa” zabrzmi tu mniej precyzyjnie.", "",
+ ("To mleko jest nieświeże.", "nom bùut láew khráp", "นมบูดแล้วครับ")),
+("A2", "świeży", "sòt", "สด", "Jedzenie i napoje", "Jakość", "adjective", 4, "n",
+ "„sòt” dotyczy owoców, ryb i soków. „náam phǒn-lá-mái sòt” = świeży sok.", "",
+ ("Czy ta ryba jest świeża?", "plaa níi sòt mǎi khráp", "ปลานี้สดไหมครับ")),
+
+# =====================================================================
+# STOPIEN I MIARA
+# =====================================================================
+("A2", "trochę, odrobinę", "nít nàwi", "นิดหน่อย", "Cechy i opinie", "Stopień", "adverb", 5, "n",
+ "Najczęstszy sposób łagodzenia wypowiedzi. Można nim osłabić dowolny przymiotnik.", "",
+ ("Jest trochę za ostre.", "phèt pai nít nàwi khráp", "เผ็ดไปนิดหน่อยครับ")),
+("A2", "całkiem, dosyć", "khâwn khâang", "ค่อนข้าง", "Cechy i opinie", "Stopień", "adverb", 4, "n",
+ "Stoi PRZED przymiotnikiem, w odróżnieniu od „mâak”, które stoi po nim.", "",
+ ("Jest tu całkiem drogo.", "thîi nîi khâwn khâang phaeng khráp", "ที่นี่ค่อนข้างแพงครับ")),
+("A2", "za bardzo, zbyt", "koen pai", "เกินไป", "Cechy i opinie", "Stopień", "adverb", 4, "n",
+ "„koen pai” idzie po przymiotniku i sygnalizuje przekroczenie miary.", "przekraczać iść",
+ ("To dla mnie za drogie.", "phaeng koen pai sǎm-ràp phǒm khráp", "แพงเกินไปสำหรับผมครับ")),
+("A2", "wystarczająco", "phaw", "พอ", "Cechy i opinie", "Stopień", "adverb", 4, "n",
+ "„phaw láew” = wystarczy, przestań nalewać. Bardzo przydatne przy stole.", "",
+ ("Wystarczy, dziękuję.", "phaw láew khráp khàwp khun khráp", "พอแล้วครับ ขอบคุณครับ")),
+("A2", "prawie", "kùeap", "เกือบ", "Cechy i opinie", "Stopień", "adverb", 4, "n",
+ "Stoi przed czasownikiem lub liczbą: „kùeap sìp mohng” = prawie dziesiąta.", "",
+ ("Prawie skończyłem.", "phǒm kùeap sèt láew khráp", "ผมเกือบเสร็จแล้วครับ")),
+("A2", "w ogóle nie", "mâi … loei", "ไม่…เลย", "Cechy i opinie", "Stopień", "phrase", 4, "n",
+ "„loei” na końcu wzmacnia przeczenie do zera. Bez niego zdanie brzmi łagodniej.", "nie … wcale",
+ ("W ogóle nie jest ostre.", "mâi phèt loei khráp", "ไม่เผ็ดเลยครับ")),
+("B1", "coraz bardziej", "mâak khûen rûeai rûeai", "มากขึ้นเรื่อยๆ", "Cechy i opinie", "Stopień", "phrase", 3, "n",
+ "„rûeai rûeai” oznacza stopniowe narastanie w czasie.", "więcej wzrastać ciągle",
+ ("Jest coraz cieplej.", "aa-kàat ráwn khûen rûeai rûeai khráp", "อากาศร้อนขึ้นเรื่อยๆ ครับ")),
+("B1", "mniej więcej tyle samo", "phaw phaw kan", "พอๆ กัน", "Cechy i opinie", "Porównania", "phrase", 3, "n",
+ "Wygodna odpowiedź, gdy nie chcesz wskazać zwycięzcy porównania.", "wystarczająco razem",
+ ("Obie opcje kosztują mniej więcej tyle samo.", "sǎwng bàep raa-khaa phaw phaw kan khráp", "สองแบบราคาพอๆ กันครับ")),
+
+# =====================================================================
+# CZESTOTLIWOSC
+# =====================================================================
+("A2", "zawsze", "sà-mǒoe", "เสมอ", "Czas i daty", "Częstotliwość", "adverb", 4, "n",
+ "„sà-mǒoe” stoi na końcu zdania, inaczej niż polskie „zawsze”.", "",
+ ("Zawsze tu jem.", "phǒm kin thîi nîi sà-mǒoe khráp", "ผมกินที่นี่เสมอครับ")),
+("A2", "często", "bàwi", "บ่อย", "Czas i daty", "Częstotliwość", "adverb", 4, "n",
+ "„bàwi bàwi” to jeszcze częściej. Podwojenie wzmacnia, nie osłabia.", "",
+ ("Często tu przyjeżdżam.", "phǒm maa thîi nîi bàwi khráp", "ผมมาที่นี่บ่อยครับ")),
+("A2", "czasami", "baang khráng", "บางครั้ง", "Czas i daty", "Częstotliwość", "adverb", 4, "n",
+ "Wariant potoczny to „baang thii”, który znaczy też „może”.", "niektóre razy",
+ ("Czasami pracuję w soboty.", "baang khráng phǒm tham ngaan wan sǎo khráp", "บางครั้งผมทำงานวันเสาร์ครับ")),
+("A2", "rzadko", "naan naan khráng", "นานๆ ครั้ง", "Czas i daty", "Częstotliwość", "phrase", 3, "n",
+ "Dosłownie „raz na długo”. Tajski nie ma jednego słowa na „rzadko”.", "długo długo raz",
+ ("Rzadko chodzę do kina.", "phǒm pai duu nǎng naan naan khráng khráp", "ผมไปดูหนังนานๆ ครั้งครับ")),
+("A2", "nigdy", "mâi khoei", "ไม่เคย", "Czas i daty", "Częstotliwość", "phrase", 4, "n",
+ "„khoei” to „mieć doświadczenie”; z przeczeniem daje „nigdy w życiu nie”.", "nie mieć doświadczenia",
+ ("Nigdy tego nie próbowałem.", "phǒm mâi khoei lawng khráp", "ผมไม่เคยลองครับ")),
+("A2", "od czasu do czasu", "pen khráng khraaw", "เป็นครั้งคราว", "Czas i daty", "Częstotliwość", "phrase", 2, "f",
+ "Wersja nieco formalna, dobra w rozmowie z lekarzem o objawach.", "być raz okazja",
+ ("Ból pojawia się od czasu do czasu.", "pùat pen khráng khraaw khráp", "ปวดเป็นครั้งคราวครับ")),
+
+# =====================================================================
+# KOLEJNOSC ZDARZEN
+# =====================================================================
+("A2", "najpierw", "kàwn", "ก่อน", "Czas i daty", "Kolejność", "adverb", 5, "n",
+ "„kàwn” na końcu zdania znaczy „najpierw” albo „na razie”.", "",
+ ("Najpierw zjedzmy.", "kin khâo kàwn ná khráp", "กินข้าวก่อนนะครับ")),
+("A2", "potem, później", "thii lǎng", "ทีหลัง", "Czas i daty", "Kolejność", "adverb", 4, "n",
+ "„thii lǎng” dotyczy późniejszego momentu; „lǎng jàak nán” otwiera nowe zdanie.", "raz później",
+ ("Zapłacę później.", "phǒm jàai thii lǎng dâai mǎi khráp", "ผมจ่ายทีหลังได้ไหมครับ")),
+("A2", "od razu, natychmiast", "than thii", "ทันที", "Czas i daty", "Kolejność", "adverb", 3, "n",
+ "Mocniejsze niż „dǐao” — sygnalizuje brak zwłoki.", "zdążyć raz",
+ ("Przyszedł od razu.", "khǎo maa than thii loei khráp", "เขามาทันทีเลยครับ")),
+("A2", "za chwilę", "dǐao", "เดี๋ยว", "Czas i daty", "Kolejność", "adverb", 5, "p",
+ "Najczęstsze słowo w tajskiej codzienności. Samo w sobie brzmi szorstko — dodaj „ná khráp”.", "",
+ ("Za chwilę wracam.", "dǐao phǒm klàp maa ná khráp", "เดี๋ยวผมกลับมานะครับ")),
+("A2", "w międzyczasie", "rá-wàang níi", "ระหว่างนี้", "Czas i daty", "Kolejność", "phrase", 2, "n",
+ "„rá-wàang” to „pomiędzy” — zarówno w czasie, jak i w przestrzeni.", "pomiędzy to",
+ ("W międzyczasie proszę usiąść.", "rá-wàang níi chooen nâng kàwn khráp", "ระหว่างนี้เชิญนั่งก่อนครับ")),
+("B1", "wreszcie, w końcu", "nai thîi sùt", "ในที่สุด", "Czas i daty", "Kolejność", "phrase", 3, "n",
+ "Otwiera zdanie podsumowujące dłuższą historię.", "w miejsce ostatnie",
+ ("W końcu się udało.", "nai thîi sùt kâw tham dâai khráp", "ในที่สุดก็ทำได้ครับ")),
+
+# =====================================================================
+# PORY DNIA I PUNKTY NA OSI CZASU
+# =====================================================================
+("A1", "wczesnym rankiem", "cháo trùu", "เช้าตรู่", "Czas i daty", "Pory dnia", "phrase", 3, "n",
+ "Wcześniej niż zwykłe „tawn cháo” — chodzi o świt.", "rano wcześnie",
+ ("Wyjeżdżamy wczesnym rankiem.", "raw àwk doen thaang tawn cháo trùu khráp", "เราออกเดินทางตอนเช้าตรู่ครับ")),
+("A1", "w południe", "tawn thîang", "ตอนเที่ยง", "Czas i daty", "Pory dnia", "phrase", 4, "n",
+ "„thîang” to godzina dwunasta; „thîang khuen” to północ.", "podczas południe",
+ ("Spotkajmy się w południe.", "jooe kan tawn thîang ná khráp", "เจอกันตอนเที่ยงนะครับ")),
+("A1", "po południu", "tawn bàai", "ตอนบ่าย", "Czas i daty", "Pory dnia", "phrase", 4, "n",
+ "Tajski dzieli popołudnie („bàai”, do ok. 16) i wieczór („yen”).", "podczas popołudnie",
+ ("Będę wolny po południu.", "tawn bàai phǒm wâang khráp", "ตอนบ่ายผมว่างครับ")),
+("A1", "wieczorem", "tawn yen", "ตอนเย็น", "Czas i daty", "Pory dnia", "phrase", 4, "n",
+ "„yen” znaczy też „chłodny” — wieczór to pora, gdy robi się chłodniej.", "podczas chłód",
+ ("Zadzwonię wieczorem.", "tawn yen phǒm jà thoo pai ná khráp", "ตอนเย็นผมจะโทรไปนะครับ")),
+("A1", "w nocy", "tawn klaang khuen", "ตอนกลางคืน", "Czas i daty", "Pory dnia", "phrase", 3, "n",
+ "„klaang khuen” to środek nocy; „klaang wan” to środek dnia.", "podczas środek noc",
+ ("W nocy jest tu głośno.", "tawn klaang khuen thîi nîi sǐang dang khráp", "ตอนกลางคืนที่นี่เสียงดังครับ")),
+("A2", "przedwczoraj", "wan suen", "วันซืน", "Czas i daty", "Punkty w czasie", "noun", 2, "p",
+ "Pełna forma to „wan muea suen nii”. W mowie skraca się do „wan suen”.", "",
+ ("Przyjechałem przedwczoraj.", "phǒm maa thǔeng tâng tàe wan suen khráp", "ผมมาถึงตั้งแต่วันซืนครับ")),
+("A2", "pojutrze", "wan má-ruen", "วันมะรืน", "Czas i daty", "Punkty w czasie", "noun", 3, "n",
+ "Jedno słowo zamiast polskiego opisu. Bardzo częste przy umawianiu się.", "",
+ ("Wracam pojutrze.", "phǒm klàp wan má-ruen khráp", "ผมกลับวันมะรืนครับ")),
+("A2", "za tydzień", "ìik aa-thít nùeng", "อีกอาทิตย์หนึ่ง", "Czas i daty", "Punkty w czasie", "phrase", 3, "n",
+ "„ìik + miara + liczba” to standardowy sposób mówienia „za ile czasu”.", "jeszcze tydzień jeden",
+ ("Wracam za tydzień.", "phǒm klàp ìik aa-thít nùeng khráp", "ผมกลับอีกอาทิตย์หนึ่งครับ")),
+("A2", "przez cały dzień", "tháng wan", "ทั้งวัน", "Czas i daty", "Trwanie", "phrase", 3, "n",
+ "„tháng” = cały, w całości. Działa też z „tháng khuen” (całą noc).", "cały dzień",
+ ("Padało przez cały dzień.", "fǒn tòk tháng wan loei khráp", "ฝนตกทั้งวันเลยครับ")),
+("B1", "od dawna", "maa naan láew", "มานานแล้ว", "Czas i daty", "Trwanie", "phrase", 4, "n",
+ "Tajski używa tu konstrukcji dokonanej tam, gdzie polski ma czas teraźniejszy.", "przyjść długo już",
+ ("Mieszkam tu od dawna.", "phǒm yùu thîi nîi maa naan láew khráp", "ผมอยู่ที่นี่มานานแล้วครับ")),
+("B1", "dopiero co", "phôoeng jà", "เพิ่งจะ", "Czas i daty", "Trwanie", "phrase", 4, "n",
+ "„phôoeng” sygnalizuje czynność sprzed chwili — częsty sposób tłumaczenia się ze spóźnienia.", "dopiero będzie",
+ ("Dopiero co przyjechałem.", "phǒm phôoeng jà maa thǔeng khráp", "ผมเพิ่งจะมาถึงครับ")),
+("B1", "do tej pory", "jon thǔeng tawn níi", "จนถึงตอนนี้", "Czas i daty", "Trwanie", "phrase", 2, "n",
+ "Otwiera podsumowanie stanu bieżącego, np. w rozmowie o postępach sprawy.", "aż dojść moment ten",
+ ("Do tej pory nie dostałem odpowiedzi.", "jon thǔeng tawn níi phǒm yang mâi dâai kham tàwp khráp", "จนถึงตอนนี้ผมยังไม่ได้คำตอบครับ")),
+
+# =====================================================================
+# WIELKOSC, ILOSC, PRZESTRZEN
+# =====================================================================
+("A2", "ciasny, wąski", "khâep", "แคบ", "Cechy i opinie", "Przestrzeń", "adjective", 3, "n",
+ "O pokojach, ulicach i ubraniach. Przeciwieństwo to „kwâang”.", "",
+ ("Pokój jest trochę ciasny.", "hâwng khâep pai nít nàwi khráp", "ห้องแคบไปนิดหน่อยครับ")),
+("A2", "przestronny", "kwâang", "กว้าง", "Cechy i opinie", "Przestrzeń", "adjective", 3, "n",
+ "Dotyczy też szerokości drogi i rozmiaru ubrania.", "",
+ ("Ten pokój jest przestronny.", "hâwng níi kwâang dii khráp", "ห้องนี้กว้างดีครับ")),
+("A2", "głęboki", "lúek", "ลึก", "Pogoda i przyroda", "Woda", "adjective", 2, "n",
+ "Ważne przy pytaniu o bezpieczeństwo kąpieli.", "",
+ ("Czy tu jest głęboko?", "trong níi lúek mǎi khráp", "ตรงนี้ลึกไหมครับ")),
+("A2", "płytki", "tûen", "ตื้น", "Pogoda i przyroda", "Woda", "adjective", 2, "n",
+ "Para do „lúek”. Przy plaży pytanie o to bywa kwestią bezpieczeństwa.", "",
+ ("Tam jest płytko, można wejść.", "trong nán tûen long dâai khráp", "ตรงนั้นตื้น ลงได้ครับ")),
+("A2", "pełny", "tem", "เต็ม", "Cechy i opinie", "Ilość", "adjective", 4, "n",
+ "„tem” dotyczy naczyń, autobusów i hoteli. „hâwng tem” = brak wolnych pokoi.", "",
+ ("Autobus jest pełny.", "rót mee tem láew khráp", "รถเมล์เต็มแล้วครับ")),
+("A2", "pusty", "wâang", "ว่าง", "Cechy i opinie", "Ilość", "adjective", 4, "n",
+ "To samo słowo znaczy „wolny” o czasie i o miejscu siedzącym.", "",
+ ("Czy to miejsce jest wolne?", "thîi nâng níi wâang mǎi khráp", "ที่นั่งนี้ว่างไหมครับ")),
+
+# =====================================================================
+# CENA, WARTOSC, JAKOSC
+# =====================================================================
+("A2", "tani", "thùuk", "ถูก", "Zakupy i pieniądze", "Cena", "adjective", 5, "n",
+ "To samo słowo znaczy „poprawny”. O rozróżnieniu decyduje kontekst.", "",
+ ("Tu jest taniej.", "thîi nîi thùuk kwàa khráp", "ที่นี่ถูกกว่าครับ")),
+("A2", "opłacalny, wart ceny", "khúm khâa", "คุ้มค่า", "Zakupy i pieniądze", "Cena", "adjective", 3, "n",
+ "Ocena stosunku jakości do ceny — częsta w opiniach o hotelach i restauracjach.", "opłacać wartość",
+ ("To jest warte swojej ceny.", "an níi khúm khâa khráp", "อันนี้คุ้มค่าครับ")),
+("B1", "przepłacić", "jàai phaeng koen", "จ่ายแพงเกิน", "Zakupy i pieniądze", "Cena", "phrase", 3, "n",
+ "Neutralny opis sytuacji. Zarzut wobec sprzedawcy sformułowany wprost jest w Tajlandii źle widziany.", "płacić drogo za bardzo",
+ ("Chyba przepłaciłem.", "khít wâa phǒm jàai phaeng koen pai khráp", "คิดว่าผมจ่ายแพงเกินไปครับ")),
+("B1", "w promocji", "lót raa-khaa", "ลดราคา", "Zakupy i pieniądze", "Cena", "phrase", 4, "n",
+ "„lót” to obniżyć. Prośba o rabat brzmi „lót dâai mǎi khráp”.", "obniżyć cenę",
+ ("Czy to jest w promocji?", "an níi lót raa-khaa mǎi khráp", "อันนี้ลดราคาไหมครับ")),
+
+# =====================================================================
+# POGODA I OTOCZENIE
+# =====================================================================
+("A2", "duszno", "òp âao", "อบอ้าว", "Pogoda i przyroda", "Pogoda", "adjective", 3, "n",
+ "Opisuje upał z wilgocią — typowy dla pory deszczowej.", "",
+ ("Dziś jest duszno.", "wan níi aa-kàat òp âao khráp", "วันนี้อากาศอบอ้าวครับ")),
+("A2", "wietrznie", "lom raeng", "ลมแรง", "Pogoda i przyroda", "Pogoda", "phrase", 3, "n",
+ "Dosłownie „silny wiatr”. Ostrzeżenie ważne przy wynajmie łódki.", "wiatr silny",
+ ("Dziś mocno wieje.", "wan níi lom raeng khráp", "วันนี้ลมแรงครับ")),
+("A2", "leje", "fǒn tòk nàk", "ฝนตกหนัก", "Pogoda i przyroda", "Pogoda", "phrase", 4, "n",
+ "„nàk” znaczy ciężki — stosuje się do deszczu, pracy i choroby.", "deszcz padać ciężko",
+ ("Mocno pada, przeczekajmy.", "fǒn tòk nàk raw láe kàwn ná khráp", "ฝนตกหนัก เรารอก่อนนะครับ")),
+("A2", "przejaśnia się", "fǒn sàang láew", "ฝนสร่างแล้ว", "Pogoda i przyroda", "Pogoda", "phrase", 2, "n",
+ "„sàang” to słabnąć — mówi się tak też o gorączce.", "deszcz słabnąć już",
+ ("Deszcz już słabnie.", "fǒn sàang láew khráp pai dâai", "ฝนสร่างแล้วครับ ไปได้")),
+("A2", "głośno", "sǐang dang", "เสียงดัง", "Cechy i opinie", "Otoczenie", "phrase", 4, "n",
+ "„dang” samo znaczy też „sławny”. Z „sǐang” zawsze chodzi o hałas.", "dźwięk głośny",
+ ("Tu jest bardzo głośno.", "thîi nîi sǐang dang mâak khráp", "ที่นี่เสียงดังมากครับ")),
+("A2", "cicho, spokojnie", "ngîap", "เงียบ", "Cechy i opinie", "Otoczenie", "adjective", 3, "n",
+ "Pochwała dla pokoju hotelowego: „hâwng ngîap dii”.", "",
+ ("Szukam cichego pokoju.", "phǒm hǎa hâwng thîi ngîap khráp", "ผมหาห้องที่เงียบครับ")),
+]
