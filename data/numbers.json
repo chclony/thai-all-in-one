@@ -1,0 +1,5241 @@
+{
+ "file": "numbers.json",
+ "generator": "tools/generators/numbers.py",
+ "version": "1.18.0",
+ "count": 165,
+ "range": {
+  "min": 0,
+  "max": 1000000
+ },
+ "atoms": {
+  "digits": [
+   {
+    "value": 0,
+    "thaiPhonetic": "sǔun",
+    "ttsThai": "ศูนย์",
+    "pronunciationPolish": "suun",
+    "toneGuide": "sǔun — ton rosnący"
+   },
+   {
+    "value": 1,
+    "thaiPhonetic": "nùeng",
+    "ttsThai": "หนึ่ง",
+    "pronunciationPolish": "nyng",
+    "toneGuide": "nùeng — ton niski"
+   },
+   {
+    "value": 2,
+    "thaiPhonetic": "sǎwng",
+    "ttsThai": "สอง",
+    "pronunciationPolish": "song",
+    "toneGuide": "sǎwng — ton rosnący"
+   },
+   {
+    "value": 3,
+    "thaiPhonetic": "sǎam",
+    "ttsThai": "สาม",
+    "pronunciationPolish": "saam",
+    "toneGuide": "sǎam — ton rosnący"
+   },
+   {
+    "value": 4,
+    "thaiPhonetic": "sìi",
+    "ttsThai": "สี่",
+    "pronunciationPolish": "sii",
+    "toneGuide": "sìi — ton niski"
+   },
+   {
+    "value": 5,
+    "thaiPhonetic": "hâa",
+    "ttsThai": "ห้า",
+    "pronunciationPolish": "haa",
+    "toneGuide": "hâa — ton opadający"
+   },
+   {
+    "value": 6,
+    "thaiPhonetic": "hòk",
+    "ttsThai": "หก",
+    "pronunciationPolish": "hok",
+    "toneGuide": "hòk — ton niski"
+   },
+   {
+    "value": 7,
+    "thaiPhonetic": "jèt",
+    "ttsThai": "เจ็ด",
+    "pronunciationPolish": "dźet",
+    "toneGuide": "jèt — ton niski"
+   },
+   {
+    "value": 8,
+    "thaiPhonetic": "pàet",
+    "ttsThai": "แปด",
+    "pronunciationPolish": "paet",
+    "toneGuide": "pàet — ton niski"
+   },
+   {
+    "value": 9,
+    "thaiPhonetic": "kâo",
+    "ttsThai": "เก้า",
+    "pronunciationPolish": "kau",
+    "toneGuide": "kâo — ton opadający"
+   }
+  ],
+  "positions": [
+   {
+    "value": 100000,
+    "thaiPhonetic": "sǎen",
+    "ttsThai": "แสน",
+    "pronunciationPolish": "saen"
+   },
+   {
+    "value": 10000,
+    "thaiPhonetic": "mùen",
+    "ttsThai": "หมื่น",
+    "pronunciationPolish": "myn"
+   },
+   {
+    "value": 1000,
+    "thaiPhonetic": "phan",
+    "ttsThai": "พัน",
+    "pronunciationPolish": "phan"
+   },
+   {
+    "value": 100,
+    "thaiPhonetic": "ráwy",
+    "ttsThai": "ร้อย",
+    "pronunciationPolish": "roy"
+   },
+   {
+    "value": 10,
+    "thaiPhonetic": "sìp",
+    "ttsThai": "สิบ",
+    "pronunciationPolish": "sip"
+   }
+  ],
+  "et": {
+   "thaiPhonetic": "èt",
+   "ttsThai": "เอ็ด",
+   "pronunciationPolish": "et"
+  },
+  "yii": {
+   "thaiPhonetic": "yîi",
+   "ttsThai": "ยี่",
+   "pronunciationPolish": "jii"
+  },
+  "million": {
+   "thaiPhonetic": "láan",
+   "ttsThai": "ล้าน",
+   "pronunciationPolish": "laan"
+  }
+ },
+ "irregularities": [
+  {
+   "id": "et",
+   "label": "jedność „1” po czymkolwiek brzmi èt, nie nùeng",
+   "examples": [
+    11,
+    21,
+    101,
+    111,
+    121,
+    1001
+   ]
+  },
+  {
+   "id": "million",
+   "label": "powyżej miliona liczy się w milionach",
+   "examples": [
+    1000000
+   ]
+  },
+  {
+   "id": "silent-one",
+   "label": "dziesiątka „1” jest niema: sìp, nie nùeng-sìp",
+   "examples": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  {
+   "id": "skip-zero",
+   "label": "pozycja pusta jest pomijana, nie wymawiana jako sǔun",
+   "examples": [
+    100,
+    101,
+    105,
+    110,
+    120,
+    200
+   ]
+  },
+  {
+   "id": "teens",
+   "label": "jedenaście–dziewiętnaście: dziesiątka niema, jedność przez èt",
+   "examples": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ]
+  },
+  {
+   "id": "yii",
+   "label": "dziesiątka „2” to yîi-sìp, nigdy sǎwng-sìp",
+   "examples": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ]
+  }
+ ],
+ "checkpoints": [
+  {
+   "n": 0,
+   "thaiPhonetic": "sǔun",
+   "irregular": []
+  },
+  {
+   "n": 1,
+   "thaiPhonetic": "nùeng",
+   "irregular": []
+  },
+  {
+   "n": 2,
+   "thaiPhonetic": "sǎwng",
+   "irregular": []
+  },
+  {
+   "n": 3,
+   "thaiPhonetic": "sǎam",
+   "irregular": []
+  },
+  {
+   "n": 4,
+   "thaiPhonetic": "sìi",
+   "irregular": []
+  },
+  {
+   "n": 5,
+   "thaiPhonetic": "hâa",
+   "irregular": []
+  },
+  {
+   "n": 6,
+   "thaiPhonetic": "hòk",
+   "irregular": []
+  },
+  {
+   "n": 7,
+   "thaiPhonetic": "jèt",
+   "irregular": []
+  },
+  {
+   "n": 8,
+   "thaiPhonetic": "pàet",
+   "irregular": []
+  },
+  {
+   "n": 9,
+   "thaiPhonetic": "kâo",
+   "irregular": []
+  },
+  {
+   "n": 10,
+   "thaiPhonetic": "sìp",
+   "irregular": [
+    "silent-one"
+   ]
+  },
+  {
+   "n": 11,
+   "thaiPhonetic": "sìp-èt",
+   "irregular": [
+    "et",
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 12,
+   "thaiPhonetic": "sìp-sǎwng",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 13,
+   "thaiPhonetic": "sìp-sǎam",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 14,
+   "thaiPhonetic": "sìp-sìi",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 15,
+   "thaiPhonetic": "sìp-hâa",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 16,
+   "thaiPhonetic": "sìp-hòk",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 17,
+   "thaiPhonetic": "sìp-jèt",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 18,
+   "thaiPhonetic": "sìp-pàet",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 19,
+   "thaiPhonetic": "sìp-kâo",
+   "irregular": [
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 20,
+   "thaiPhonetic": "yîi-sìp",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 21,
+   "thaiPhonetic": "yîi-sìp-èt",
+   "irregular": [
+    "et",
+    "yii"
+   ]
+  },
+  {
+   "n": 22,
+   "thaiPhonetic": "yîi-sìp-sǎwng",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 23,
+   "thaiPhonetic": "yîi-sìp-sǎam",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 24,
+   "thaiPhonetic": "yîi-sìp-sìi",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 25,
+   "thaiPhonetic": "yîi-sìp-hâa",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 26,
+   "thaiPhonetic": "yîi-sìp-hòk",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 27,
+   "thaiPhonetic": "yîi-sìp-jèt",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 28,
+   "thaiPhonetic": "yîi-sìp-pàet",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 29,
+   "thaiPhonetic": "yîi-sìp-kâo",
+   "irregular": [
+    "yii"
+   ]
+  },
+  {
+   "n": 30,
+   "thaiPhonetic": "sǎam-sìp",
+   "irregular": []
+  },
+  {
+   "n": 40,
+   "thaiPhonetic": "sìi-sìp",
+   "irregular": []
+  },
+  {
+   "n": 50,
+   "thaiPhonetic": "hâa-sìp",
+   "irregular": []
+  },
+  {
+   "n": 90,
+   "thaiPhonetic": "kâo-sìp",
+   "irregular": []
+  },
+  {
+   "n": 99,
+   "thaiPhonetic": "kâo-sìp-kâo",
+   "irregular": []
+  },
+  {
+   "n": 100,
+   "thaiPhonetic": "nùeng-ráwy",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 101,
+   "thaiPhonetic": "nùeng-ráwy-èt",
+   "irregular": [
+    "et",
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 105,
+   "thaiPhonetic": "nùeng-ráwy-hâa",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 110,
+   "thaiPhonetic": "nùeng-ráwy-sìp",
+   "irregular": [
+    "silent-one",
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 111,
+   "thaiPhonetic": "nùeng-ráwy-sìp-èt",
+   "irregular": [
+    "et",
+    "silent-one",
+    "teens"
+   ]
+  },
+  {
+   "n": 120,
+   "thaiPhonetic": "nùeng-ráwy-yîi-sìp",
+   "irregular": [
+    "skip-zero",
+    "yii"
+   ]
+  },
+  {
+   "n": 121,
+   "thaiPhonetic": "nùeng-ráwy-yîi-sìp-èt",
+   "irregular": [
+    "et",
+    "yii"
+   ]
+  },
+  {
+   "n": 200,
+   "thaiPhonetic": "sǎwng-ráwy",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 555,
+   "thaiPhonetic": "hâa-ráwy-hâa-sìp-hâa",
+   "irregular": []
+  },
+  {
+   "n": 999,
+   "thaiPhonetic": "kâo-ráwy-kâo-sìp-kâo",
+   "irregular": []
+  },
+  {
+   "n": 1000,
+   "thaiPhonetic": "nùeng-phan",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 1001,
+   "thaiPhonetic": "nùeng-phan-èt",
+   "irregular": [
+    "et",
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 1010,
+   "thaiPhonetic": "nùeng-phan-sìp",
+   "irregular": [
+    "silent-one",
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 1100,
+   "thaiPhonetic": "nùeng-phan-nùeng-ráwy",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 2568,
+   "thaiPhonetic": "sǎwng-phan-hâa-ráwy-hòk-sìp-pàet",
+   "irregular": []
+  },
+  {
+   "n": 10000,
+   "thaiPhonetic": "nùeng-mùen",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 10001,
+   "thaiPhonetic": "nùeng-mùen-èt",
+   "irregular": [
+    "et",
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 12345,
+   "thaiPhonetic": "nùeng-mùen-sǎwng-phan-sǎam-ráwy-sìi-sìp-hâa",
+   "irregular": []
+  },
+  {
+   "n": 100000,
+   "thaiPhonetic": "nùeng-sǎen",
+   "irregular": [
+    "skip-zero"
+   ]
+  },
+  {
+   "n": 123456,
+   "thaiPhonetic": "nùeng-sǎen-sǎwng-mùen-sǎam-phan-sìi-ráwy-hâa-sìp-hòk",
+   "irregular": []
+  },
+  {
+   "n": 999999,
+   "thaiPhonetic": "kâo-sǎen-kâo-mùen-kâo-phan-kâo-ráwy-kâo-sìp-kâo",
+   "irregular": []
+  },
+  {
+   "n": 1000000,
+   "thaiPhonetic": "nùeng-láan",
+   "irregular": [
+    "million"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "numerals",
+   "title": "Liczebniki 0–1 000 000",
+   "lead": "System pozycyjny z pięcioma nieregularnościami. Reszta jest regularna — cyfra razy pozycja."
+  },
+  {
+   "id": "prices",
+   "title": "Ceny: baht i satang",
+   "lead": "Kwota pada raz i szybko. Na targu usłyszysz też salueng — ćwierć bahta."
+  },
+  {
+   "id": "clock",
+   "title": "Godziny — system sześciogodzinny",
+   "lead": "Doba w czterech odcinkach, w każdym licznik od nowa.",
+   "dayParts": [
+    {
+     "id": "tii",
+     "range": "tii 1 – tii 5",
+     "from": 1,
+     "to": 5,
+     "polish": "od pierwszej do piątej nad ranem",
+     "trap": "Odcinek liczony od północy. `tii hâa` to piąta rano, nie siedemnasta."
+    },
+    {
+     "id": "cháo",
+     "range": "hòk – sìp-èt moong cháo",
+     "from": 6,
+     "to": 11,
+     "polish": "od szóstej do jedenastej rano",
+     "trap": "Tu numer godziny zgadza się z zegarem, ale `cháo` na końcu jest obowiązkowe."
+    },
+    {
+     "id": "thîang",
+     "range": "thîang wan",
+     "from": 12,
+     "to": 12,
+     "polish": "południe",
+     "trap": "Południe ma własne słowo i nie jest liczone jako dwunasta."
+    },
+    {
+     "id": "bàai",
+     "range": "bàai nùeng – bàai sǎam moong",
+     "from": 13,
+     "to": 15,
+     "polish": "od trzynastej do piętnastej",
+     "trap": "Licznik startuje od nowa: `bàai sǎwng moong` to czternasta, nie druga w nocy."
+    },
+    {
+     "id": "yen",
+     "range": "sìi – hòk moong yen",
+     "from": 16,
+     "to": 18,
+     "polish": "od szesnastej do osiemnastej",
+     "trap": "`sìi moong yen` i `sìi moong cháo` różnią się jednym słowem i sześcioma godzinami."
+    },
+    {
+     "id": "thûm",
+     "range": "nùeng – hâa thûm",
+     "from": 19,
+     "to": 23,
+     "polish": "od dziewiętnastej do dwudziestej trzeciej",
+     "trap": "Wieczór liczy się od dziewiętnastej: `sǎwng thûm` to dwudziesta."
+    }
+   ]
+  },
+  {
+   "id": "dates",
+   "title": "Daty: dni, miesiące, lata",
+   "lead": "Końcówka mówi, ile dni ma miesiąc: -khom to 31 dni, -yon to 30, a luty -phan jest jedynym wyjątkiem. Rok w dokumentach jest buddyjski: gregoriański plus 543."
+  },
+  {
+   "id": "duration",
+   "title": "Czas trwania i częstotliwość",
+   "lead": "Od–do, co ile, przez ile."
+  },
+  {
+   "id": "serials",
+   "title": "Numery",
+   "lead": "Numer to nie liczba. Czyta się go cyfra po cyfrze."
+  },
+  {
+   "id": "quantities",
+   "title": "Ilości z klasyfikatorami",
+   "lead": "Liczba bez klasyfikatora jest niegramatyczna. Pełny wykaz klasyfikatorów leży w data/classifiers.json."
+  },
+  {
+   "id": "fractions",
+   "title": "Ułamki i wartości przybliżone",
+   "lead": "prà-maan stoi przed liczbą, kwàa po niej."
+  }
+ ],
+ "drills": [
+  {
+   "id": "dictation",
+   "label": "Dyktando liczbowe",
+   "lead": "Słuchasz liczby, wpisujesz ją cyframi. Nie tłumaczysz — zapisujesz.",
+   "limitMs": 8000,
+   "masteryMs": 2500
+  },
+  {
+   "id": "price",
+   "label": "Cena ze słuchu",
+   "lead": "Słuchasz kwoty i wybierasz właściwy banknot albo właściwą sumę.",
+   "limitMs": 7000,
+   "masteryMs": 2200
+  },
+  {
+   "id": "clock",
+   "label": "Godzina ze słuchu",
+   "lead": "Słuchasz godziny i ustawiasz ją na tarczy zegara.",
+   "limitMs": 9000,
+   "masteryMs": 3000
+  },
+  {
+   "id": "produce",
+   "label": "Produkcja: powiedz liczbę",
+   "lead": "Widzisz liczbę cyframi, mówisz ją po tajsku. Ocena konturu tonalnego z sesji J rozstrzyga, czy trafiłeś.",
+   "limitMs": 10000,
+   "masteryMs": 3500
+  },
+  {
+   "id": "change",
+   "label": "Reszta",
+   "lead": "Ile wydać z podanej kwoty. Liczenie po tajsku pod presją czasu.",
+   "limitMs": 12000,
+   "masteryMs": 4000
+  },
+  {
+   "id": "sequence",
+   "label": "Ciąg cyfr",
+   "lead": "Kilka liczb pod rząd — zapamiętaj i odtwórz. Tak podaje się numer telefonu.",
+   "limitMs": 12000,
+   "masteryMs": 4500
+  }
+ ],
+ "lessons": [
+  {
+   "id": "num-lesson-01",
+   "title": "Liczby 0–10 ze słuchu",
+   "level": "Survival",
+   "goal": "Dziesięć cyfr rozpoznawanych ze słuchu, bez zapisu przed oczami. To jest warunek wszystkiego dalej: bez cyfr nie ma ani ceny, ani godziny.",
+   "anchorAfter": "lesson-009",
+   "anchorNumber": 3,
+   "sections": [
+    "numerals"
+   ],
+   "itemIds": [
+    "num-0001",
+    "num-0002",
+    "num-0003",
+    "num-0004",
+    "num-0005",
+    "num-0006",
+    "num-0007",
+    "num-0008",
+    "num-0009",
+    "num-0010",
+    "num-0011"
+   ],
+   "drills": [
+    "dictation"
+   ],
+   "pass": {
+    "questions": 11,
+    "correct": 9
+   }
+  },
+  {
+   "id": "num-lesson-02",
+   "title": "Jedenaście–dziewiętnaście i dziesiątki",
+   "level": "Survival",
+   "goal": "Trzy nieregularności naraz: niema dziesiątka w sìp, èt zamiast nùeng w jedności i yîi-sìp zamiast sǎwng-sìp. Tu przepada najwięcej ludzi.",
+   "anchorAfter": "lesson-012",
+   "anchorNumber": 6,
+   "sections": [
+    "numerals"
+   ],
+   "itemIds": [
+    "num-0012",
+    "num-0013",
+    "num-0014",
+    "num-0015",
+    "num-0016",
+    "num-0017",
+    "num-0018",
+    "num-0019",
+    "num-0020",
+    "num-0021",
+    "num-0022",
+    "num-0023",
+    "num-0024",
+    "num-0025",
+    "num-0026",
+    "num-0027",
+    "num-0028",
+    "num-0029",
+    "num-0030",
+    "num-0031"
+   ],
+   "drills": [
+    "dictation",
+    "produce"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-03",
+   "title": "Setki, tysiące i cały system do miliona",
+   "level": "A1",
+   "goal": "Reszta systemu jest już regularna — pozycja razy cyfra. Ćwiczymy tempo, nie regułę.",
+   "anchorAfter": "lesson-034",
+   "anchorNumber": 10,
+   "sections": [
+    "numerals"
+   ],
+   "itemIds": [
+    "num-0032",
+    "num-0033",
+    "num-0034",
+    "num-0035",
+    "num-0036",
+    "num-0037",
+    "num-0038",
+    "num-0039",
+    "num-0040",
+    "num-0041",
+    "num-0042",
+    "num-0043",
+    "num-0044",
+    "num-0045",
+    "num-0046",
+    "num-0047",
+    "num-0048",
+    "num-0049",
+    "num-0050",
+    "num-0051"
+   ],
+   "drills": [
+    "dictation",
+    "sequence"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-04",
+   "title": "Ceny: baht i satang",
+   "level": "Survival",
+   "goal": "Kwota ze słuchu i wybór właściwego banknotu. Cena pada raz i szybko — drugie podejście w sklepie kosztuje.",
+   "anchorAfter": "lesson-508",
+   "anchorNumber": 14,
+   "sections": [
+    "prices"
+   ],
+   "itemIds": [
+    "num-0052",
+    "num-0053",
+    "num-0054",
+    "num-0055",
+    "num-0056",
+    "num-0057",
+    "num-0058",
+    "num-0059",
+    "num-0060",
+    "num-0061",
+    "num-0062",
+    "num-0063",
+    "num-0064",
+    "num-0065",
+    "num-0066",
+    "num-0067",
+    "num-0068",
+    "num-0069",
+    "num-0070",
+    "num-0071",
+    "num-0072",
+    "num-0073",
+    "num-0074"
+   ],
+   "drills": [
+    "price",
+    "change"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-05",
+   "title": "Godziny w systemie sześciogodzinnym",
+   "level": "A1",
+   "goal": "Doba dzielona na cztery odcinki, w każdym licznik od nowa. `sìi moong cháo` i `sìi moong yen` różnią się jednym słowem i sześcioma godzinami.",
+   "anchorAfter": "lesson-026",
+   "anchorNumber": 22,
+   "sections": [
+    "clock"
+   ],
+   "itemIds": [
+    "num-0075",
+    "num-0076",
+    "num-0077",
+    "num-0078",
+    "num-0079",
+    "num-0080",
+    "num-0081",
+    "num-0082",
+    "num-0083",
+    "num-0084",
+    "num-0085",
+    "num-0086",
+    "num-0087",
+    "num-0088",
+    "num-0089",
+    "num-0090",
+    "num-0091",
+    "num-0092",
+    "num-0093",
+    "num-0094",
+    "num-0095",
+    "num-0096",
+    "num-0097",
+    "num-0098",
+    "num-0099",
+    "num-0100",
+    "num-0101",
+    "num-0102",
+    "num-0103",
+    "num-0104"
+   ],
+   "drills": [
+    "clock"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-06",
+   "title": "Dni tygodnia i miesiące",
+   "level": "A1",
+   "goal": "Nazwy miesięcy niosą liczbę dni w samej końcówce: -khom to 31, -yon to 30.",
+   "anchorAfter": "lesson-522",
+   "anchorNumber": 40,
+   "sections": [
+    "dates"
+   ],
+   "itemIds": [
+    "num-0105",
+    "num-0106",
+    "num-0107",
+    "num-0108",
+    "num-0109",
+    "num-0110",
+    "num-0111",
+    "num-0112",
+    "num-0113",
+    "num-0114",
+    "num-0115",
+    "num-0116",
+    "num-0117",
+    "num-0118",
+    "num-0119",
+    "num-0120",
+    "num-0121",
+    "num-0122",
+    "num-0123",
+    "num-0124",
+    "num-0125",
+    "num-0126",
+    "num-0127",
+    "num-0128",
+    "num-0129",
+    "num-0130",
+    "num-0131",
+    "num-0132"
+   ],
+   "drills": [
+    "dictation"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-07",
+   "title": "Lata: kalendarz buddyjski i gregoriański",
+   "level": "A2",
+   "goal": "Rok buddyjski to gregoriański plus 543. Data urodzenia w dokumencie będzie w tym pierwszym.",
+   "anchorAfter": "lesson-072",
+   "anchorNumber": 60,
+   "sections": [
+    "dates"
+   ],
+   "itemIds": [
+    "num-0105",
+    "num-0106",
+    "num-0107",
+    "num-0108",
+    "num-0109",
+    "num-0110",
+    "num-0111",
+    "num-0112",
+    "num-0113",
+    "num-0114",
+    "num-0115",
+    "num-0116",
+    "num-0117",
+    "num-0118",
+    "num-0119",
+    "num-0120",
+    "num-0121",
+    "num-0122",
+    "num-0123",
+    "num-0124",
+    "num-0125",
+    "num-0126",
+    "num-0127",
+    "num-0128",
+    "num-0129",
+    "num-0130",
+    "num-0131",
+    "num-0132"
+   ],
+   "drills": [
+    "produce"
+   ],
+   "pass": {
+    "questions": 14,
+    "correct": 11
+   }
+  },
+  {
+   "id": "num-lesson-08",
+   "title": "Czas trwania i częstotliwość",
+   "level": "A2",
+   "goal": "Od–do, co ile, przez ile. Konstrukcje, bez których nie da się umówić niczego powtarzalnego.",
+   "anchorAfter": "lesson-076",
+   "anchorNumber": 85,
+   "sections": [
+    "duration"
+   ],
+   "itemIds": [
+    "num-0133",
+    "num-0134",
+    "num-0135",
+    "num-0136",
+    "num-0137",
+    "num-0138",
+    "num-0139",
+    "num-0140",
+    "num-0141",
+    "num-0142"
+   ],
+   "drills": [
+    "dictation",
+    "produce"
+   ],
+   "pass": {
+    "questions": 10,
+    "correct": 8
+   }
+  },
+  {
+   "id": "num-lesson-09",
+   "title": "Numery: telefon, pokój, autobus, peron, miejsce",
+   "level": "A2",
+   "goal": "Numer nie jest liczbą — czyta się go cyfra po cyfrze. Ćwiczenie ciągu sprawdza pamięć słuchową, nie arytmetykę.",
+   "anchorAfter": "lesson-566",
+   "anchorNumber": 110,
+   "sections": [
+    "serials"
+   ],
+   "itemIds": [
+    "num-0143",
+    "num-0144",
+    "num-0145",
+    "num-0146",
+    "num-0147",
+    "num-0148"
+   ],
+   "drills": [
+    "sequence"
+   ],
+   "pass": {
+    "questions": 8,
+    "correct": 7
+   }
+  },
+  {
+   "id": "num-lesson-10",
+   "title": "Ilości z klasyfikatorami",
+   "level": "A2",
+   "goal": "Liczba bez klasyfikatora jest w tajskim niegramatyczna. „Jeden” to jedyna liczba, która staje PO klasyfikatorze.",
+   "anchorAfter": "lesson-588",
+   "anchorNumber": 140,
+   "sections": [
+    "quantities"
+   ],
+   "itemIds": [
+    "num-0149",
+    "num-0150",
+    "num-0151",
+    "num-0152",
+    "num-0153",
+    "num-0154",
+    "num-0155"
+   ],
+   "drills": [
+    "produce"
+   ],
+   "pass": {
+    "questions": 8,
+    "correct": 7
+   }
+  },
+  {
+   "id": "num-lesson-11",
+   "title": "Ułamki i wartości przybliżone",
+   "level": "B1",
+   "goal": "Około, ponad, prawie, mniej więcej — i to, że kwàa stoi po liczbie, a prà-maan przed nią.",
+   "anchorAfter": "lesson-164",
+   "anchorNumber": 175,
+   "sections": [
+    "fractions"
+   ],
+   "itemIds": [
+    "num-0156",
+    "num-0157",
+    "num-0158",
+    "num-0159",
+    "num-0160",
+    "num-0161",
+    "num-0162",
+    "num-0163",
+    "num-0164",
+    "num-0165"
+   ],
+   "drills": [
+    "dictation",
+    "produce"
+   ],
+   "pass": {
+    "questions": 10,
+    "correct": 8
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "id": "nscene-001",
+   "type": "number-scene",
+   "title": "Targowanie się o koszulkę",
+   "setting": "Na targu",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Ile kosztuje ta koszulka?",
+     "thaiPhonetic": "an níi raa-khaa thâo-rài khráp",
+     "pronunciationPolish": "an nii raa-khaa thau-raj khrap",
+     "toneGuide": "an — ton średni; níi — ton wysoki; raa — ton średni; khaa — ton średni; thâo — ton opadający; rài — ton niski; khráp — ton wysoki",
+     "ttsThai": "อันนี้ราคาเท่าไหร่ครับ",
+     "ttsSplit": [3, 3, 4, 8, 4],
+     "colloquial": {
+      "thaiPhonetic": "an níi la-khaa thâo-rai kháp",
+      "rules": ["lex", "r-l", "vowel-short"],
+      "pronunciationPolish": "an nii la-khaa thau-raj khap",
+      "ttsThai": "อันนี้ราคาเท่าไหร่คับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "an níi raa-khaa thâo-rài khá",
+       "pronunciationPolish": "an nii raa-khaa thau-raj kha",
+       "ttsThai": "อันนี้ราคาเท่าไหร่คะ",
+       "toneGuide": "an — ton średni; níi — ton wysoki; raa — ton średni; khaa — ton średni; thâo — ton opadający; rài — ton niski; khá — ton wysoki"
+      }
+     },
+     "index": 1,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Trzysta pięćdziesiąt bahtów.",
+     "thaiPhonetic": "sǎam-ráwy-hâa-sìp bàat khâ",
+     "pronunciationPolish": "saam-roy-haa-sip baat kha",
+     "toneGuide": "sǎam — ton rosnący; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "สามร้อยห้าสิบบาทค่ะ",
+     "ttsSplit": [13, 3, 3],
+     "colloquial": {
+      "thaiPhonetic": "sám-láwy-hâ-sìp bàat khâ",
+      "rules": ["r-l", "vowel-short", "tone-lax"],
+      "pronunciationPolish": "sam-loy-ha-sip baat kha",
+      "ttsThai": "สามร้อยห้าสิบบาทค่ะ"
+     },
+     "index": 2,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Drogo. Może pani opuścić?",
+     "thaiPhonetic": "phaeng lót nòi dâai mǎi khráp",
+     "pronunciationPolish": "phaeng lot noj daaj maj khrap",
+     "toneGuide": "phaeng — ton średni; lót — ton wysoki; nòi — ton niski; dâai — ton opadający; mǎi — ton rosnący; khráp — ton wysoki",
+     "ttsThai": "แพงลดหน่อยได้ไหมครับ",
+     "ttsSplit": [3, 2, 5, 3, 3, 4],
+     "colloquial": {
+      "thaiPhonetic": "phaeng lót nòi dâai mái kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "phaeng lot noj daaj maj khap",
+      "ttsThai": "แพงลดหน่อยได้ไหมคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "phaeng lót nòi dâai mǎi khá",
+       "pronunciationPolish": "phaeng lot noj daaj maj kha",
+       "ttsThai": "แพงลดหน่อยได้ไหมคะ",
+       "toneGuide": "phaeng — ton średni; lót — ton wysoki; nòi — ton niski; dâai — ton opadający; mǎi — ton rosnący; khá — ton wysoki"
+      }
+     },
+     "index": 3,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Trzysta. Taniej się nie da.",
+     "thaiPhonetic": "sǎam-ráwy bàat khâ",
+     "pronunciationPolish": "saam-roy baat kha",
+     "toneGuide": "sǎam — ton rosnący; ráwy — ton wysoki; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "สามร้อยบาทค่ะ",
+     "ttsSplit": [7, 3, 3],
+     "colloquial": {
+      "thaiPhonetic": "sám-láwy bàat khâ",
+      "rules": ["r-l", "vowel-short", "tone-lax"],
+      "pronunciationPolish": "sam-loy baat kha",
+      "ttsThai": "สามร้อยบาทค่ะ"
+     },
+     "index": 4,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Dwieście pięćdziesiąt?",
+     "thaiPhonetic": "sǎwng-ráwy-hâa-sìp bàat dâai mǎi khráp",
+     "pronunciationPolish": "song-roy-haa-sip baat daaj maj khrap",
+     "toneGuide": "sǎwng — ton rosnący; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; bàat — ton niski; dâai — ton opadający; mǎi — ton rosnący; khráp — ton wysoki",
+     "ttsThai": "สองร้อยห้าสิบบาทได้ไหมครับ",
+     "ttsSplit": [13, 3, 3, 3, 4],
+     "colloquial": {
+      "thaiPhonetic": "sáwng-láwy-hâ-sìp bàat dâai mái kháp",
+      "rules": ["lex", "r-l", "vowel-short", "tone-lax"],
+      "pronunciationPolish": "song-loy-ha-sip baat daaj maj khap",
+      "ttsThai": "สองร้อยห้าสิบบาทได้ไหมคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "sǎwng-ráwy-hâa-sìp bàat dâai mǎi khá",
+       "pronunciationPolish": "song-roy-haa-sip baat daaj maj kha",
+       "ttsThai": "สองร้อยห้าสิบบาทได้ไหมคะ",
+       "toneGuide": "sǎwng — ton rosnący; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; bàat — ton niski; dâai — ton opadający; mǎi — ton rosnący; khá — ton wysoki"
+      }
+     },
+     "index": 5,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Dwieście osiemdziesiąt. Zgoda.",
+     "thaiPhonetic": "sǎwng-ráwy-pàet-sìp bàat khâ",
+     "pronunciationPolish": "song-roy-paet-sip baat kha",
+     "toneGuide": "sǎwng — ton rosnący; ráwy — ton wysoki; pàet — ton niski; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "สองร้อยแปดสิบบาทค่ะ",
+     "ttsSplit": [13, 3, 3],
+     "colloquial": {
+      "thaiPhonetic": "sáwng-láwy-pàet-sìp bàat khâ",
+      "rules": ["r-l", "tone-lax"],
+      "pronunciationPolish": "song-loy-paet-sip baat kha",
+      "ttsThai": "สองร้อยแปดสิบบาทค่ะ"
+     },
+     "index": 6,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Dobrze, biorę.",
+     "thaiPhonetic": "ao khráp",
+     "pronunciationPolish": "au khrap",
+     "toneGuide": "ao — ton średni; khráp — ton wysoki",
+     "ttsThai": "เอาครับ",
+     "ttsSplit": [3, 4],
+     "colloquial": {
+      "thaiPhonetic": "ao kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "au khap",
+      "ttsThai": "เอาคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "ao khâ",
+       "pronunciationPolish": "au kha",
+       "ttsThai": "เอาค่ะ",
+       "toneGuide": "ao — ton średni; khâ — ton opadający"
+      }
+     },
+     "index": 7,
+     "role": "A",
+     "speakerGender": "any"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-001-q1",
+     "prompt": "Ile sprzedawczyni zażądała na początku?",
+     "options": [
+      "250 bahtów",
+      "280 bahtów",
+      "300 bahtów",
+      "350 bahtów"
+     ],
+     "answer": 3,
+     "value": 350,
+     "explain": "Pierwsza cena padła w drugiej kwestii: sǎam-ráwy-hâa-sìp bàat."
+    },
+    {
+     "id": "nscene-001-q2",
+     "prompt": "Na jakiej cenie stanęło?",
+     "options": [
+      "250 bahtów",
+      "280 bahtów",
+      "300 bahtów",
+      "350 bahtów"
+     ],
+     "answer": 1,
+     "value": 280,
+     "explain": "Ostatnia liczba w scenie: sǎwng-ráwy-pàet-sìp bàat."
+    },
+    {
+     "id": "nscene-001-q3",
+     "prompt": "O ile udało się zbić cenę?",
+     "options": [
+      "o 50 bahtów",
+      "o 70 bahtów",
+      "o 80 bahtów",
+      "wcale"
+     ],
+     "answer": 1,
+     "value": 70,
+     "explain": "350 minus 280. Odjęcie trzeba zrobić samemu — żadna kwestia nie podaje różnicy."
+    }
+   ]
+  },
+  {
+   "id": "nscene-002",
+   "type": "number-scene",
+   "title": "Rachunek i reszta",
+   "setting": "W restauracji",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Poproszę rachunek.",
+     "thaiPhonetic": "khǎw chék-bin khráp",
+     "pronunciationPolish": "kho czek-bin khrap",
+     "toneGuide": "khǎw — ton rosnący; chék — ton wysoki; bin — ton średni; khráp — ton wysoki",
+     "ttsThai": "ขอเช็คบิลครับ",
+     "ttsSplit": [2, 7, 4],
+     "colloquial": {
+      "thaiPhonetic": "khǎw ché-bin kháp",
+      "rules": ["lex", "coda-drop"],
+      "pronunciationPolish": "kho cze-bin khap",
+      "ttsThai": "ขอเช็คบิลคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "khǎw chék-bin khâ",
+       "pronunciationPolish": "kho czek-bin kha",
+       "ttsThai": "ขอเช็คบิลค่ะ",
+       "toneGuide": "khǎw — ton rosnący; chék — ton wysoki; bin — ton średni; khâ — ton opadający"
+      }
+     },
+     "index": 1,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Razem czterysta dwadzieścia bahtów.",
+     "thaiPhonetic": "tháng-mòt sìi-ráwy-yîi-sìp bàat khâ",
+     "pronunciationPolish": "thang-mot sii-roy-jii-sip baat kha",
+     "toneGuide": "tháng — ton wysoki; mòt — ton niski; sìi — ton niski; ráwy — ton wysoki; yîi — ton opadający; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "ทั้งหมดสี่ร้อยยี่สิบบาทค่ะ",
+     "ttsSplit": [7, 13, 3, 3],
+     "colloquial": {
+      "thaiPhonetic": "tháng-mòt sì-láwy-yî-sìp bàat khâ",
+      "rules": ["r-l", "vowel-short"],
+      "pronunciationPolish": "thang-mot si-loy-ji-sip baat kha",
+      "ttsThai": "ทั้งหมดสี่ร้อยยี่สิบบาทค่ะ"
+     },
+     "index": 2,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Daję pięćset.",
+     "thaiPhonetic": "khǎw hâa-ráwy khráp",
+     "pronunciationPolish": "kho haa-roy khrap",
+     "toneGuide": "khǎw — ton rosnący; hâa — ton opadający; ráwy — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "ขอห้าร้อยครับ",
+     "ttsSplit": [2, 7, 4],
+     "colloquial": {
+      "thaiPhonetic": "khǎw hâ-láwy kháp",
+      "rules": ["lex", "r-l", "vowel-short"],
+      "pronunciationPolish": "kho ha-loy khap",
+      "ttsThai": "ขอห้าร้อยคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "khǎw hâa-ráwy khâ",
+       "pronunciationPolish": "kho haa-roy kha",
+       "ttsThai": "ขอห้าร้อยค่ะ",
+       "toneGuide": "khǎw — ton rosnący; hâa — ton opadający; ráwy — ton wysoki; khâ — ton opadający"
+      }
+     },
+     "index": 3,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Reszta osiemdziesiąt bahtów.",
+     "thaiPhonetic": "thawn pàet-sìp bàat khâ",
+     "pronunciationPolish": "thon paet-sip baat kha",
+     "toneGuide": "thawn — ton średni; pàet — ton niski; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "ทอนแปดสิบบาทค่ะ",
+     "ttsSplit": [3, 6, 3, 3],
+     "index": 4,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Dziękuję.",
+     "thaiPhonetic": "khàwp-khun khráp",
+     "pronunciationPolish": "khop-khun khrap",
+     "toneGuide": "khàwp — ton niski; khun — ton średni; khráp — ton wysoki",
+     "ttsThai": "ขอบคุณครับ",
+     "ttsSplit": [6, 4],
+     "colloquial": {
+      "thaiPhonetic": "khàp-khun kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "khap-khun khap",
+      "ttsThai": "ขอบคุณคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "khàwp-khun khâ",
+       "pronunciationPolish": "khop-khun kha",
+       "ttsThai": "ขอบคุณค่ะ",
+       "toneGuide": "khàwp — ton niski; khun — ton średni; khâ — ton opadający"
+      }
+     },
+     "index": 5,
+     "role": "A",
+     "speakerGender": "any"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-002-q1",
+     "prompt": "Ile wyniósł rachunek?",
+     "options": [
+      "80 bahtów",
+      "420 bahtów",
+      "480 bahtów",
+      "500 bahtów"
+     ],
+     "answer": 1,
+     "value": 420,
+     "explain": "sìi-ráwy-yîi-sìp bàat — druga kwestia."
+    },
+    {
+     "id": "nscene-002-q2",
+     "prompt": "Ile powinna wynosić reszta?",
+     "options": [
+      "20 bahtów",
+      "80 bahtów",
+      "100 bahtów",
+      "180 bahtów"
+     ],
+     "answer": 1,
+     "value": 80,
+     "explain": "500 minus 420. Kelnerka podała pàet-sìp bàat i się zgadza."
+    }
+   ]
+  },
+  {
+   "id": "nscene-003",
+   "type": "number-scene",
+   "title": "Bilet na konkretną godzinę",
+   "setting": "Na dworcu",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Poproszę bilet do Chiang Mai.",
+     "thaiPhonetic": "khǎw tǔa pai chiang-mài khráp",
+     "pronunciationPolish": "kho tua paj cziang-maj khrap",
+     "toneGuide": "khǎw — ton rosnący; tǔa — ton rosnący; pai — ton średni; chiang — ton średni; mài — ton niski; khráp — ton wysoki",
+     "ttsThai": "ขอตั๋วไปเชียงใหม่ครับ",
+     "ttsSplit": [2, 4, 2, 9, 4],
+     "colloquial": {
+      "thaiPhonetic": "khǎw tǔa pai chiang-mài kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "kho tua paj cziang-maj khap",
+      "ttsThai": "ขอตั๋วไปเชียงใหม่คับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "khǎw tǔa pai chiang-mài khâ",
+       "pronunciationPolish": "kho tua paj cziang-maj kha",
+       "ttsThai": "ขอตั๋วไปเชียงใหม่ค่ะ",
+       "toneGuide": "khǎw — ton rosnący; tǔa — ton rosnący; pai — ton średni; chiang — ton średni; mài — ton niski; khâ — ton opadający"
+      }
+     },
+     "index": 1,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "O której?",
+     "thaiPhonetic": "kìi moong khá",
+     "pronunciationPolish": "kii moong kha",
+     "toneGuide": "kìi — ton niski; moong — ton średni; khá — ton wysoki",
+     "ttsThai": "กี่โมงคะ",
+     "ttsSplit": [3, 3, 2],
+     "index": 2,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "O ósmej rano.",
+     "thaiPhonetic": "pàet moong cháo khráp",
+     "pronunciationPolish": "paet moong czau khrap",
+     "toneGuide": "pàet — ton niski; moong — ton średni; cháo — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "แปดโมงเช้าครับ",
+     "ttsSplit": [3, 3, 4, 4],
+     "colloquial": {
+      "thaiPhonetic": "pàet moong cháo kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "paet moong czau khap",
+      "ttsThai": "แปดโมงเช้าคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "pàet moong cháo khâ",
+       "pronunciationPolish": "paet moong czau kha",
+       "ttsThai": "แปดโมงเช้าค่ะ",
+       "toneGuide": "pàet — ton niski; moong — ton średni; cháo — ton wysoki; khâ — ton opadający"
+      }
+     },
+     "index": 3,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "O ósmej nie ma. Jest o dziewiątej trzydzieści.",
+     "thaiPhonetic": "kâo moong cháo khrûeng mii khâ",
+     "pronunciationPolish": "kau moong czau khryng mii kha",
+     "toneGuide": "kâo — ton opadający; moong — ton średni; cháo — ton wysoki; khrûeng — ton opadający; mii — ton średni; khâ — ton opadający",
+     "ttsThai": "เก้าโมงเช้าครึ่งมีค่ะ",
+     "ttsSplit": [4, 3, 4, 5, 2, 3],
+     "colloquial": {
+      "thaiPhonetic": "kâo moong cháo khûeng mii khâ",
+      "rules": ["cluster-r"],
+      "pronunciationPolish": "kau moong czau khyng mii kha",
+      "ttsThai": "เก้าโมงเช้าครึ่งมีค่ะ"
+     },
+     "index": 4,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Dobrze. Peron który?",
+     "thaiPhonetic": "chaan-chaa-laa thîi thâo-rài khráp",
+     "pronunciationPolish": "czaan-czaa-laa thii thau-raj khrap",
+     "toneGuide": "chaan — ton średni; chaa — ton średni; laa — ton średni; thîi — ton opadający; thâo — ton opadający; rài — ton niski; khráp — ton wysoki",
+     "ttsThai": "ชานชาลาที่เท่าไหร่ครับ",
+     "ttsSplit": [7, 3, 8, 4],
+     "colloquial": {
+      "thaiPhonetic": "chan-cha-laa thîi thâo-rai kháp",
+      "rules": ["lex", "vowel-short"],
+      "pronunciationPolish": "czan-cza-laa thii thau-raj khap",
+      "ttsThai": "ชานชาลาที่เท่าไหร่คับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "chaan-chaa-laa thîi thâo-rài khá",
+       "pronunciationPolish": "czaan-czaa-laa thii thau-raj kha",
+       "ttsThai": "ชานชาลาที่เท่าไหร่คะ",
+       "toneGuide": "chaan — ton średni; chaa — ton średni; laa — ton średni; thîi — ton opadający; thâo — ton opadający; rài — ton niski; khá — ton wysoki"
+      }
+     },
+     "index": 5,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Peron czwarty. Miejsce dwudzieste drugie.",
+     "thaiPhonetic": "chaan-chaa-laa thîi sìi thîi-nâng boe yîi-sìp-sǎwng khâ",
+     "pronunciationPolish": "czaan-czaa-laa thii sii thii-nang be jii-sip-song kha",
+     "toneGuide": "chaan — ton średni; chaa — ton średni; laa — ton średni; thîi — ton opadający; sìi — ton niski; thîi — ton opadający; nâng — ton opadający; boe — ton średni; yîi — ton opadający; sìp — ton niski; sǎwng — ton rosnący; khâ — ton opadający",
+     "ttsThai": "ชานชาลาที่สี่ที่นั่งเบอร์ยี่สิบสองค่ะ",
+     "ttsSplit": [7, 3, 3, 7, 5, 9, 3],
+     "colloquial": {
+      "thaiPhonetic": "chan-cha-laa thîi sìi thî-nâng boe yî-sìp-sǎwng khâ",
+      "rules": ["vowel-short"],
+      "pronunciationPolish": "czan-cza-laa thii sii thi-nang be ji-sip-song kha",
+      "ttsThai": "ชานชาลาที่สี่ที่นั่งเบอร์ยี่สิบสองค่ะ"
+     },
+     "index": 6,
+     "role": "B",
+     "speakerGender": "female"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-003-q1",
+     "prompt": "O której faktycznie odjeżdża autobus?",
+     "options": [
+      "08:00",
+      "09:00",
+      "09:30",
+      "10:30"
+     ],
+     "answer": 2,
+     "value": 930,
+     "explain": "kâo moong cháo khrûeng — „khrûeng” to pół godziny, nie osobna godzina."
+    },
+    {
+     "id": "nscene-003-q2",
+     "prompt": "Z którego peronu?",
+     "options": [
+      "z drugiego",
+      "z trzeciego",
+      "z czwartego",
+      "z dwudziestego drugiego"
+     ],
+     "answer": 2,
+     "value": 4,
+     "explain": "chaan-chaa-laa thîi sìi. Liczba 22 padła zaraz potem, ale dotyczyła miejsca, nie peronu."
+    },
+    {
+     "id": "nscene-003-q3",
+     "prompt": "Który numer ma miejsce?",
+     "options": [
+      "4",
+      "9",
+      "22",
+      "30"
+     ],
+     "answer": 2,
+     "value": 22,
+     "explain": "thîi-nâng boe yîi-sìp-sǎwng."
+    }
+   ]
+  },
+  {
+   "id": "nscene-004",
+   "type": "number-scene",
+   "title": "Umawianie wizyty",
+   "setting": "W przychodni",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Chciałbym umówić wizytę.",
+     "thaiPhonetic": "yàak nát khráp",
+     "pronunciationPolish": "jaak nat khrap",
+     "toneGuide": "yàak — ton niski; nát — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "อยากนัดครับ",
+     "ttsSplit": [4, 3, 4],
+     "colloquial": {
+      "thaiPhonetic": "yàak nát kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "jaak nat khap",
+      "ttsThai": "อยากนัดคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "yàak nát khâ",
+       "pronunciationPolish": "jaak nat kha",
+       "ttsThai": "อยากนัดค่ะ",
+       "toneGuide": "yàak — ton niski; nát — ton wysoki; khâ — ton opadający"
+      }
+     },
+     "index": 1,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Kiedy panu pasuje?",
+     "thaiPhonetic": "wan nǎi dii khá",
+     "pronunciationPolish": "łan naj dii kha",
+     "toneGuide": "wan — ton średni; nǎi — ton rosnący; dii — ton średni; khá — ton wysoki",
+     "ttsThai": "วันไหนดีคะ",
+     "ttsSplit": [3, 3, 2, 2],
+     "index": 2,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "W piątek po południu.",
+     "thaiPhonetic": "wan sùk bàai khráp",
+     "pronunciationPolish": "łan suk baaj khrap",
+     "toneGuide": "wan — ton średni; sùk — ton niski; bàai — ton niski; khráp — ton wysoki",
+     "ttsThai": "วันศุกร์บ่ายครับ",
+     "ttsSplit": [3, 5, 4, 4],
+     "colloquial": {
+      "thaiPhonetic": "wan sùk bàai kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "łan suk baaj khap",
+      "ttsThai": "วันศุกร์บ่ายคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "wan sùk bàai khâ",
+       "pronunciationPolish": "łan suk baaj kha",
+       "ttsThai": "วันศุกร์บ่ายค่ะ",
+       "toneGuide": "wan — ton średni; sùk — ton niski; bàai — ton niski; khâ — ton opadający"
+      }
+     },
+     "index": 3,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Piątek czternastego, o czternastej trzydzieści?",
+     "thaiPhonetic": "wan sùk thîi sìp-sìi bàai sǎwng moong khrûeng khá",
+     "pronunciationPolish": "łan suk thii sip-sii baaj song moong khryng kha",
+     "toneGuide": "wan — ton średni; sùk — ton niski; thîi — ton opadający; sìp — ton niski; sìi — ton niski; bàai — ton niski; sǎwng — ton rosnący; moong — ton średni; khrûeng — ton opadający; khá — ton wysoki",
+     "ttsThai": "วันศุกร์ที่สิบสี่บ่ายสองโมงครึ่งคะ",
+     "ttsSplit": [3, 5, 3, 6, 4, 3, 3, 5, 2],
+     "colloquial": {
+      "thaiPhonetic": "wan sùk thîi sìp-sìi bàai sǎwng moong khûeng khá",
+      "rules": ["cluster-r"],
+      "pronunciationPolish": "łan suk thii sip-sii baaj song moong khyng kha",
+      "ttsThai": "วันศุกร์ที่สิบสี่บ่ายสองโมงครึ่งคะ"
+     },
+     "index": 4,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Pasuje.",
+     "thaiPhonetic": "dâai khráp",
+     "pronunciationPolish": "daaj khrap",
+     "toneGuide": "dâai — ton opadający; khráp — ton wysoki",
+     "ttsThai": "ได้ครับ",
+     "ttsSplit": [3, 4],
+     "colloquial": {
+      "thaiPhonetic": "dâai kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "daaj khap",
+      "ttsThai": "ได้คับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "dâai khâ",
+       "pronunciationPolish": "daaj kha",
+       "ttsThai": "ได้ค่ะ",
+       "toneGuide": "dâai — ton opadający; khâ — ton opadający"
+      }
+     },
+     "index": 5,
+     "role": "A",
+     "speakerGender": "any"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-004-q1",
+     "prompt": "Na który dzień miesiąca umówiona jest wizyta?",
+     "options": [
+      "na 4",
+      "na 14",
+      "na 30",
+      "na 40"
+     ],
+     "answer": 1,
+     "value": 14,
+     "explain": "wan thîi sìp-sìi — czternasty."
+    },
+    {
+     "id": "nscene-004-q2",
+     "prompt": "O której godzinie?",
+     "options": [
+      "02:30",
+      "14:00",
+      "14:30",
+      "16:30"
+     ],
+     "answer": 2,
+     "value": 1430,
+     "explain": "bàai sǎwng moong khrûeng. `bàai sǎwng` to czternasta — licznik po południu startuje od nowa."
+    }
+   ]
+  },
+  {
+   "id": "nscene-005",
+   "type": "number-scene",
+   "title": "Podawanie własnego numeru",
+   "setting": "Przy rejestracji",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Jaki jest pana numer telefonu?",
+     "thaiPhonetic": "boe thoo thâo-rài khá",
+     "pronunciationPolish": "be thoo thau-raj kha",
+     "toneGuide": "boe — ton średni; thoo — ton średni; thâo — ton opadający; rài — ton niski; khá — ton wysoki",
+     "ttsThai": "เบอร์โทรเท่าไหร่คะ",
+     "ttsSplit": [5, 3, 8, 2],
+     "colloquial": {
+      "thaiPhonetic": "boe thoo thâo-rai khá",
+      "rules": ["lex"],
+      "pronunciationPolish": "be thoo thau-raj kha",
+      "ttsThai": "เบอร์โทรเท่าไหร่คะ"
+     },
+     "index": 1,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Zero osiem, dziewięć jeden, dwa trzy, cztery pięć, sześć siedem.",
+     "thaiPhonetic": "boe thoo sǔun pàet kâo nùeng sǎwng sǎam sìi hâa hòk jèt khráp",
+     "pronunciationPolish": "be thoo suun paet kau nyng song saam sii haa hok dźet khrap",
+     "toneGuide": "boe — ton średni; thoo — ton średni; sǔun — ton rosnący; pàet — ton niski; kâo — ton opadający; nùeng — ton niski; sǎwng — ton rosnący; sǎam — ton rosnący; sìi — ton niski; hâa — ton opadający; hòk — ton niski; jèt — ton niski; khráp — ton wysoki",
+     "ttsThai": "เบอร์โทรศูนย์แปดเก้าหนึ่งสองสามสี่ห้าหกเจ็ดครับ",
+     "ttsSplit": [5, 3, 5, 3, 4, 5, 3, 3, 3, 3, 2, 4, 4],
+     "colloquial": {
+      "thaiPhonetic": "boe thoo sǔun pàet kâo nùeng sǎwng sǎam sìi hâa hòk jèt kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "be thoo suun paet kau nyng song saam sii haa hok dźet khap",
+      "ttsThai": "เบอร์โทรศูนย์แปดเก้าหนึ่งสองสามสี่ห้าหกเจ็ดคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "boe thoo sǔun pàet kâo nùeng sǎwng sǎam sìi hâa hòk jèt khâ",
+       "pronunciationPolish": "be thoo suun paet kau nyng song saam sii haa hok dźet kha",
+       "ttsThai": "เบอร์โทรศูนย์แปดเก้าหนึ่งสองสามสี่ห้าหกเจ็ดค่ะ",
+       "toneGuide": "boe — ton średni; thoo — ton średni; sǔun — ton rosnący; pàet — ton niski; kâo — ton opadający; nùeng — ton niski; sǎwng — ton rosnący; sǎam — ton rosnący; sìi — ton niski; hâa — ton opadający; hòk — ton niski; jèt — ton niski; khâ — ton opadający"
+      }
+     },
+     "index": 2,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Powtórzę: zero osiem, dziewięć jeden, dwa trzy…",
+     "thaiPhonetic": "thúan sǔun pàet kâo nùeng sǎwng sǎam khá",
+     "pronunciationPolish": "thuan suun paet kau nyng song saam kha",
+     "toneGuide": "thúan — ton wysoki; sǔun — ton rosnący; pàet — ton niski; kâo — ton opadający; nùeng — ton niski; sǎwng — ton rosnący; sǎam — ton rosnący; khá — ton wysoki",
+     "ttsThai": "ทวนศูนย์แปดเก้าหนึ่งสองสามคะ",
+     "ttsSplit": [3, 5, 3, 4, 5, 3, 3, 2],
+     "index": 3,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Zgadza się.",
+     "thaiPhonetic": "thùuk láew khráp",
+     "pronunciationPolish": "thuuk laew khrap",
+     "toneGuide": "thùuk — ton niski; láew — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "ถูกแล้วครับ",
+     "ttsSplit": [3, 4, 4],
+     "colloquial": {
+      "thaiPhonetic": "thùuk láew kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "thuuk laew khap",
+      "ttsThai": "ถูกแล้วคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "thùuk láew khâ",
+       "pronunciationPolish": "thuuk laew kha",
+       "ttsThai": "ถูกแล้วค่ะ",
+       "toneGuide": "thùuk — ton niski; láew — ton wysoki; khâ — ton opadający"
+      }
+     },
+     "index": 4,
+     "role": "A",
+     "speakerGender": "any"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-005-q1",
+     "prompt": "Jakie są trzy pierwsze cyfry numeru?",
+     "options": [
+      "0 8 1",
+      "0 8 9",
+      "0 9 8",
+      "8 9 1"
+     ],
+     "answer": 1,
+     "value": 89,
+     "explain": "sǔun pàet kâo. Numer telefonu czyta się cyfra po cyfrze — nikt nie mówi „osiemdziesiąt dziewięć”."
+    },
+    {
+     "id": "nscene-005-q2",
+     "prompt": "Ile cyfr powtórzyła rozmówczyni?",
+     "options": [
+      "cztery",
+      "pięć",
+      "sześć",
+      "wszystkie dziesięć"
+     ],
+     "answer": 2,
+     "value": 6,
+     "explain": "Powtórzyła sześć: sǔun pàet kâo nùeng sǎwng sǎam."
+    }
+   ]
+  },
+  {
+   "id": "nscene-006",
+   "type": "number-scene",
+   "title": "Sprawdzanie reszty",
+   "setting": "W sklepie",
+   "level": "A1",
+   "lines": [
+    {
+     "polish": "Poproszę dwie wody.",
+     "thaiPhonetic": "khǎw náam sǎwng khùat khráp",
+     "pronunciationPolish": "kho naam song khuat khrap",
+     "toneGuide": "khǎw — ton rosnący; náam — ton wysoki; sǎwng — ton rosnący; khùat — ton niski; khráp — ton wysoki",
+     "ttsThai": "ขอน้ำสองขวดครับ",
+     "ttsSplit": [2, 3, 3, 3, 4],
+     "colloquial": {
+      "thaiPhonetic": "khǎw náam sǎwng khùat kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "kho naam song khuat khap",
+      "ttsThai": "ขอน้ำสองขวดคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "khǎw náam sǎwng khùat khâ",
+       "pronunciationPolish": "kho naam song khuat kha",
+       "ttsThai": "ขอน้ำสองขวดค่ะ",
+       "toneGuide": "khǎw — ton rosnący; náam — ton wysoki; sǎwng — ton rosnący; khùat — ton niski; khâ — ton opadający"
+      }
+     },
+     "index": 1,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Trzydzieści bahtów.",
+     "thaiPhonetic": "sǎam-sìp bàat khâ",
+     "pronunciationPolish": "saam-sip baat kha",
+     "toneGuide": "sǎam — ton rosnący; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "สามสิบบาทค่ะ",
+     "ttsSplit": [6, 3, 3],
+     "colloquial": {
+      "thaiPhonetic": "sám-sìp bàat khâ",
+      "rules": ["vowel-short", "tone-lax"],
+      "pronunciationPolish": "sam-sip baat kha",
+      "ttsThai": "สามสิบบาทค่ะ"
+     },
+     "index": 2,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Mam tylko setkę.",
+     "thaiPhonetic": "mii tàe nùeng-ráwy khráp",
+     "pronunciationPolish": "mii tae nyng-roy khrap",
+     "toneGuide": "mii — ton średni; tàe — ton niski; nùeng — ton niski; ráwy — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "มีแต่หนึ่งร้อยครับ",
+     "ttsSplit": [2, 3, 9, 4],
+     "colloquial": {
+      "thaiPhonetic": "mii tàe nùeng-láwy kháp",
+      "rules": ["lex", "r-l"],
+      "pronunciationPolish": "mii tae nyng-loy khap",
+      "ttsThai": "มีแต่หนึ่งร้อยคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "mii tàe nùeng-ráwy khâ",
+       "pronunciationPolish": "mii tae nyng-roy kha",
+       "ttsThai": "มีแต่หนึ่งร้อยค่ะ",
+       "toneGuide": "mii — ton średni; tàe — ton niski; nùeng — ton niski; ráwy — ton wysoki; khâ — ton opadający"
+      }
+     },
+     "index": 3,
+     "role": "A",
+     "speakerGender": "any"
+    },
+    {
+     "polish": "Reszta sześćdziesiąt bahtów.",
+     "thaiPhonetic": "thawn hòk-sìp bàat khâ",
+     "pronunciationPolish": "thon hok-sip baat kha",
+     "toneGuide": "thawn — ton średni; hòk — ton niski; sìp — ton niski; bàat — ton niski; khâ — ton opadający",
+     "ttsThai": "ทอนหกสิบบาทค่ะ",
+     "ttsSplit": [3, 5, 3, 3],
+     "index": 4,
+     "role": "B",
+     "speakerGender": "female"
+    },
+    {
+     "polish": "Chyba za mało.",
+     "thaiPhonetic": "mâi thùuk ná khráp",
+     "pronunciationPolish": "maj thuuk na khrap",
+     "toneGuide": "mâi — ton opadający; thùuk — ton niski; ná — ton wysoki; khráp — ton wysoki",
+     "ttsThai": "ไม่ถูกนะครับ",
+     "ttsSplit": [3, 3, 2, 4],
+     "colloquial": {
+      "thaiPhonetic": "mâi thùuk ná kháp",
+      "rules": ["lex"],
+      "pronunciationPolish": "maj thuuk na khap",
+      "ttsThai": "ไม่ถูกนะคับ"
+     },
+     "genderVariant": {
+      "female": {
+       "thaiPhonetic": "mâi thùuk ná khá",
+       "pronunciationPolish": "maj thuuk na kha",
+       "ttsThai": "ไม่ถูกนะคะ",
+       "toneGuide": "mâi — ton opadający; thùuk — ton niski; ná — ton wysoki; khá — ton wysoki"
+      }
+     },
+     "index": 5,
+     "role": "A",
+     "speakerGender": "any"
+    }
+   ],
+   "questions": [
+    {
+     "id": "nscene-006-q1",
+     "prompt": "Ile powinna wynosić reszta?",
+     "options": [
+      "30 bahtów",
+      "60 bahtów",
+      "70 bahtów",
+      "100 bahtów"
+     ],
+     "answer": 2,
+     "value": 70,
+     "explain": "100 minus 30. Sprzedawczyni podała hòk-sìp — o dziesięć za mało."
+    },
+    {
+     "id": "nscene-006-q2",
+     "prompt": "Ile reszty faktycznie podała sprzedawczyni?",
+     "options": [
+      "30 bahtów",
+      "60 bahtów",
+      "70 bahtów",
+      "100 bahtów"
+     ],
+     "answer": 1,
+     "value": 60,
+     "explain": "thawn hòk-sìp bàat. Różnica między tym a rachunkiem jest właśnie powodem, dla którego ostatnia kwestia brzmi jak brzmi."
+    }
+   ]
+  }
+ ],
+ "records": [
+  {
+   "id": "num-0001",
+   "section": "numerals",
+   "polish": "0",
+   "thaiPhonetic": "sǔun",
+   "pronunciationPolish": "suun",
+   "toneGuide": "sǔun — ton rosnący",
+   "ttsThai": "ศูนย์",
+   "ttsSplit": [5],
+   "meta": {
+    "value": 0,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0002",
+   "section": "numerals",
+   "polish": "1",
+   "thaiPhonetic": "nùeng",
+   "pronunciationPolish": "nyng",
+   "toneGuide": "nùeng — ton niski",
+   "ttsThai": "หนึ่ง",
+   "ttsSplit": [5],
+   "meta": {
+    "value": 1,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0003",
+   "section": "numerals",
+   "polish": "2",
+   "thaiPhonetic": "sǎwng",
+   "pronunciationPolish": "song",
+   "toneGuide": "sǎwng — ton rosnący",
+   "ttsThai": "สอง",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 2,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0004",
+   "section": "numerals",
+   "polish": "3",
+   "thaiPhonetic": "sǎam",
+   "pronunciationPolish": "saam",
+   "toneGuide": "sǎam — ton rosnący",
+   "ttsThai": "สาม",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 3,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0005",
+   "section": "numerals",
+   "polish": "4",
+   "thaiPhonetic": "sìi",
+   "pronunciationPolish": "sii",
+   "toneGuide": "sìi — ton niski",
+   "ttsThai": "สี่",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 4,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0006",
+   "section": "numerals",
+   "polish": "5",
+   "thaiPhonetic": "hâa",
+   "pronunciationPolish": "haa",
+   "toneGuide": "hâa — ton opadający",
+   "ttsThai": "ห้า",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 5,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0007",
+   "section": "numerals",
+   "polish": "6",
+   "thaiPhonetic": "hòk",
+   "pronunciationPolish": "hok",
+   "toneGuide": "hòk — ton niski",
+   "ttsThai": "หก",
+   "ttsSplit": [2],
+   "meta": {
+    "value": 6,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0008",
+   "section": "numerals",
+   "polish": "7",
+   "thaiPhonetic": "jèt",
+   "pronunciationPolish": "dźet",
+   "toneGuide": "jèt — ton niski",
+   "ttsThai": "เจ็ด",
+   "ttsSplit": [4],
+   "meta": {
+    "value": 7,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0009",
+   "section": "numerals",
+   "polish": "8",
+   "thaiPhonetic": "pàet",
+   "pronunciationPolish": "paet",
+   "toneGuide": "pàet — ton niski",
+   "ttsThai": "แปด",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 8,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0010",
+   "section": "numerals",
+   "polish": "9",
+   "thaiPhonetic": "kâo",
+   "pronunciationPolish": "kau",
+   "toneGuide": "kâo — ton opadający",
+   "ttsThai": "เก้า",
+   "ttsSplit": [4],
+   "meta": {
+    "value": 9,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0011",
+   "section": "numerals",
+   "polish": "10",
+   "thaiPhonetic": "sìp",
+   "pronunciationPolish": "sip",
+   "toneGuide": "sìp — ton niski",
+   "ttsThai": "สิบ",
+   "ttsSplit": [3],
+   "meta": {
+    "value": 10,
+    "kind": "cardinal"
+   }
+  },
+  {
+   "id": "num-0012",
+   "section": "numerals",
+   "polish": "11",
+   "thaiPhonetic": "sìp-èt",
+   "pronunciationPolish": "sip-et",
+   "toneGuide": "sìp — ton niski; èt — ton niski",
+   "ttsThai": "สิบเอ็ด",
+   "ttsSplit": [7],
+   "meta": {
+    "value": 11,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0013",
+   "section": "numerals",
+   "polish": "12",
+   "thaiPhonetic": "sìp-sǎwng",
+   "pronunciationPolish": "sip-song",
+   "toneGuide": "sìp — ton niski; sǎwng — ton rosnący",
+   "ttsThai": "สิบสอง",
+   "ttsSplit": [6],
+   "meta": {
+    "value": 12,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0014",
+   "section": "numerals",
+   "polish": "13",
+   "thaiPhonetic": "sìp-sǎam",
+   "pronunciationPolish": "sip-saam",
+   "toneGuide": "sìp — ton niski; sǎam — ton rosnący",
+   "ttsThai": "สิบสาม",
+   "ttsSplit": [6],
+   "meta": {
+    "value": 13,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0015",
+   "section": "numerals",
+   "polish": "14",
+   "thaiPhonetic": "sìp-sìi",
+   "pronunciationPolish": "sip-sii",
+   "toneGuide": "sìp — ton niski; sìi — ton niski",
+   "ttsThai": "สิบสี่",
+   "ttsSplit": [6],
+   "meta": {
+    "value": 14,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0016",
+   "section": "numerals",
+   "polish": "15",
+   "thaiPhonetic": "sìp-hâa",
+   "pronunciationPolish": "sip-haa",
+   "toneGuide": "sìp — ton niski; hâa — ton opadający",
+   "ttsThai": "สิบห้า",
+   "ttsSplit": [6],
+   "meta": {
+    "value": 15,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0017",
+   "section": "numerals",
+   "polish": "16",
+   "thaiPhonetic": "sìp-hòk",
+   "pronunciationPolish": "sip-hok",
+   "toneGuide": "sìp — ton niski; hòk — ton niski",
+   "ttsThai": "สิบหก",
+   "ttsSplit": [5],
+   "meta": {
+    "value": 16,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0018",
+   "section": "numerals",
+   "polish": "17",
+   "thaiPhonetic": "sìp-jèt",
+   "pronunciationPolish": "sip-dźet",
+   "toneGuide": "sìp — ton niski; jèt — ton niski",
+   "ttsThai": "สิบเจ็ด",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "sì-jèt",
+    "rules": ["coda-drop"],
+    "pronunciationPolish": "si-dźet",
+    "ttsThai": "สิบเจ็ด"
+   },
+   "meta": {
+    "value": 17,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0019",
+   "section": "numerals",
+   "polish": "18",
+   "thaiPhonetic": "sìp-pàet",
+   "pronunciationPolish": "sip-paet",
+   "toneGuide": "sìp — ton niski; pàet — ton niski",
+   "ttsThai": "สิบแปด",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "sì-pàet",
+    "rules": ["coda-drop"],
+    "pronunciationPolish": "si-paet",
+    "ttsThai": "สิบแปด"
+   },
+   "meta": {
+    "value": 18,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0020",
+   "section": "numerals",
+   "polish": "19",
+   "thaiPhonetic": "sìp-kâo",
+   "pronunciationPolish": "sip-kau",
+   "toneGuide": "sìp — ton niski; kâo — ton opadający",
+   "ttsThai": "สิบเก้า",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "sì-kâo",
+    "rules": ["coda-drop"],
+    "pronunciationPolish": "si-kau",
+    "ttsThai": "สิบเก้า"
+   },
+   "meta": {
+    "value": 19,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0021",
+   "section": "numerals",
+   "polish": "20",
+   "thaiPhonetic": "yîi-sìp",
+   "pronunciationPolish": "jii-sip",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski",
+   "ttsThai": "ยี่สิบ",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip",
+    "ttsThai": "ยี่สิบ"
+   },
+   "meta": {
+    "value": 20,
+    "kind": "cardinal",
+    "irregular": [
+     "yii"
+    ]
+   }
+  },
+  {
+   "id": "num-0022",
+   "section": "numerals",
+   "polish": "21",
+   "thaiPhonetic": "yîi-sìp-èt",
+   "pronunciationPolish": "jii-sip-et",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; èt — ton niski",
+   "ttsThai": "ยี่สิบเอ็ด",
+   "ttsSplit": [10],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp-èt",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip-et",
+    "ttsThai": "ยี่สิบเอ็ด"
+   },
+   "meta": {
+    "value": 21,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "yii"
+    ]
+   }
+  },
+  {
+   "id": "num-0023",
+   "section": "numerals",
+   "polish": "22",
+   "thaiPhonetic": "yîi-sìp-sǎwng",
+   "pronunciationPolish": "jii-sip-song",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; sǎwng — ton rosnący",
+   "ttsThai": "ยี่สิบสอง",
+   "ttsSplit": [9],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp-sǎwng",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip-song",
+    "ttsThai": "ยี่สิบสอง"
+   },
+   "meta": {
+    "value": 22,
+    "kind": "cardinal",
+    "irregular": [
+     "yii"
+    ]
+   }
+  },
+  {
+   "id": "num-0024",
+   "section": "numerals",
+   "polish": "30",
+   "thaiPhonetic": "sǎam-sìp",
+   "pronunciationPolish": "saam-sip",
+   "toneGuide": "sǎam — ton rosnący; sìp — ton niski",
+   "ttsThai": "สามสิบ",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "sám-sìp",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "sam-sip",
+    "ttsThai": "สามสิบ"
+   },
+   "meta": {
+    "value": 30,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0025",
+   "section": "numerals",
+   "polish": "31",
+   "thaiPhonetic": "sǎam-sìp-èt",
+   "pronunciationPolish": "saam-sip-et",
+   "toneGuide": "sǎam — ton rosnący; sìp — ton niski; èt — ton niski",
+   "ttsThai": "สามสิบเอ็ด",
+   "ttsSplit": [10],
+   "colloquial": {
+    "thaiPhonetic": "sám-sìp-èt",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "sam-sip-et",
+    "ttsThai": "สามสิบเอ็ด"
+   },
+   "meta": {
+    "value": 31,
+    "kind": "cardinal",
+    "irregular": [
+     "et"
+    ]
+   }
+  },
+  {
+   "id": "num-0026",
+   "section": "numerals",
+   "polish": "40",
+   "thaiPhonetic": "sìi-sìp",
+   "pronunciationPolish": "sii-sip",
+   "toneGuide": "sìi — ton niski; sìp — ton niski",
+   "ttsThai": "สี่สิบ",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "sì-sìp",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "si-sip",
+    "ttsThai": "สี่สิบ"
+   },
+   "meta": {
+    "value": 40,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0027",
+   "section": "numerals",
+   "polish": "50",
+   "thaiPhonetic": "hâa-sìp",
+   "pronunciationPolish": "haa-sip",
+   "toneGuide": "hâa — ton opadający; sìp — ton niski",
+   "ttsThai": "ห้าสิบ",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "hâ-sìp",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ha-sip",
+    "ttsThai": "ห้าสิบ"
+   },
+   "meta": {
+    "value": 50,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0028",
+   "section": "numerals",
+   "polish": "60",
+   "thaiPhonetic": "hòk-sìp",
+   "pronunciationPolish": "hok-sip",
+   "toneGuide": "hòk — ton niski; sìp — ton niski",
+   "ttsThai": "หกสิบ",
+   "ttsSplit": [5],
+   "meta": {
+    "value": 60,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0029",
+   "section": "numerals",
+   "polish": "70",
+   "thaiPhonetic": "jèt-sìp",
+   "pronunciationPolish": "dźet-sip",
+   "toneGuide": "jèt — ton niski; sìp — ton niski",
+   "ttsThai": "เจ็ดสิบ",
+   "ttsSplit": [7],
+   "meta": {
+    "value": 70,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0030",
+   "section": "numerals",
+   "polish": "80",
+   "thaiPhonetic": "pàet-sìp",
+   "pronunciationPolish": "paet-sip",
+   "toneGuide": "pàet — ton niski; sìp — ton niski",
+   "ttsThai": "แปดสิบ",
+   "ttsSplit": [6],
+   "meta": {
+    "value": 80,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0031",
+   "section": "numerals",
+   "polish": "90",
+   "thaiPhonetic": "kâo-sìp",
+   "pronunciationPolish": "kau-sip",
+   "toneGuide": "kâo — ton opadający; sìp — ton niski",
+   "ttsThai": "เก้าสิบ",
+   "ttsSplit": [7],
+   "meta": {
+    "value": 90,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0032",
+   "section": "numerals",
+   "polish": "100",
+   "thaiPhonetic": "nùeng-ráwy",
+   "pronunciationPolish": "nyng-roy",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki",
+   "ttsThai": "หนึ่งร้อย",
+   "ttsSplit": [9],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy",
+    "ttsThai": "หนึ่งร้อย"
+   },
+   "meta": {
+    "value": 100,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0033",
+   "section": "numerals",
+   "polish": "101",
+   "thaiPhonetic": "nùeng-ráwy-èt",
+   "pronunciationPolish": "nyng-roy-et",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; èt — ton niski",
+   "ttsThai": "หนึ่งร้อยเอ็ด",
+   "ttsSplit": [13],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-èt",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy-et",
+    "ttsThai": "หนึ่งร้อยเอ็ด"
+   },
+   "meta": {
+    "value": 101,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0034",
+   "section": "numerals",
+   "polish": "105",
+   "thaiPhonetic": "nùeng-ráwy-hâa",
+   "pronunciationPolish": "nyng-roy-haa",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; hâa — ton opadający",
+   "ttsThai": "หนึ่งร้อยห้า",
+   "ttsSplit": [12],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-hâa",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy-haa",
+    "ttsThai": "หนึ่งร้อยห้า"
+   },
+   "meta": {
+    "value": 105,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0035",
+   "section": "numerals",
+   "polish": "110",
+   "thaiPhonetic": "nùeng-ráwy-sìp",
+   "pronunciationPolish": "nyng-roy-sip",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; sìp — ton niski",
+   "ttsThai": "หนึ่งร้อยสิบ",
+   "ttsSplit": [12],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-sìp",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy-sip",
+    "ttsThai": "หนึ่งร้อยสิบ"
+   },
+   "meta": {
+    "value": 110,
+    "kind": "cardinal",
+    "irregular": [
+     "silent-one",
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0036",
+   "section": "numerals",
+   "polish": "111",
+   "thaiPhonetic": "nùeng-ráwy-sìp-èt",
+   "pronunciationPolish": "nyng-roy-sip-et",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; sìp — ton niski; èt — ton niski",
+   "ttsThai": "หนึ่งร้อยสิบเอ็ด",
+   "ttsSplit": [16],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-sìp-èt",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy-sip-et",
+    "ttsThai": "หนึ่งร้อยสิบเอ็ด"
+   },
+   "meta": {
+    "value": 111,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "silent-one",
+     "teens"
+    ]
+   }
+  },
+  {
+   "id": "num-0037",
+   "section": "numerals",
+   "polish": "120",
+   "thaiPhonetic": "nùeng-ráwy-yîi-sìp",
+   "pronunciationPolish": "nyng-roy-jii-sip",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; yîi — ton opadający; sìp — ton niski",
+   "ttsThai": "หนึ่งร้อยยี่สิบ",
+   "ttsSplit": [15],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-yî-sìp",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "nyng-loy-ji-sip",
+    "ttsThai": "หนึ่งร้อยยี่สิบ"
+   },
+   "meta": {
+    "value": 120,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero",
+     "yii"
+    ]
+   }
+  },
+  {
+   "id": "num-0038",
+   "section": "numerals",
+   "polish": "121",
+   "thaiPhonetic": "nùeng-ráwy-yîi-sìp-èt",
+   "pronunciationPolish": "nyng-roy-jii-sip-et",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; yîi — ton opadający; sìp — ton niski; èt — ton niski",
+   "ttsThai": "หนึ่งร้อยยี่สิบเอ็ด",
+   "ttsSplit": [19],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-yî-sìp-èt",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "nyng-loy-ji-sip-et",
+    "ttsThai": "หนึ่งร้อยยี่สิบเอ็ด"
+   },
+   "meta": {
+    "value": 121,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "yii"
+    ]
+   }
+  },
+  {
+   "id": "num-0039",
+   "section": "numerals",
+   "polish": "200",
+   "thaiPhonetic": "sǎwng-ráwy",
+   "pronunciationPolish": "song-roy",
+   "toneGuide": "sǎwng — ton rosnący; ráwy — ton wysoki",
+   "ttsThai": "สองร้อย",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "sáwng-láwy",
+    "rules": ["r-l", "tone-lax"],
+    "pronunciationPolish": "song-loy",
+    "ttsThai": "สองร้อย"
+   },
+   "meta": {
+    "value": 200,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0040",
+   "section": "numerals",
+   "polish": "555",
+   "thaiPhonetic": "hâa-ráwy-hâa-sìp-hâa",
+   "pronunciationPolish": "haa-roy-haa-sip-haa",
+   "toneGuide": "hâa — ton opadający; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; hâa — ton opadający",
+   "ttsThai": "ห้าร้อยห้าสิบห้า",
+   "ttsSplit": [16],
+   "colloquial": {
+    "thaiPhonetic": "hâ-láwy-hâ-sìp-hâa",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "ha-loy-ha-sip-haa",
+    "ttsThai": "ห้าร้อยห้าสิบห้า"
+   },
+   "meta": {
+    "value": 555,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0041",
+   "section": "numerals",
+   "polish": "999",
+   "thaiPhonetic": "kâo-ráwy-kâo-sìp-kâo",
+   "pronunciationPolish": "kau-roy-kau-sip-kau",
+   "toneGuide": "kâo — ton opadający; ráwy — ton wysoki; kâo — ton opadający; sìp — ton niski; kâo — ton opadający",
+   "ttsThai": "เก้าร้อยเก้าสิบเก้า",
+   "ttsSplit": [19],
+   "colloquial": {
+    "thaiPhonetic": "kâo-láwy-kâo-sì-kâo",
+    "rules": ["r-l", "coda-drop"],
+    "pronunciationPolish": "kau-loy-kau-si-kau",
+    "ttsThai": "เก้าร้อยเก้าสิบเก้า"
+   },
+   "meta": {
+    "value": 999,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0042",
+   "section": "numerals",
+   "polish": "1000",
+   "thaiPhonetic": "nùeng-phan",
+   "pronunciationPolish": "nyng-phan",
+   "toneGuide": "nùeng — ton niski; phan — ton średni",
+   "ttsThai": "หนึ่งพัน",
+   "ttsSplit": [8],
+   "meta": {
+    "value": 1000,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0043",
+   "section": "numerals",
+   "polish": "1001",
+   "thaiPhonetic": "nùeng-phan-èt",
+   "pronunciationPolish": "nyng-phan-et",
+   "toneGuide": "nùeng — ton niski; phan — ton średni; èt — ton niski",
+   "ttsThai": "หนึ่งพันเอ็ด",
+   "ttsSplit": [12],
+   "meta": {
+    "value": 1001,
+    "kind": "cardinal",
+    "irregular": [
+     "et",
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0044",
+   "section": "numerals",
+   "polish": "1100",
+   "thaiPhonetic": "nùeng-phan-nùeng-ráwy",
+   "pronunciationPolish": "nyng-phan-nyng-roy",
+   "toneGuide": "nùeng — ton niski; phan — ton średni; nùeng — ton niski; ráwy — ton wysoki",
+   "ttsThai": "หนึ่งพันหนึ่งร้อย",
+   "ttsSplit": [17],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-phan-nùeng-láwy",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-phan-nyng-loy",
+    "ttsThai": "หนึ่งพันหนึ่งร้อย"
+   },
+   "meta": {
+    "value": 1100,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0045",
+   "section": "numerals",
+   "polish": "2500",
+   "thaiPhonetic": "sǎwng-phan-hâa-ráwy",
+   "pronunciationPolish": "song-phan-haa-roy",
+   "toneGuide": "sǎwng — ton rosnący; phan — ton średni; hâa — ton opadający; ráwy — ton wysoki",
+   "ttsThai": "สองพันห้าร้อย",
+   "ttsSplit": [13],
+   "colloquial": {
+    "thaiPhonetic": "sáwng-phan-hâ-láwy",
+    "rules": ["r-l", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "song-phan-ha-loy",
+    "ttsThai": "สองพันห้าร้อย"
+   },
+   "meta": {
+    "value": 2500,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0046",
+   "section": "numerals",
+   "polish": "10000",
+   "thaiPhonetic": "nùeng-mùen",
+   "pronunciationPolish": "nyng-myn",
+   "toneGuide": "nùeng — ton niski; mùen — ton niski",
+   "ttsThai": "หนึ่งหมื่น",
+   "ttsSplit": [10],
+   "meta": {
+    "value": 10000,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0047",
+   "section": "numerals",
+   "polish": "12345",
+   "thaiPhonetic": "nùeng-mùen-sǎwng-phan-sǎam-ráwy-sìi-sìp-hâa",
+   "pronunciationPolish": "nyng-myn-song-phan-saam-roy-sii-sip-haa",
+   "toneGuide": "nùeng — ton niski; mùen — ton niski; sǎwng — ton rosnący; phan — ton średni; sǎam — ton rosnący; ráwy — ton wysoki; sìi — ton niski; sìp — ton niski; hâa — ton opadający",
+   "ttsThai": "หนึ่งหมื่นสองพันสามร้อยสี่สิบห้า",
+   "ttsSplit": [32],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-mùen-sáwng-phan-sám-láwy-sì-sìp-hâa",
+    "rules": ["r-l", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "nyng-myn-song-phan-sam-loy-si-sip-haa",
+    "ttsThai": "หนึ่งหมื่นสองพันสามร้อยสี่สิบห้า"
+   },
+   "meta": {
+    "value": 12345,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0048",
+   "section": "numerals",
+   "polish": "100000",
+   "thaiPhonetic": "nùeng-sǎen",
+   "pronunciationPolish": "nyng-saen",
+   "toneGuide": "nùeng — ton niski; sǎen — ton rosnący",
+   "ttsThai": "หนึ่งแสน",
+   "ttsSplit": [8],
+   "meta": {
+    "value": 100000,
+    "kind": "cardinal",
+    "irregular": [
+     "skip-zero"
+    ]
+   }
+  },
+  {
+   "id": "num-0049",
+   "section": "numerals",
+   "polish": "123456",
+   "thaiPhonetic": "nùeng-sǎen-sǎwng-mùen-sǎam-phan-sìi-ráwy-hâa-sìp-hòk",
+   "pronunciationPolish": "nyng-saen-song-myn-saam-phan-sii-roy-haa-sip-hok",
+   "toneGuide": "nùeng — ton niski; sǎen — ton rosnący; sǎwng — ton rosnący; mùen — ton niski; sǎam — ton rosnący; phan — ton średni; sìi — ton niski; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; hòk — ton niski",
+   "ttsThai": "หนึ่งแสนสองหมื่นสามพันสี่ร้อยห้าสิบหก",
+   "ttsSplit": [37],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-sáen-sáwng-mùen-sám-phan-sì-láwy-hâ-sìp-hòk",
+    "rules": ["r-l", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "nyng-saen-song-myn-sam-phan-si-loy-ha-sip-hok",
+    "ttsThai": "หนึ่งแสนสองหมื่นสามพันสี่ร้อยห้าสิบหก"
+   },
+   "meta": {
+    "value": 123456,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0050",
+   "section": "numerals",
+   "polish": "999999",
+   "thaiPhonetic": "kâo-sǎen-kâo-mùen-kâo-phan-kâo-ráwy-kâo-sìp-kâo",
+   "pronunciationPolish": "kau-saen-kau-myn-kau-phan-kau-roy-kau-sip-kau",
+   "toneGuide": "kâo — ton opadający; sǎen — ton rosnący; kâo — ton opadający; mùen — ton niski; kâo — ton opadający; phan — ton średni; kâo — ton opadający; ráwy — ton wysoki; kâo — ton opadający; sìp — ton niski; kâo — ton opadający",
+   "ttsThai": "เก้าแสนเก้าหมื่นเก้าพันเก้าร้อยเก้าสิบเก้า",
+   "ttsSplit": [42],
+   "colloquial": {
+    "thaiPhonetic": "kâo-sáen-kâo-mùen-kâo-phan-kâo-láwy-kâo-sì-kâo",
+    "rules": ["r-l", "coda-drop", "tone-lax"],
+    "pronunciationPolish": "kau-saen-kau-myn-kau-phan-kau-loy-kau-si-kau",
+    "ttsThai": "เก้าแสนเก้าหมื่นเก้าพันเก้าร้อยเก้าสิบเก้า"
+   },
+   "meta": {
+    "value": 999999,
+    "kind": "cardinal",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0051",
+   "section": "numerals",
+   "polish": "1000000",
+   "thaiPhonetic": "nùeng-láan",
+   "pronunciationPolish": "nyng-laan",
+   "toneGuide": "nùeng — ton niski; láan — ton wysoki",
+   "ttsThai": "หนึ่งล้าน",
+   "ttsSplit": [9],
+   "meta": {
+    "value": 1000000,
+    "kind": "cardinal",
+    "irregular": [
+     "million"
+    ]
+   }
+  },
+  {
+   "id": "num-0052",
+   "section": "prices",
+   "polish": "5 bahtów",
+   "thaiPhonetic": "hâa bàat",
+   "pronunciationPolish": "haa baat",
+   "toneGuide": "hâa — ton opadający; bàat — ton niski",
+   "ttsThai": "ห้าบาท",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "value": 5,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0053",
+   "section": "prices",
+   "polish": "10 bahtów",
+   "thaiPhonetic": "sìp bàat",
+   "pronunciationPolish": "sip baat",
+   "toneGuide": "sìp — ton niski; bàat — ton niski",
+   "ttsThai": "สิบบาท",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "value": 10,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0054",
+   "section": "prices",
+   "polish": "20 bahtów",
+   "thaiPhonetic": "yîi-sìp bàat",
+   "pronunciationPolish": "jii-sip baat",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; bàat — ton niski",
+   "ttsThai": "ยี่สิบบาท",
+   "ttsSplit": [6, 3],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp bàat",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip baat",
+    "ttsThai": "ยี่สิบบาท"
+   },
+   "meta": {
+    "value": 20,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0055",
+   "section": "prices",
+   "polish": "25 bahtów",
+   "thaiPhonetic": "yîi-sìp-hâa bàat",
+   "pronunciationPolish": "jii-sip-haa baat",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; hâa — ton opadający; bàat — ton niski",
+   "ttsThai": "ยี่สิบห้าบาท",
+   "ttsSplit": [9, 3],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp-hâa bàat",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip-haa baat",
+    "ttsThai": "ยี่สิบห้าบาท"
+   },
+   "meta": {
+    "value": 25,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0056",
+   "section": "prices",
+   "polish": "35 bahtów",
+   "thaiPhonetic": "sǎam-sìp-hâa bàat",
+   "pronunciationPolish": "saam-sip-haa baat",
+   "toneGuide": "sǎam — ton rosnący; sìp — ton niski; hâa — ton opadający; bàat — ton niski",
+   "ttsThai": "สามสิบห้าบาท",
+   "ttsSplit": [9, 3],
+   "colloquial": {
+    "thaiPhonetic": "sám-sìp-hâa bàat",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "sam-sip-haa baat",
+    "ttsThai": "สามสิบห้าบาท"
+   },
+   "meta": {
+    "value": 35,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0057",
+   "section": "prices",
+   "polish": "50 bahtów",
+   "thaiPhonetic": "hâa-sìp bàat",
+   "pronunciationPolish": "haa-sip baat",
+   "toneGuide": "hâa — ton opadający; sìp — ton niski; bàat — ton niski",
+   "ttsThai": "ห้าสิบบาท",
+   "ttsSplit": [6, 3],
+   "colloquial": {
+    "thaiPhonetic": "hâ-sìp bàat",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ha-sip baat",
+    "ttsThai": "ห้าสิบบาท"
+   },
+   "meta": {
+    "value": 50,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0058",
+   "section": "prices",
+   "polish": "60 bahtów",
+   "thaiPhonetic": "hòk-sìp bàat",
+   "pronunciationPolish": "hok-sip baat",
+   "toneGuide": "hòk — ton niski; sìp — ton niski; bàat — ton niski",
+   "ttsThai": "หกสิบบาท",
+   "ttsSplit": [5, 3],
+   "meta": {
+    "value": 60,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0059",
+   "section": "prices",
+   "polish": "100 bahtów",
+   "thaiPhonetic": "nùeng-ráwy bàat",
+   "pronunciationPolish": "nyng-roy baat",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; bàat — ton niski",
+   "ttsThai": "หนึ่งร้อยบาท",
+   "ttsSplit": [9, 3],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy bàat",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy baat",
+    "ttsThai": "หนึ่งร้อยบาท"
+   },
+   "meta": {
+    "value": 100,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0060",
+   "section": "prices",
+   "polish": "120 bahtów",
+   "thaiPhonetic": "nùeng-ráwy-yîi-sìp bàat",
+   "pronunciationPolish": "nyng-roy-jii-sip baat",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; yîi — ton opadający; sìp — ton niski; bàat — ton niski",
+   "ttsThai": "หนึ่งร้อยยี่สิบบาท",
+   "ttsSplit": [15, 3],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy-yî-sìp bàat",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "nyng-loy-ji-sip baat",
+    "ttsThai": "หนึ่งร้อยยี่สิบบาท"
+   },
+   "meta": {
+    "value": 120,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0061",
+   "section": "prices",
+   "polish": "250 bahtów",
+   "thaiPhonetic": "sǎwng-ráwy-hâa-sìp bàat",
+   "pronunciationPolish": "song-roy-haa-sip baat",
+   "toneGuide": "sǎwng — ton rosnący; ráwy — ton wysoki; hâa — ton opadający; sìp — ton niski; bàat — ton niski",
+   "ttsThai": "สองร้อยห้าสิบบาท",
+   "ttsSplit": [13, 3],
+   "colloquial": {
+    "thaiPhonetic": "sáwng-láwy-hâ-sìp bàat",
+    "rules": ["r-l", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "song-loy-ha-sip baat",
+    "ttsThai": "สองร้อยห้าสิบบาท"
+   },
+   "meta": {
+    "value": 250,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0062",
+   "section": "prices",
+   "polish": "500 bahtów",
+   "thaiPhonetic": "hâa-ráwy bàat",
+   "pronunciationPolish": "haa-roy baat",
+   "toneGuide": "hâa — ton opadający; ráwy — ton wysoki; bàat — ton niski",
+   "ttsThai": "ห้าร้อยบาท",
+   "ttsSplit": [7, 3],
+   "colloquial": {
+    "thaiPhonetic": "hâ-láwy bàat",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "ha-loy baat",
+    "ttsThai": "ห้าร้อยบาท"
+   },
+   "meta": {
+    "value": 500,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0063",
+   "section": "prices",
+   "polish": "1000 bahtów",
+   "thaiPhonetic": "nùeng-phan bàat",
+   "pronunciationPolish": "nyng-phan baat",
+   "toneGuide": "nùeng — ton niski; phan — ton średni; bàat — ton niski",
+   "ttsThai": "หนึ่งพันบาท",
+   "ttsSplit": [8, 3],
+   "meta": {
+    "value": 1000,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0064",
+   "section": "prices",
+   "polish": "1500 bahtów",
+   "thaiPhonetic": "nùeng-phan-hâa-ráwy bàat",
+   "pronunciationPolish": "nyng-phan-haa-roy baat",
+   "toneGuide": "nùeng — ton niski; phan — ton średni; hâa — ton opadający; ráwy — ton wysoki; bàat — ton niski",
+   "ttsThai": "หนึ่งพันห้าร้อยบาท",
+   "ttsSplit": [15, 3],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-phan-hâ-láwy bàat",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "nyng-phan-ha-loy baat",
+    "ttsThai": "หนึ่งพันห้าร้อยบาท"
+   },
+   "meta": {
+    "value": 1500,
+    "kind": "price",
+    "unit": "baht"
+   }
+  },
+  {
+   "id": "num-0065",
+   "section": "prices",
+   "polish": "25 satangów",
+   "thaiPhonetic": "yîi-sìp-hâa sà-taang",
+   "pronunciationPolish": "jii-sip-haa sa-taang",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; hâa — ton opadający; sà — ton niski; taang — ton średni",
+   "ttsThai": "ยี่สิบห้าสตางค์",
+   "ttsSplit": [9, 6],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp-hâa sà-taang",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip-haa sa-taang",
+    "ttsThai": "ยี่สิบห้าสตางค์"
+   },
+   "meta": {
+    "value": 25,
+    "kind": "price",
+    "unit": "satang"
+   }
+  },
+  {
+   "id": "num-0066",
+   "section": "prices",
+   "polish": "50 satangów",
+   "thaiPhonetic": "hâa-sìp sà-taang",
+   "pronunciationPolish": "haa-sip sa-taang",
+   "toneGuide": "hâa — ton opadający; sìp — ton niski; sà — ton niski; taang — ton średni",
+   "ttsThai": "ห้าสิบสตางค์",
+   "ttsSplit": [6, 6],
+   "colloquial": {
+    "thaiPhonetic": "hâ-sìp sà-taang",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ha-sip sa-taang",
+    "ttsThai": "ห้าสิบสตางค์"
+   },
+   "meta": {
+    "value": 50,
+    "kind": "price",
+    "unit": "satang"
+   }
+  },
+  {
+   "id": "num-0067",
+   "section": "prices",
+   "polish": "75 satangów",
+   "thaiPhonetic": "jèt-sìp-hâa sà-taang",
+   "pronunciationPolish": "dźet-sip-haa sa-taang",
+   "toneGuide": "jèt — ton niski; sìp — ton niski; hâa — ton opadający; sà — ton niski; taang — ton średni",
+   "ttsThai": "เจ็ดสิบห้าสตางค์",
+   "ttsSplit": [10, 6],
+   "meta": {
+    "value": 75,
+    "kind": "price",
+    "unit": "satang"
+   }
+  },
+  {
+   "id": "num-0068",
+   "section": "prices",
+   "polish": "35,50 bahta",
+   "thaiPhonetic": "sǎam-sìp-hâa bàat hâa-sìp sà-taang",
+   "pronunciationPolish": "saam-sip-haa baat haa-sip sa-taang",
+   "toneGuide": "sǎam — ton rosnący; sìp — ton niski; hâa — ton opadający; bàat — ton niski; hâa — ton opadający; sìp — ton niski; sà — ton niski; taang — ton średni",
+   "ttsThai": "สามสิบห้าบาทห้าสิบสตางค์",
+   "ttsSplit": [9, 3, 6, 6],
+   "colloquial": {
+    "thaiPhonetic": "sám-sìp-hâa bàat hâ-sìp sà-taang",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "sam-sip-haa baat ha-sip sa-taang",
+    "ttsThai": "สามสิบห้าบาทห้าสิบสตางค์"
+   },
+   "meta": {
+    "value": 3550,
+    "kind": "price",
+    "unit": "baht-satang"
+   }
+  },
+  {
+   "id": "num-0069",
+   "section": "prices",
+   "polish": "jeden salueng (25 satangów) — forma z targu",
+   "thaiPhonetic": "nùeng sà-lueng",
+   "pronunciationPolish": "nyng sa-lyng",
+   "toneGuide": "nùeng — ton niski; sà — ton niski; lueng — ton średni",
+   "ttsThai": "หนึ่งสลึง",
+   "ttsSplit": [5, 4],
+   "meta": {
+    "value": 25,
+    "kind": "price",
+    "unit": "salueng",
+    "note": "Salueng to ćwierć bahta. Na targu i w rozmowie o drobnych słychać go częściej niż „yîi-sìp-hâa sà-taang”."
+   }
+  },
+  {
+   "id": "num-0070",
+   "section": "prices",
+   "polish": "Ile to kosztuje?",
+   "thaiPhonetic": "raa-khaa thâo-rài khráp",
+   "pronunciationPolish": "raa-khaa thau-raj khrap",
+   "toneGuide": "raa — ton średni; khaa — ton średni; thâo — ton opadający; rài — ton niski; khráp — ton wysoki",
+   "ttsThai": "ราคาเท่าไหร่ครับ",
+   "ttsSplit": [4, 8, 4],
+   "colloquial": {
+    "thaiPhonetic": "la-khaa thâo-rai kháp",
+    "rules": ["lex", "r-l", "vowel-short"],
+    "pronunciationPolish": "la-khaa thau-raj khap",
+    "ttsThai": "ราคาเท่าไหร่คับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "raa-khaa thâo-rài khá",
+     "pronunciationPolish": "raa-khaa thau-raj kha",
+     "ttsThai": "ราคาเท่าไหร่คะ",
+     "toneGuide": "raa — ton średni; khaa — ton średni; thâo — ton opadający; rài — ton niski; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-price"
+   }
+  },
+  {
+   "id": "num-0071",
+   "section": "prices",
+   "polish": "Ile bahtów?",
+   "thaiPhonetic": "kìi bàat khráp",
+   "pronunciationPolish": "kii baat khrap",
+   "toneGuide": "kìi — ton niski; bàat — ton niski; khráp — ton wysoki",
+   "ttsThai": "กี่บาทครับ",
+   "ttsSplit": [3, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "kìi bàat kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "kii baat khap",
+    "ttsThai": "กี่บาทคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "kìi bàat khá",
+     "pronunciationPolish": "kii baat kha",
+     "ttsThai": "กี่บาทคะ",
+     "toneGuide": "kìi — ton niski; bàat — ton niski; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-price"
+   }
+  },
+  {
+   "id": "num-0072",
+   "section": "prices",
+   "polish": "Może pan trochę opuścić?",
+   "thaiPhonetic": "lót nòi dâai mǎi khráp",
+   "pronunciationPolish": "lot noj daaj maj khrap",
+   "toneGuide": "lót — ton wysoki; nòi — ton niski; dâai — ton opadający; mǎi — ton rosnący; khráp — ton wysoki",
+   "ttsThai": "ลดหน่อยได้ไหมครับ",
+   "ttsSplit": [2, 5, 3, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "lót nòi dâai mái kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "lot noj daaj maj khap",
+    "ttsThai": "ลดหน่อยได้ไหมคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "lót nòi dâai mǎi khá",
+     "pronunciationPolish": "lot noj daaj maj kha",
+     "ttsThai": "ลดหน่อยได้ไหมคะ",
+     "toneGuide": "lót — ton wysoki; nòi — ton niski; dâai — ton opadający; mǎi — ton rosnący; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "haggle"
+   }
+  },
+  {
+   "id": "num-0073",
+   "section": "prices",
+   "polish": "To bardzo drogo.",
+   "thaiPhonetic": "phaeng mâak khráp",
+   "pronunciationPolish": "phaeng maak khrap",
+   "toneGuide": "phaeng — ton średni; mâak — ton opadający; khráp — ton wysoki",
+   "ttsThai": "แพงมากครับ",
+   "ttsSplit": [3, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "phaeng mâak kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "phaeng maak khap",
+    "ttsThai": "แพงมากคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "phaeng mâak khâ",
+     "pronunciationPolish": "phaeng maak kha",
+     "ttsThai": "แพงมากค่ะ",
+     "toneGuide": "phaeng — ton średni; mâak — ton opadający; khâ — ton opadający"
+    }
+   },
+   "meta": {
+    "kind": "haggle"
+   }
+  },
+  {
+   "id": "num-0074",
+   "section": "prices",
+   "polish": "Poproszę resztę.",
+   "thaiPhonetic": "khǎw ngoen thawn khráp",
+   "pronunciationPolish": "kho ngen thon khrap",
+   "toneGuide": "khǎw — ton rosnący; ngoen — ton średni; thawn — ton średni; khráp — ton wysoki",
+   "ttsThai": "ขอเงินทอนครับ",
+   "ttsSplit": [2, 4, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "khǎw ngoen thawn kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "kho ngen thon khap",
+    "ttsThai": "ขอเงินทอนคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "khǎw ngoen thawn khâ",
+     "pronunciationPolish": "kho ngen thon kha",
+     "ttsThai": "ขอเงินทอนค่ะ",
+     "toneGuide": "khǎw — ton rosnący; ngoen — ton średni; thawn — ton średni; khâ — ton opadający"
+    }
+   },
+   "meta": {
+    "kind": "change"
+   }
+  },
+  {
+   "id": "num-0075",
+   "section": "clock",
+   "polish": "01:00",
+   "thaiPhonetic": "tii nùeng",
+   "pronunciationPolish": "tii nyng",
+   "toneGuide": "tii — ton średni; nùeng — ton niski",
+   "ttsThai": "ตีหนึ่ง",
+   "ttsSplit": [2, 5],
+   "meta": {
+    "hour": 1,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0076",
+   "section": "clock",
+   "polish": "03:00",
+   "thaiPhonetic": "tii sǎam",
+   "pronunciationPolish": "tii saam",
+   "toneGuide": "tii — ton średni; sǎam — ton rosnący",
+   "ttsThai": "ตีสาม",
+   "ttsSplit": [2, 3],
+   "meta": {
+    "hour": 3,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0077",
+   "section": "clock",
+   "polish": "05:00",
+   "thaiPhonetic": "tii hâa",
+   "pronunciationPolish": "tii haa",
+   "toneGuide": "tii — ton średni; hâa — ton opadający",
+   "ttsThai": "ตีห้า",
+   "ttsSplit": [2, 3],
+   "meta": {
+    "hour": 5,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0078",
+   "section": "clock",
+   "polish": "06:00",
+   "thaiPhonetic": "hòk moong cháo",
+   "pronunciationPolish": "hok moong czau",
+   "toneGuide": "hòk — ton niski; moong — ton średni; cháo — ton wysoki",
+   "ttsThai": "หกโมงเช้า",
+   "ttsSplit": [2, 3, 4],
+   "meta": {
+    "hour": 6,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0079",
+   "section": "clock",
+   "polish": "08:00",
+   "thaiPhonetic": "pàet moong cháo",
+   "pronunciationPolish": "paet moong czau",
+   "toneGuide": "pàet — ton niski; moong — ton średni; cháo — ton wysoki",
+   "ttsThai": "แปดโมงเช้า",
+   "ttsSplit": [3, 3, 4],
+   "meta": {
+    "hour": 8,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0080",
+   "section": "clock",
+   "polish": "10:00",
+   "thaiPhonetic": "sìp moong cháo",
+   "pronunciationPolish": "sip moong czau",
+   "toneGuide": "sìp — ton niski; moong — ton średni; cháo — ton wysoki",
+   "ttsThai": "สิบโมงเช้า",
+   "ttsSplit": [3, 3, 4],
+   "meta": {
+    "hour": 10,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0081",
+   "section": "clock",
+   "polish": "11:00",
+   "thaiPhonetic": "sìp-èt moong cháo",
+   "pronunciationPolish": "sip-et moong czau",
+   "toneGuide": "sìp — ton niski; èt — ton niski; moong — ton średni; cháo — ton wysoki",
+   "ttsThai": "สิบเอ็ดโมงเช้า",
+   "ttsSplit": [7, 3, 4],
+   "meta": {
+    "hour": 11,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0082",
+   "section": "clock",
+   "polish": "12:00",
+   "thaiPhonetic": "thîang wan",
+   "pronunciationPolish": "thiang łan",
+   "toneGuide": "thîang — ton opadający; wan — ton średni",
+   "ttsThai": "เที่ยงวัน",
+   "ttsSplit": [6, 3],
+   "meta": {
+    "hour": 12,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0083",
+   "section": "clock",
+   "polish": "13:00",
+   "thaiPhonetic": "bàai nùeng moong",
+   "pronunciationPolish": "baaj nyng moong",
+   "toneGuide": "bàai — ton niski; nùeng — ton niski; moong — ton średni",
+   "ttsThai": "บ่ายหนึ่งโมง",
+   "ttsSplit": [4, 5, 3],
+   "meta": {
+    "hour": 13,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0084",
+   "section": "clock",
+   "polish": "14:00",
+   "thaiPhonetic": "bàai sǎwng moong",
+   "pronunciationPolish": "baaj song moong",
+   "toneGuide": "bàai — ton niski; sǎwng — ton rosnący; moong — ton średni",
+   "ttsThai": "บ่ายสองโมง",
+   "ttsSplit": [4, 3, 3],
+   "meta": {
+    "hour": 14,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0085",
+   "section": "clock",
+   "polish": "15:00",
+   "thaiPhonetic": "bàai sǎam moong",
+   "pronunciationPolish": "baaj saam moong",
+   "toneGuide": "bàai — ton niski; sǎam — ton rosnący; moong — ton średni",
+   "ttsThai": "บ่ายสามโมง",
+   "ttsSplit": [4, 3, 3],
+   "meta": {
+    "hour": 15,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0086",
+   "section": "clock",
+   "polish": "16:00",
+   "thaiPhonetic": "sìi moong yen",
+   "pronunciationPolish": "sii moong jen",
+   "toneGuide": "sìi — ton niski; moong — ton średni; yen — ton średni",
+   "ttsThai": "สี่โมงเย็น",
+   "ttsSplit": [3, 3, 4],
+   "meta": {
+    "hour": 16,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0087",
+   "section": "clock",
+   "polish": "17:00",
+   "thaiPhonetic": "hâa moong yen",
+   "pronunciationPolish": "haa moong jen",
+   "toneGuide": "hâa — ton opadający; moong — ton średni; yen — ton średni",
+   "ttsThai": "ห้าโมงเย็น",
+   "ttsSplit": [3, 3, 4],
+   "meta": {
+    "hour": 17,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0088",
+   "section": "clock",
+   "polish": "18:00",
+   "thaiPhonetic": "hòk moong yen",
+   "pronunciationPolish": "hok moong jen",
+   "toneGuide": "hòk — ton niski; moong — ton średni; yen — ton średni",
+   "ttsThai": "หกโมงเย็น",
+   "ttsSplit": [2, 3, 4],
+   "meta": {
+    "hour": 18,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0089",
+   "section": "clock",
+   "polish": "19:00",
+   "thaiPhonetic": "nùeng thûm",
+   "pronunciationPolish": "nyng thum",
+   "toneGuide": "nùeng — ton niski; thûm — ton opadający",
+   "ttsThai": "หนึ่งทุ่ม",
+   "ttsSplit": [5, 4],
+   "meta": {
+    "hour": 19,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0090",
+   "section": "clock",
+   "polish": "20:00",
+   "thaiPhonetic": "sǎwng thûm",
+   "pronunciationPolish": "song thum",
+   "toneGuide": "sǎwng — ton rosnący; thûm — ton opadający",
+   "ttsThai": "สองทุ่ม",
+   "ttsSplit": [3, 4],
+   "meta": {
+    "hour": 20,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0091",
+   "section": "clock",
+   "polish": "22:00",
+   "thaiPhonetic": "sìi thûm",
+   "pronunciationPolish": "sii thum",
+   "toneGuide": "sìi — ton niski; thûm — ton opadający",
+   "ttsThai": "สี่ทุ่ม",
+   "ttsSplit": [3, 4],
+   "meta": {
+    "hour": 22,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0092",
+   "section": "clock",
+   "polish": "23:00",
+   "thaiPhonetic": "hâa thûm",
+   "pronunciationPolish": "haa thum",
+   "toneGuide": "hâa — ton opadający; thûm — ton opadający",
+   "ttsThai": "ห้าทุ่ม",
+   "ttsSplit": [3, 4],
+   "meta": {
+    "hour": 23,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0093",
+   "section": "clock",
+   "polish": "00:00",
+   "thaiPhonetic": "thîang-khuen",
+   "pronunciationPolish": "thiang-khyn",
+   "toneGuide": "thîang — ton opadający; khuen — ton średni",
+   "ttsThai": "เที่ยงคืน",
+   "ttsSplit": [9],
+   "meta": {
+    "hour": 0,
+    "minute": 0,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0094",
+   "section": "clock",
+   "polish": "07:30",
+   "thaiPhonetic": "jèt moong cháo khrûeng",
+   "pronunciationPolish": "dźet moong czau khryng",
+   "toneGuide": "jèt — ton niski; moong — ton średni; cháo — ton wysoki; khrûeng — ton opadający",
+   "ttsThai": "เจ็ดโมงเช้าครึ่ง",
+   "ttsSplit": [4, 3, 4, 5],
+   "colloquial": {
+    "thaiPhonetic": "jèt moong cháo khûeng",
+    "rules": ["cluster-r"],
+    "pronunciationPolish": "dźet moong czau khyng",
+    "ttsThai": "เจ็ดโมงเช้าครึ่ง"
+   },
+   "meta": {
+    "hour": 7,
+    "minute": 30,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0095",
+   "section": "clock",
+   "polish": "09:15",
+   "thaiPhonetic": "kâo moong cháo sìp-hâa naa-thii",
+   "pronunciationPolish": "kau moong czau sip-haa naa-thii",
+   "toneGuide": "kâo — ton opadający; moong — ton średni; cháo — ton wysoki; sìp — ton niski; hâa — ton opadający; naa — ton średni; thii — ton średni",
+   "ttsThai": "เก้าโมงเช้าสิบห้านาที",
+   "ttsSplit": [4, 3, 4, 6, 4],
+   "colloquial": {
+    "thaiPhonetic": "kâo moong cháo sìp-hâa na-thii",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "kau moong czau sip-haa na-thii",
+    "ttsThai": "เก้าโมงเช้าสิบห้านาที"
+   },
+   "meta": {
+    "hour": 9,
+    "minute": 15,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0096",
+   "section": "clock",
+   "polish": "14:30",
+   "thaiPhonetic": "bàai sǎwng moong khrûeng",
+   "pronunciationPolish": "baaj song moong khryng",
+   "toneGuide": "bàai — ton niski; sǎwng — ton rosnący; moong — ton średni; khrûeng — ton opadający",
+   "ttsThai": "บ่ายสองโมงครึ่ง",
+   "ttsSplit": [4, 3, 3, 5],
+   "colloquial": {
+    "thaiPhonetic": "bàai sǎwng moong khûeng",
+    "rules": ["cluster-r"],
+    "pronunciationPolish": "baaj song moong khyng",
+    "ttsThai": "บ่ายสองโมงครึ่ง"
+   },
+   "meta": {
+    "hour": 14,
+    "minute": 30,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0097",
+   "section": "clock",
+   "polish": "18:45",
+   "thaiPhonetic": "hòk moong yen sìi-sìp-hâa naa-thii",
+   "pronunciationPolish": "hok moong jen sii-sip-haa naa-thii",
+   "toneGuide": "hòk — ton niski; moong — ton średni; yen — ton średni; sìi — ton niski; sìp — ton niski; hâa — ton opadający; naa — ton średni; thii — ton średni",
+   "ttsThai": "หกโมงเย็นสี่สิบห้านาที",
+   "ttsSplit": [2, 3, 4, 9, 4],
+   "colloquial": {
+    "thaiPhonetic": "hòk moong yen sì-sìp-hâa na-thii",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "hok moong jen si-sip-haa na-thii",
+    "ttsThai": "หกโมงเย็นสี่สิบห้านาที"
+   },
+   "meta": {
+    "hour": 18,
+    "minute": 45,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0098",
+   "section": "clock",
+   "polish": "20:30",
+   "thaiPhonetic": "sǎwng thûm khrûeng",
+   "pronunciationPolish": "song thum khryng",
+   "toneGuide": "sǎwng — ton rosnący; thûm — ton opadający; khrûeng — ton opadający",
+   "ttsThai": "สองทุ่มครึ่ง",
+   "ttsSplit": [3, 4, 5],
+   "colloquial": {
+    "thaiPhonetic": "sǎwng thûm khûeng",
+    "rules": ["cluster-r"],
+    "pronunciationPolish": "song thum khyng",
+    "ttsThai": "สองทุ่มครึ่ง"
+   },
+   "meta": {
+    "hour": 20,
+    "minute": 30,
+    "kind": "clock",
+    "style": "spoken"
+   }
+  },
+  {
+   "id": "num-0099",
+   "section": "clock",
+   "polish": "13:00 (forma urzędowa)",
+   "thaiPhonetic": "sìp-sǎam naa-lí-kaa",
+   "pronunciationPolish": "sip-saam naa-li-kaa",
+   "toneGuide": "sìp — ton niski; sǎam — ton rosnący; naa — ton średni; lí — ton wysoki; kaa — ton średni",
+   "ttsThai": "สิบสามนาฬิกา",
+   "ttsSplit": [6, 6],
+   "colloquial": {
+    "thaiPhonetic": "sìp-sǎam na-lí-kaa",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "sip-saam na-li-kaa",
+    "ttsThai": "สิบสามนาฬิกา"
+   },
+   "meta": {
+    "hour": 13,
+    "minute": 0,
+    "kind": "clock",
+    "style": "formal"
+   }
+  },
+  {
+   "id": "num-0100",
+   "section": "clock",
+   "polish": "18:30 (forma urzędowa)",
+   "thaiPhonetic": "sìp-pàet naa-lí-kaa khrûeng",
+   "pronunciationPolish": "sip-paet naa-li-kaa khryng",
+   "toneGuide": "sìp — ton niski; pàet — ton niski; naa — ton średni; lí — ton wysoki; kaa — ton średni; khrûeng — ton opadający",
+   "ttsThai": "สิบแปดนาฬิกาครึ่ง",
+   "ttsSplit": [6, 6, 5],
+   "colloquial": {
+    "thaiPhonetic": "sì-pàet na-lí-kaa khûeng",
+    "rules": ["cluster-r", "coda-drop", "vowel-short"],
+    "pronunciationPolish": "si-paet na-li-kaa khyng",
+    "ttsThai": "สิบแปดนาฬิกาครึ่ง"
+   },
+   "meta": {
+    "hour": 18,
+    "minute": 30,
+    "kind": "clock",
+    "style": "formal"
+   }
+  },
+  {
+   "id": "num-0101",
+   "section": "clock",
+   "polish": "21:00 (forma urzędowa)",
+   "thaiPhonetic": "yîi-sìp-èt naa-lí-kaa",
+   "pronunciationPolish": "jii-sip-et naa-li-kaa",
+   "toneGuide": "yîi — ton opadający; sìp — ton niski; èt — ton niski; naa — ton średni; lí — ton wysoki; kaa — ton średni",
+   "ttsThai": "ยี่สิบเอ็ดนาฬิกา",
+   "ttsSplit": [10, 6],
+   "colloquial": {
+    "thaiPhonetic": "yî-sìp-èt na-lí-kaa",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "ji-sip-et na-li-kaa",
+    "ttsThai": "ยี่สิบเอ็ดนาฬิกา"
+   },
+   "meta": {
+    "hour": 21,
+    "minute": 0,
+    "kind": "clock",
+    "style": "formal"
+   }
+  },
+  {
+   "id": "num-0102",
+   "section": "clock",
+   "polish": "O której?",
+   "thaiPhonetic": "kìi moong khráp",
+   "pronunciationPolish": "kii moong khrap",
+   "toneGuide": "kìi — ton niski; moong — ton średni; khráp — ton wysoki",
+   "ttsThai": "กี่โมงครับ",
+   "ttsSplit": [3, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "kìi moong kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "kii moong khap",
+    "ttsThai": "กี่โมงคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "kìi moong khá",
+     "pronunciationPolish": "kii moong kha",
+     "ttsThai": "กี่โมงคะ",
+     "toneGuide": "kìi — ton niski; moong — ton średni; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-clock"
+   }
+  },
+  {
+   "id": "num-0103",
+   "section": "clock",
+   "polish": "w dzień",
+   "thaiPhonetic": "klaang-wan",
+   "pronunciationPolish": "klaang-łan",
+   "toneGuide": "klaang — ton średni; wan — ton średni",
+   "ttsThai": "กลางวัน",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "kang-wan",
+    "rules": ["cluster-l", "vowel-short"],
+    "pronunciationPolish": "kang-łan",
+    "ttsThai": "กลางวัน"
+   },
+   "meta": {
+    "kind": "daypart"
+   }
+  },
+  {
+   "id": "num-0104",
+   "section": "clock",
+   "polish": "w nocy",
+   "thaiPhonetic": "klaang-khuen",
+   "pronunciationPolish": "klaang-khyn",
+   "toneGuide": "klaang — ton średni; khuen — ton średni",
+   "ttsThai": "กลางคืน",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "kang-khuen",
+    "rules": ["cluster-l", "vowel-short"],
+    "pronunciationPolish": "kang-khyn",
+    "ttsThai": "กลางคืน"
+   },
+   "meta": {
+    "kind": "daypart"
+   }
+  },
+  {
+   "id": "num-0105",
+   "section": "dates",
+   "polish": "poniedziałek",
+   "thaiPhonetic": "wan jan",
+   "pronunciationPolish": "łan dźan",
+   "toneGuide": "wan — ton średni; jan — ton średni",
+   "ttsThai": "วันจันทร์",
+   "ttsSplit": [3, 6],
+   "meta": {
+    "kind": "weekday",
+    "index": 1
+   }
+  },
+  {
+   "id": "num-0106",
+   "section": "dates",
+   "polish": "wtorek",
+   "thaiPhonetic": "wan ang-khaan",
+   "pronunciationPolish": "łan ang-khaan",
+   "toneGuide": "wan — ton średni; ang — ton średni; khaan — ton średni",
+   "ttsThai": "วันอังคาร",
+   "ttsSplit": [3, 6],
+   "meta": {
+    "kind": "weekday",
+    "index": 2
+   }
+  },
+  {
+   "id": "num-0107",
+   "section": "dates",
+   "polish": "środa",
+   "thaiPhonetic": "wan phút",
+   "pronunciationPolish": "łan phut",
+   "toneGuide": "wan — ton średni; phút — ton wysoki",
+   "ttsThai": "วันพุธ",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "weekday",
+    "index": 3
+   }
+  },
+  {
+   "id": "num-0108",
+   "section": "dates",
+   "polish": "czwartek",
+   "thaiPhonetic": "wan phá-rúe-hàt",
+   "pronunciationPolish": "łan pha-ry-hat",
+   "toneGuide": "wan — ton średni; phá — ton wysoki; rúe — ton wysoki; hàt — ton niski",
+   "ttsThai": "วันพฤหัส",
+   "ttsSplit": [3, 5],
+   "colloquial": {
+    "thaiPhonetic": "wan phá-lúe-hàt",
+    "rules": ["r-l"],
+    "pronunciationPolish": "łan pha-ly-hat",
+    "ttsThai": "วันพฤหัส"
+   },
+   "meta": {
+    "kind": "weekday",
+    "index": 4
+   }
+  },
+  {
+   "id": "num-0109",
+   "section": "dates",
+   "polish": "piątek",
+   "thaiPhonetic": "wan sùk",
+   "pronunciationPolish": "łan suk",
+   "toneGuide": "wan — ton średni; sùk — ton niski",
+   "ttsThai": "วันศุกร์",
+   "ttsSplit": [3, 5],
+   "meta": {
+    "kind": "weekday",
+    "index": 5
+   }
+  },
+  {
+   "id": "num-0110",
+   "section": "dates",
+   "polish": "sobota",
+   "thaiPhonetic": "wan sǎo",
+   "pronunciationPolish": "łan sau",
+   "toneGuide": "wan — ton średni; sǎo — ton rosnący",
+   "ttsThai": "วันเสาร์",
+   "ttsSplit": [3, 5],
+   "meta": {
+    "kind": "weekday",
+    "index": 6
+   }
+  },
+  {
+   "id": "num-0111",
+   "section": "dates",
+   "polish": "niedziela",
+   "thaiPhonetic": "wan aa-thít",
+   "pronunciationPolish": "łan aa-thit",
+   "toneGuide": "wan — ton średni; aa — ton średni; thít — ton wysoki",
+   "ttsThai": "วันอาทิตย์",
+   "ttsSplit": [3, 7],
+   "colloquial": {
+    "thaiPhonetic": "wan a-thít",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "łan a-thit",
+    "ttsThai": "วันอาทิตย์"
+   },
+   "meta": {
+    "kind": "weekday",
+    "index": 7
+   }
+  },
+  {
+   "id": "num-0112",
+   "section": "dates",
+   "polish": "styczeń",
+   "thaiPhonetic": "má-ka-raa-khom",
+   "pronunciationPolish": "ma-ka-raa-khom",
+   "toneGuide": "má — ton wysoki; ka — ton średni; raa — ton średni; khom — ton średni",
+   "ttsThai": "มกราคม",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "má-ka-la-khom",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "ma-ka-la-khom",
+    "ttsThai": "มกราคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 1,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0113",
+   "section": "dates",
+   "polish": "luty",
+   "thaiPhonetic": "kum-phaa-phan",
+   "pronunciationPolish": "kum-phaa-phan",
+   "toneGuide": "kum — ton średni; phaa — ton średni; phan — ton średni",
+   "ttsThai": "กุมภาพันธ์",
+   "ttsSplit": [10],
+   "colloquial": {
+    "thaiPhonetic": "kum-pha-phan",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "kum-pha-phan",
+    "ttsThai": "กุมภาพันธ์"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 2,
+    "days": 28
+   }
+  },
+  {
+   "id": "num-0114",
+   "section": "dates",
+   "polish": "marzec",
+   "thaiPhonetic": "mii-naa-khom",
+   "pronunciationPolish": "mii-naa-khom",
+   "toneGuide": "mii — ton średni; naa — ton średni; khom — ton średni",
+   "ttsThai": "มีนาคม",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "mi-na-khom",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "mi-na-khom",
+    "ttsThai": "มีนาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 3,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0115",
+   "section": "dates",
+   "polish": "kwiecień",
+   "thaiPhonetic": "mee-sǎa-yon",
+   "pronunciationPolish": "mee-saa-jon",
+   "toneGuide": "mee — ton średni; sǎa — ton rosnący; yon — ton średni",
+   "ttsThai": "เมษายน",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "me-sá-yon",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "me-sa-jon",
+    "ttsThai": "เมษายน"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 4,
+    "days": 30
+   }
+  },
+  {
+   "id": "num-0116",
+   "section": "dates",
+   "polish": "maj",
+   "thaiPhonetic": "phrúet-sà-phaa-khom",
+   "pronunciationPolish": "phryt-sa-phaa-khom",
+   "toneGuide": "phrúet — ton wysoki; sà — ton niski; phaa — ton średni; khom — ton średni",
+   "ttsThai": "พฤษภาคม",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "phúet-sà-pha-khom",
+    "rules": ["cluster-r", "vowel-short"],
+    "pronunciationPolish": "phyt-sa-pha-khom",
+    "ttsThai": "พฤษภาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 5,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0117",
+   "section": "dates",
+   "polish": "czerwiec",
+   "thaiPhonetic": "mí-thù-naa-yon",
+   "pronunciationPolish": "mi-thu-naa-jon",
+   "toneGuide": "mí — ton wysoki; thù — ton niski; naa — ton średni; yon — ton średni",
+   "ttsThai": "มิถุนายน",
+   "ttsSplit": [8],
+   "colloquial": {
+    "thaiPhonetic": "mí-thù-na-yon",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "mi-thu-na-jon",
+    "ttsThai": "มิถุนายน"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 6,
+    "days": 30
+   }
+  },
+  {
+   "id": "num-0118",
+   "section": "dates",
+   "polish": "lipiec",
+   "thaiPhonetic": "ka-rá-ka-daa-khom",
+   "pronunciationPolish": "ka-ra-ka-daa-khom",
+   "toneGuide": "ka — ton średni; rá — ton wysoki; ka — ton średni; daa — ton średni; khom — ton średni",
+   "ttsThai": "กรกฎาคม",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "ka-lá-ka-da-khom",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "ka-la-ka-da-khom",
+    "ttsThai": "กรกฎาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 7,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0119",
+   "section": "dates",
+   "polish": "sierpień",
+   "thaiPhonetic": "sǐng-hǎa-khom",
+   "pronunciationPolish": "sing-haa-khom",
+   "toneGuide": "sǐng — ton rosnący; hǎa — ton rosnący; khom — ton średni",
+   "ttsThai": "สิงหาคม",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "síng-há-khom",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "sing-ha-khom",
+    "ttsThai": "สิงหาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 8,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0120",
+   "section": "dates",
+   "polish": "wrzesień",
+   "thaiPhonetic": "kan-yaa-yon",
+   "pronunciationPolish": "kan-jaa-jon",
+   "toneGuide": "kan — ton średni; yaa — ton średni; yon — ton średni",
+   "ttsThai": "กันยายน",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "kan-ya-yon",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "kan-ja-jon",
+    "ttsThai": "กันยายน"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 9,
+    "days": 30
+   }
+  },
+  {
+   "id": "num-0121",
+   "section": "dates",
+   "polish": "październik",
+   "thaiPhonetic": "tù-laa-khom",
+   "pronunciationPolish": "tu-laa-khom",
+   "toneGuide": "tù — ton niski; laa — ton średni; khom — ton średni",
+   "ttsThai": "ตุลาคม",
+   "ttsSplit": [6],
+   "colloquial": {
+    "thaiPhonetic": "tù-la-khom",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "tu-la-khom",
+    "ttsThai": "ตุลาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 10,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0122",
+   "section": "dates",
+   "polish": "listopad",
+   "thaiPhonetic": "phrúet-sà-jì-kaa-yon",
+   "pronunciationPolish": "phryt-sa-dźi-kaa-jon",
+   "toneGuide": "phrúet — ton wysoki; sà — ton niski; jì — ton niski; kaa — ton średni; yon — ton średni",
+   "ttsThai": "พฤศจิกายน",
+   "ttsSplit": [9],
+   "colloquial": {
+    "thaiPhonetic": "phúet-sà-jì-ka-yon",
+    "rules": ["cluster-r", "vowel-short"],
+    "pronunciationPolish": "phyt-sa-dźi-ka-jon",
+    "ttsThai": "พฤศจิกายน"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 11,
+    "days": 30
+   }
+  },
+  {
+   "id": "num-0123",
+   "section": "dates",
+   "polish": "grudzień",
+   "thaiPhonetic": "than-waa-khom",
+   "pronunciationPolish": "than-łaa-khom",
+   "toneGuide": "than — ton średni; waa — ton średni; khom — ton średni",
+   "ttsThai": "ธันวาคม",
+   "ttsSplit": [7],
+   "colloquial": {
+    "thaiPhonetic": "than-wa-khom",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "than-ła-khom",
+    "ttsThai": "ธันวาคม"
+   },
+   "meta": {
+    "kind": "month",
+    "index": 12,
+    "days": 31
+   }
+  },
+  {
+   "id": "num-0124",
+   "section": "dates",
+   "polish": "1 styczeń",
+   "thaiPhonetic": "wan thîi nùeng má-ka-raa-khom",
+   "pronunciationPolish": "łan thii nyng ma-ka-raa-khom",
+   "toneGuide": "wan — ton średni; thîi — ton opadający; nùeng — ton niski; má — ton wysoki; ka — ton średni; raa — ton średni; khom — ton średni",
+   "ttsThai": "วันที่หนึ่งมกราคม",
+   "ttsSplit": [3, 3, 5, 6],
+   "colloquial": {
+    "thaiPhonetic": "wan thîi nùeng má-ka-la-khom",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "łan thii nyng ma-ka-la-khom",
+    "ttsThai": "วันที่หนึ่งมกราคม"
+   },
+   "meta": {
+    "kind": "date",
+    "day": 1,
+    "month": 1
+   }
+  },
+  {
+   "id": "num-0125",
+   "section": "dates",
+   "polish": "13 kwiecień",
+   "thaiPhonetic": "wan thîi sìp-sǎam mee-sǎa-yon",
+   "pronunciationPolish": "łan thii sip-saam mee-saa-jon",
+   "toneGuide": "wan — ton średni; thîi — ton opadający; sìp — ton niski; sǎam — ton rosnący; mee — ton średni; sǎa — ton rosnący; yon — ton średni",
+   "ttsThai": "วันที่สิบสามเมษายน",
+   "ttsSplit": [3, 3, 6, 6],
+   "colloquial": {
+    "thaiPhonetic": "wan thîi sìp-sǎam me-sá-yon",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "łan thii sip-saam me-sa-jon",
+    "ttsThai": "วันที่สิบสามเมษายน"
+   },
+   "meta": {
+    "kind": "date",
+    "day": 13,
+    "month": 4
+   }
+  },
+  {
+   "id": "num-0126",
+   "section": "dates",
+   "polish": "15 czerwiec",
+   "thaiPhonetic": "wan thîi sìp-hâa mí-thù-naa-yon",
+   "pronunciationPolish": "łan thii sip-haa mi-thu-naa-jon",
+   "toneGuide": "wan — ton średni; thîi — ton opadający; sìp — ton niski; hâa — ton opadający; mí — ton wysoki; thù — ton niski; naa — ton średni; yon — ton średni",
+   "ttsThai": "วันที่สิบห้ามิถุนายน",
+   "ttsSplit": [3, 3, 6, 8],
+   "colloquial": {
+    "thaiPhonetic": "wan thîi sìp-hâa mí-thù-na-yon",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "łan thii sip-haa mi-thu-na-jon",
+    "ttsThai": "วันที่สิบห้ามิถุนายน"
+   },
+   "meta": {
+    "kind": "date",
+    "day": 15,
+    "month": 6
+   }
+  },
+  {
+   "id": "num-0127",
+   "section": "dates",
+   "polish": "31 grudzień",
+   "thaiPhonetic": "wan thîi sǎam-sìp-èt than-waa-khom",
+   "pronunciationPolish": "łan thii saam-sip-et than-łaa-khom",
+   "toneGuide": "wan — ton średni; thîi — ton opadający; sǎam — ton rosnący; sìp — ton niski; èt — ton niski; than — ton średni; waa — ton średni; khom — ton średni",
+   "ttsThai": "วันที่สามสิบเอ็ดธันวาคม",
+   "ttsSplit": [3, 3, 10, 7],
+   "colloquial": {
+    "thaiPhonetic": "wan thîi sám-sìp-èt than-wa-khom",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "łan thii sam-sip-et than-ła-khom",
+    "ttsThai": "วันที่สามสิบเอ็ดธันวาคม"
+   },
+   "meta": {
+    "kind": "date",
+    "day": 31,
+    "month": 12
+   }
+  },
+  {
+   "id": "num-0128",
+   "section": "dates",
+   "polish": "rok 2024 (kalendarz buddyjski: 2567)",
+   "thaiPhonetic": "pii phaw-sǎw sǎwng-phan-hâa-ráwy-hòk-sìp-jèt",
+   "pronunciationPolish": "pii pho-so song-phan-haa-roy-hok-sip-dźet",
+   "toneGuide": "pii — ton średni; phaw — ton średni; sǎw — ton rosnący; sǎwng — ton rosnący; phan — ton średni; hâa — ton opadający; ráwy — ton wysoki; hòk — ton niski; sìp — ton niski; jèt — ton niski",
+   "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบเจ็ด",
+   "ttsSplit": [2, 4, 22],
+   "colloquial": {
+    "thaiPhonetic": "pii phaw-sǎw sáwng-phan-hâ-láwy-hòk-sì-jèt",
+    "rules": ["r-l", "coda-drop", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "pii pho-so song-phan-ha-loy-hok-si-dźet",
+    "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบเจ็ด"
+   },
+   "meta": {
+    "kind": "year",
+    "ce": 2024,
+    "be": 2567,
+    "era": "BE"
+   }
+  },
+  {
+   "id": "num-0129",
+   "section": "dates",
+   "polish": "rok 2025 (kalendarz buddyjski: 2568)",
+   "thaiPhonetic": "pii phaw-sǎw sǎwng-phan-hâa-ráwy-hòk-sìp-pàet",
+   "pronunciationPolish": "pii pho-so song-phan-haa-roy-hok-sip-paet",
+   "toneGuide": "pii — ton średni; phaw — ton średni; sǎw — ton rosnący; sǎwng — ton rosnący; phan — ton średni; hâa — ton opadający; ráwy — ton wysoki; hòk — ton niski; sìp — ton niski; pàet — ton niski",
+   "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบแปด",
+   "ttsSplit": [2, 4, 21],
+   "colloquial": {
+    "thaiPhonetic": "pii phaw-sǎw sáwng-phan-hâ-láwy-hòk-sì-pàet",
+    "rules": ["r-l", "coda-drop", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "pii pho-so song-phan-ha-loy-hok-si-paet",
+    "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบแปด"
+   },
+   "meta": {
+    "kind": "year",
+    "ce": 2025,
+    "be": 2568,
+    "era": "BE"
+   }
+  },
+  {
+   "id": "num-0130",
+   "section": "dates",
+   "polish": "rok 2026 (kalendarz buddyjski: 2569)",
+   "thaiPhonetic": "pii phaw-sǎw sǎwng-phan-hâa-ráwy-hòk-sìp-kâo",
+   "pronunciationPolish": "pii pho-so song-phan-haa-roy-hok-sip-kau",
+   "toneGuide": "pii — ton średni; phaw — ton średni; sǎw — ton rosnący; sǎwng — ton rosnący; phan — ton średni; hâa — ton opadający; ráwy — ton wysoki; hòk — ton niski; sìp — ton niski; kâo — ton opadający",
+   "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบเก้า",
+   "ttsSplit": [2, 4, 22],
+   "colloquial": {
+    "thaiPhonetic": "pii phaw-sǎw sáwng-phan-hâ-láwy-hòk-sì-kâo",
+    "rules": ["r-l", "coda-drop", "vowel-short", "tone-lax"],
+    "pronunciationPolish": "pii pho-so song-phan-ha-loy-hok-si-kau",
+    "ttsThai": "ปีพ.ศ.สองพันห้าร้อยหกสิบเก้า"
+   },
+   "meta": {
+    "kind": "year",
+    "ce": 2026,
+    "be": 2569,
+    "era": "BE"
+   }
+  },
+  {
+   "id": "num-0131",
+   "section": "dates",
+   "polish": "rok 2026 w kalendarzu gregoriańskim",
+   "thaiPhonetic": "pii khaw-sǎw sǎwng-phan-yîi-sìp-hòk",
+   "pronunciationPolish": "pii kho-so song-phan-jii-sip-hok",
+   "toneGuide": "pii — ton średni; khaw — ton średni; sǎw — ton rosnący; sǎwng — ton rosnący; phan — ton średni; yîi — ton opadający; sìp — ton niski; hòk — ton niski",
+   "ttsThai": "ปีค.ศ.สองพันยี่สิบหก",
+   "ttsSplit": [2, 4, 14],
+   "colloquial": {
+    "thaiPhonetic": "pii khaw-sǎw sáwng-phan-yî-sìp-hòk",
+    "rules": ["vowel-short", "tone-lax"],
+    "pronunciationPolish": "pii kho-so song-phan-ji-sip-hok",
+    "ttsThai": "ปีค.ศ.สองพันยี่สิบหก"
+   },
+   "meta": {
+    "kind": "year",
+    "ce": 2026,
+    "be": 2569,
+    "era": "CE"
+   }
+  },
+  {
+   "id": "num-0132",
+   "section": "dates",
+   "polish": "Którego dziś jest?",
+   "thaiPhonetic": "wan thîi thâo-rài khráp",
+   "pronunciationPolish": "łan thii thau-raj khrap",
+   "toneGuide": "wan — ton średni; thîi — ton opadający; thâo — ton opadający; rài — ton niski; khráp — ton wysoki",
+   "ttsThai": "วันที่เท่าไหร่ครับ",
+   "ttsSplit": [3, 3, 8, 4],
+   "colloquial": {
+    "thaiPhonetic": "wan thîi thâo-rai kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "łan thii thau-raj khap",
+    "ttsThai": "วันที่เท่าไหร่คับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "wan thîi thâo-rài khá",
+     "pronunciationPolish": "łan thii thau-raj kha",
+     "ttsThai": "วันที่เท่าไหร่คะ",
+     "toneGuide": "wan — ton średni; thîi — ton opadający; thâo — ton opadający; rài — ton niski; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-date"
+   }
+  },
+  {
+   "id": "num-0133",
+   "section": "duration",
+   "polish": "dwie godziny",
+   "thaiPhonetic": "sǎwng chûa-moong",
+   "pronunciationPolish": "song czua-moong",
+   "toneGuide": "sǎwng — ton rosnący; chûa — ton opadający; moong — ton średni",
+   "ttsThai": "สองชั่วโมง",
+   "ttsSplit": [3, 7],
+   "meta": {
+    "kind": "duration",
+    "value": 2,
+    "unit": "hour"
+   }
+  },
+  {
+   "id": "num-0134",
+   "section": "duration",
+   "polish": "czterdzieści minut",
+   "thaiPhonetic": "sìi-sìp naa-thii",
+   "pronunciationPolish": "sii-sip naa-thii",
+   "toneGuide": "sìi — ton niski; sìp — ton niski; naa — ton średni; thii — ton średni",
+   "ttsThai": "สี่สิบนาที",
+   "ttsSplit": [6, 4],
+   "colloquial": {
+    "thaiPhonetic": "sì-sìp na-thii",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "si-sip na-thii",
+    "ttsThai": "สี่สิบนาที"
+   },
+   "meta": {
+    "kind": "duration",
+    "value": 40,
+    "unit": "minute"
+   }
+  },
+  {
+   "id": "num-0135",
+   "section": "duration",
+   "polish": "trzy dni",
+   "thaiPhonetic": "sǎam wan",
+   "pronunciationPolish": "saam łan",
+   "toneGuide": "sǎam — ton rosnący; wan — ton średni",
+   "ttsThai": "สามวัน",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "duration",
+    "value": 3,
+    "unit": "day"
+   }
+  },
+  {
+   "id": "num-0136",
+   "section": "duration",
+   "polish": "dwa tygodnie",
+   "thaiPhonetic": "sǎwng aa-thít",
+   "pronunciationPolish": "song aa-thit",
+   "toneGuide": "sǎwng — ton rosnący; aa — ton średni; thít — ton wysoki",
+   "ttsThai": "สองอาทิตย์",
+   "ttsSplit": [3, 7],
+   "colloquial": {
+    "thaiPhonetic": "sǎwng a-thít",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "song a-thit",
+    "ttsThai": "สองอาทิตย์"
+   },
+   "meta": {
+    "kind": "duration",
+    "value": 2,
+    "unit": "week"
+   }
+  },
+  {
+   "id": "num-0137",
+   "section": "duration",
+   "polish": "przez pięć dni",
+   "thaiPhonetic": "pen wee-laa hâa wan",
+   "pronunciationPolish": "pen łee-laa haa łan",
+   "toneGuide": "pen — ton średni; wee — ton średni; laa — ton średni; hâa — ton opadający; wan — ton średni",
+   "ttsThai": "เป็นเวลาห้าวัน",
+   "ttsSplit": [4, 4, 3, 3],
+   "colloquial": {
+    "thaiPhonetic": "pen we-laa hâa wan",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "pen łe-laa haa łan",
+    "ttsThai": "เป็นเวลาห้าวัน"
+   },
+   "meta": {
+    "kind": "duration",
+    "value": 5,
+    "unit": "day"
+   }
+  },
+  {
+   "id": "num-0138",
+   "section": "duration",
+   "polish": "od dziewiątej do siedemnastej",
+   "thaiPhonetic": "tâng-tàe kâo moong cháo thǔeng hâa moong yen",
+   "pronunciationPolish": "tang-tae kau moong czau thyng haa moong jen",
+   "toneGuide": "tâng — ton opadający; tàe — ton niski; kâo — ton opadający; moong — ton średni; cháo — ton wysoki; thǔeng — ton rosnący; hâa — ton opadający; moong — ton średni; yen — ton średni",
+   "ttsThai": "ตั้งแต่เก้าโมงเช้าถึงห้าโมงเย็น",
+   "ttsSplit": [7, 4, 3, 4, 3, 3, 3, 4],
+   "meta": {
+    "kind": "range",
+    "from": 9,
+    "to": 17
+   }
+  },
+  {
+   "id": "num-0139",
+   "section": "duration",
+   "polish": "codziennie",
+   "thaiPhonetic": "thúk wan",
+   "pronunciationPolish": "thuk łan",
+   "toneGuide": "thúk — ton wysoki; wan — ton średni",
+   "ttsThai": "ทุกวัน",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "frequency"
+   }
+  },
+  {
+   "id": "num-0140",
+   "section": "duration",
+   "polish": "co tydzień",
+   "thaiPhonetic": "thúk aa-thít",
+   "pronunciationPolish": "thuk aa-thit",
+   "toneGuide": "thúk — ton wysoki; aa — ton średni; thít — ton wysoki",
+   "ttsThai": "ทุกอาทิตย์",
+   "ttsSplit": [3, 7],
+   "colloquial": {
+    "thaiPhonetic": "thúk a-thít",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "thuk a-thit",
+    "ttsThai": "ทุกอาทิตย์"
+   },
+   "meta": {
+    "kind": "frequency"
+   }
+  },
+  {
+   "id": "num-0141",
+   "section": "duration",
+   "polish": "trzy razy w tygodniu",
+   "thaiPhonetic": "sǎam khráng tàw aa-thít",
+   "pronunciationPolish": "saam khrang to aa-thit",
+   "toneGuide": "sǎam — ton rosnący; khráng — ton wysoki; tàw — ton niski; aa — ton średni; thít — ton wysoki",
+   "ttsThai": "สามครั้งต่ออาทิตย์",
+   "ttsSplit": [3, 5, 3, 7],
+   "colloquial": {
+    "thaiPhonetic": "sǎam kháng tàw a-thít",
+    "rules": ["cluster-r", "vowel-short"],
+    "pronunciationPolish": "saam khang to a-thit",
+    "ttsThai": "สามครั้งต่ออาทิตย์"
+   },
+   "meta": {
+    "kind": "frequency",
+    "value": 3
+   }
+  },
+  {
+   "id": "num-0142",
+   "section": "duration",
+   "polish": "Jak długo?",
+   "thaiPhonetic": "kìi chûa-moong khráp",
+   "pronunciationPolish": "kii czua-moong khrap",
+   "toneGuide": "kìi — ton niski; chûa — ton opadający; moong — ton średni; khráp — ton wysoki",
+   "ttsThai": "กี่ชั่วโมงครับ",
+   "ttsSplit": [3, 7, 4],
+   "colloquial": {
+    "thaiPhonetic": "kìi chûa-moong kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "kii czua-moong khap",
+    "ttsThai": "กี่ชั่วโมงคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "kìi chûa-moong khá",
+     "pronunciationPolish": "kii czua-moong kha",
+     "ttsThai": "กี่ชั่วโมงคะ",
+     "toneGuide": "kìi — ton niski; chûa — ton opadający; moong — ton średni; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-duration"
+   }
+  },
+  {
+   "id": "num-0143",
+   "section": "serials",
+   "polish": "Mój numer telefonu to 08 1234 5678.",
+   "thaiPhonetic": "boe thoo sǔun pàet nùeng sǎwng sǎam sìi hâa hòk jèt pàet khráp",
+   "pronunciationPolish": "be thoo suun paet nyng song saam sii haa hok dźet paet khrap",
+   "toneGuide": "boe — ton średni; thoo — ton średni; sǔun — ton rosnący; pàet — ton niski; nùeng — ton niski; sǎwng — ton rosnący; sǎam — ton rosnący; sìi — ton niski; hâa — ton opadający; hòk — ton niski; jèt — ton niski; pàet — ton niski; khráp — ton wysoki",
+   "ttsThai": "เบอร์โทรศูนย์แปดหนึ่งสองสามสี่ห้าหกเจ็ดแปดครับ",
+   "ttsSplit": [5, 3, 5, 3, 5, 3, 3, 3, 3, 2, 4, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "boe thoo sǔun pàet nùeng sǎwng sǎam sìi hâa hòk jèt pàet kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "be thoo suun paet nyng song saam sii haa hok dźet paet khap",
+    "ttsThai": "เบอร์โทรศูนย์แปดหนึ่งสองสามสี่ห้าหกเจ็ดแปดคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "boe thoo sǔun pàet nùeng sǎwng sǎam sìi hâa hòk jèt pàet khâ",
+     "pronunciationPolish": "be thoo suun paet nyng song saam sii haa hok dźet paet kha",
+     "ttsThai": "เบอร์โทรศูนย์แปดหนึ่งสองสามสี่ห้าหกเจ็ดแปดค่ะ",
+     "toneGuide": "boe — ton średni; thoo — ton średni; sǔun — ton rosnący; pàet — ton niski; nùeng — ton niski; sǎwng — ton rosnący; sǎam — ton rosnący; sìi — ton niski; hâa — ton opadający; hòk — ton niski; jèt — ton niski; pàet — ton niski; khâ — ton opadający"
+    }
+   },
+   "meta": {
+    "kind": "phone",
+    "digits": "0812345678",
+    "note": "Numer telefonu czyta się cyfra po cyfrze. Złożenie go w liczbę („osiemset dwanaście…”) jest niezrozumiałe."
+   }
+  },
+  {
+   "id": "num-0144",
+   "section": "serials",
+   "polish": "pokój 512",
+   "thaiPhonetic": "hâwng boe hâa-ráwy-sìp-sǎwng",
+   "pronunciationPolish": "hong be haa-roy-sip-song",
+   "toneGuide": "hâwng — ton opadający; boe — ton średni; hâa — ton opadający; ráwy — ton wysoki; sìp — ton niski; sǎwng — ton rosnący",
+   "ttsThai": "ห้องเบอร์ห้าร้อยสิบสอง",
+   "ttsSplit": [4, 5, 13],
+   "colloquial": {
+    "thaiPhonetic": "hâwng boe hâ-láwy-sìp-sǎwng",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "hong be ha-loy-sip-song",
+    "ttsThai": "ห้องเบอร์ห้าร้อยสิบสอง"
+   },
+   "meta": {
+    "kind": "room",
+    "value": 512
+   }
+  },
+  {
+   "id": "num-0145",
+   "section": "serials",
+   "polish": "autobus linii 25",
+   "thaiPhonetic": "rót-mee sǎai yîi-sìp-hâa",
+   "pronunciationPolish": "rot-mee saaj jii-sip-haa",
+   "toneGuide": "rót — ton wysoki; mee — ton średni; sǎai — ton rosnący; yîi — ton opadający; sìp — ton niski; hâa — ton opadający",
+   "ttsThai": "รถเมล์สายยี่สิบห้า",
+   "ttsSplit": [6, 3, 9],
+   "colloquial": {
+    "thaiPhonetic": "lót-mee sǎai yî-sìp-hâa",
+    "rules": ["r-l", "vowel-short"],
+    "pronunciationPolish": "lot-mee saaj ji-sip-haa",
+    "ttsThai": "รถเมล์สายยี่สิบห้า"
+   },
+   "meta": {
+    "kind": "bus",
+    "value": 25
+   }
+  },
+  {
+   "id": "num-0146",
+   "section": "serials",
+   "polish": "peron 3",
+   "thaiPhonetic": "chaan-chaa-laa thîi sǎam",
+   "pronunciationPolish": "czaan-czaa-laa thii saam",
+   "toneGuide": "chaan — ton średni; chaa — ton średni; laa — ton średni; thîi — ton opadający; sǎam — ton rosnący",
+   "ttsThai": "ชานชาลาที่สาม",
+   "ttsSplit": [7, 3, 3],
+   "colloquial": {
+    "thaiPhonetic": "chan-cha-laa thîi sǎam",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "czan-cza-laa thii saam",
+    "ttsThai": "ชานชาลาที่สาม"
+   },
+   "meta": {
+    "kind": "platform",
+    "value": 3
+   }
+  },
+  {
+   "id": "num-0147",
+   "section": "serials",
+   "polish": "miejsce 14",
+   "thaiPhonetic": "thîi-nâng boe sìp-sìi",
+   "pronunciationPolish": "thii-nang be sip-sii",
+   "toneGuide": "thîi — ton opadający; nâng — ton opadający; boe — ton średni; sìp — ton niski; sìi — ton niski",
+   "ttsThai": "ที่นั่งเบอร์สิบสี่",
+   "ttsSplit": [7, 5, 6],
+   "colloquial": {
+    "thaiPhonetic": "thî-nâng boe sìp-sìi",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "thi-nang be sip-sii",
+    "ttsThai": "ที่นั่งเบอร์สิบสี่"
+   },
+   "meta": {
+    "kind": "seat",
+    "value": 14
+   }
+  },
+  {
+   "id": "num-0148",
+   "section": "serials",
+   "polish": "Jaki jest pana numer telefonu?",
+   "thaiPhonetic": "boe thoo thâo-rài khráp",
+   "pronunciationPolish": "be thoo thau-raj khrap",
+   "toneGuide": "boe — ton średni; thoo — ton średni; thâo — ton opadający; rài — ton niski; khráp — ton wysoki",
+   "ttsThai": "เบอร์โทรเท่าไหร่ครับ",
+   "ttsSplit": [5, 3, 8, 4],
+   "colloquial": {
+    "thaiPhonetic": "boe thoo thâo-rai kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "be thoo thau-raj khap",
+    "ttsThai": "เบอร์โทรเท่าไหร่คับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "boe thoo thâo-rài khá",
+     "pronunciationPolish": "be thoo thau-raj kha",
+     "ttsThai": "เบอร์โทรเท่าไหร่คะ",
+     "toneGuide": "boe — ton średni; thoo — ton średni; thâo — ton opadający; rài — ton niski; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-phone"
+   }
+  },
+  {
+   "id": "num-0149",
+   "section": "quantities",
+   "polish": "dwie osoby",
+   "thaiPhonetic": "sǎwng khon",
+   "pronunciationPolish": "song khon",
+   "toneGuide": "sǎwng — ton rosnący; khon — ton średni",
+   "ttsThai": "สองคน",
+   "ttsSplit": [3, 2],
+   "meta": {
+    "kind": "quantity",
+    "value": 2,
+    "classifier": "khon",
+    "classifierId": "cls-001",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0150",
+   "section": "quantities",
+   "polish": "trzy butelki",
+   "thaiPhonetic": "sǎam khùat",
+   "pronunciationPolish": "saam khuat",
+   "toneGuide": "sǎam — ton rosnący; khùat — ton niski",
+   "ttsThai": "สามขวด",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "quantity",
+    "value": 3,
+    "classifier": "khùat",
+    "classifierId": "cls-023",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0151",
+   "section": "quantities",
+   "polish": "jeden talerz",
+   "thaiPhonetic": "jaan nùeng",
+   "pronunciationPolish": "dźaan nyng",
+   "toneGuide": "jaan — ton średni; nùeng — ton niski",
+   "ttsThai": "จานหนึ่ง",
+   "ttsSplit": [3, 5],
+   "meta": {
+    "kind": "quantity",
+    "value": 1,
+    "classifier": "jaan",
+    "classifierId": "cls-024",
+    "irregular": [
+     "one-after-classifier"
+    ]
+   }
+  },
+  {
+   "id": "num-0152",
+   "section": "quantities",
+   "polish": "cztery sztuki (rzeczy okrągłe i pojemniki)",
+   "thaiPhonetic": "sìi bai",
+   "pronunciationPolish": "sii baj",
+   "toneGuide": "sìi — ton niski; bai — ton średni",
+   "ttsThai": "สี่ใบ",
+   "ttsSplit": [3, 2],
+   "meta": {
+    "kind": "quantity",
+    "value": 4,
+    "classifier": "bai",
+    "classifierId": "cls-006",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0153",
+   "section": "quantities",
+   "polish": "pięć sztuk (rzeczy drobne)",
+   "thaiPhonetic": "hâa an",
+   "pronunciationPolish": "haa an",
+   "toneGuide": "hâa — ton opadający; an — ton średni",
+   "ttsThai": "ห้าอัน",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "quantity",
+    "value": 5,
+    "classifier": "an",
+    "classifierId": "cls-007",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0154",
+   "section": "quantities",
+   "polish": "dwa zwierzęta albo sztuki odzieży",
+   "thaiPhonetic": "sǎwng tua",
+   "pronunciationPolish": "song tua",
+   "toneGuide": "sǎwng — ton rosnący; tua — ton średni",
+   "ttsThai": "สองตัว",
+   "ttsSplit": [3, 3],
+   "meta": {
+    "kind": "quantity",
+    "value": 2,
+    "classifier": "tua",
+    "classifierId": "cls-005",
+    "irregular": []
+   }
+  },
+  {
+   "id": "num-0155",
+   "section": "quantities",
+   "polish": "Ile sztuk?",
+   "thaiPhonetic": "kìi an khráp",
+   "pronunciationPolish": "kii an khrap",
+   "toneGuide": "kìi — ton niski; an — ton średni; khráp — ton wysoki",
+   "ttsThai": "กี่อันครับ",
+   "ttsSplit": [3, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "kìi an kháp",
+    "rules": ["lex"],
+    "pronunciationPolish": "kii an khap",
+    "ttsThai": "กี่อันคับ"
+   },
+   "genderVariant": {
+    "female": {
+     "thaiPhonetic": "kìi an khá",
+     "pronunciationPolish": "kii an kha",
+     "ttsThai": "กี่อันคะ",
+     "toneGuide": "kìi — ton niski; an — ton średni; khá — ton wysoki"
+    }
+   },
+   "meta": {
+    "kind": "ask-quantity"
+   }
+  },
+  {
+   "id": "num-0156",
+   "section": "fractions",
+   "polish": "połowa",
+   "thaiPhonetic": "khrûeng",
+   "pronunciationPolish": "khryng",
+   "toneGuide": "khrûeng — ton opadający",
+   "ttsThai": "ครึ่ง",
+   "ttsSplit": [5],
+   "colloquial": {
+    "thaiPhonetic": "khûeng",
+    "rules": ["cluster-r"],
+    "pronunciationPolish": "khyng",
+    "ttsThai": "ครึ่ง"
+   },
+   "meta": {
+    "kind": "fraction"
+   }
+  },
+  {
+   "id": "num-0157",
+   "section": "fractions",
+   "polish": "jedna czwarta",
+   "thaiPhonetic": "nùeng nai sìi",
+   "pronunciationPolish": "nyng naj sii",
+   "toneGuide": "nùeng — ton niski; nai — ton średni; sìi — ton niski",
+   "ttsThai": "หนึ่งในสี่",
+   "ttsSplit": [5, 2, 3],
+   "meta": {
+    "kind": "fraction"
+   }
+  },
+  {
+   "id": "num-0158",
+   "section": "fractions",
+   "polish": "dwie trzecie",
+   "thaiPhonetic": "sǎwng nai sǎam",
+   "pronunciationPolish": "song naj saam",
+   "toneGuide": "sǎwng — ton rosnący; nai — ton średni; sǎam — ton rosnący",
+   "ttsThai": "สองในสาม",
+   "ttsSplit": [3, 2, 3],
+   "meta": {
+    "kind": "fraction"
+   }
+  },
+  {
+   "id": "num-0159",
+   "section": "fractions",
+   "polish": "jedna trzecia (zapis formalny)",
+   "thaiPhonetic": "sèet nùeng sùan sǎam",
+   "pronunciationPolish": "seet nyng suan saam",
+   "toneGuide": "sèet — ton niski; nùeng — ton niski; sùan — ton niski; sǎam — ton rosnący",
+   "ttsThai": "เศษหนึ่งส่วนสาม",
+   "ttsSplit": [3, 5, 4, 3],
+   "meta": {
+    "kind": "fraction",
+    "style": "formal"
+   }
+  },
+  {
+   "id": "num-0160",
+   "section": "fractions",
+   "polish": "około stu bahtów",
+   "thaiPhonetic": "prà-maan nùeng-ráwy bàat",
+   "pronunciationPolish": "pra-maan nyng-roy baat",
+   "toneGuide": "prà — ton niski; maan — ton średni; nùeng — ton niski; ráwy — ton wysoki; bàat — ton niski",
+   "ttsThai": "ประมาณหนึ่งร้อยบาท",
+   "ttsSplit": [6, 9, 3],
+   "colloquial": {
+    "thaiPhonetic": "pà-maan nùeng-láwy bàat",
+    "rules": ["cluster-r", "r-l"],
+    "pronunciationPolish": "pa-maan nyng-loy baat",
+    "ttsThai": "ประมาณหนึ่งร้อยบาท"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "prà-maan"
+   }
+  },
+  {
+   "id": "num-0161",
+   "section": "fractions",
+   "polish": "ponad sto bahtów",
+   "thaiPhonetic": "nùeng-ráwy bàat kwàa",
+   "pronunciationPolish": "nyng-roy baat kłaa",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; bàat — ton niski; kwàa — ton niski",
+   "ttsThai": "หนึ่งร้อยบาทกว่า",
+   "ttsSplit": [9, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy bàat kwàa",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy baat kłaa",
+    "ttsThai": "หนึ่งร้อยบาทกว่า"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "kwàa",
+    "note": "kwàa stoi PO liczbie, nie przed nią."
+   }
+  },
+  {
+   "id": "num-0162",
+   "section": "fractions",
+   "polish": "prawie sto bahtów",
+   "thaiPhonetic": "kùeap nùeng-ráwy bàat",
+   "pronunciationPolish": "kueap nyng-roy baat",
+   "toneGuide": "kùeap — ton niski; nùeng — ton niski; ráwy — ton wysoki; bàat — ton niski",
+   "ttsThai": "เกือบหนึ่งร้อยบาท",
+   "ttsSplit": [5, 9, 3],
+   "colloquial": {
+    "thaiPhonetic": "kùeap nùeng-láwy bàat",
+    "rules": ["r-l"],
+    "pronunciationPolish": "kueap nyng-loy baat",
+    "ttsThai": "เกือบหนึ่งร้อยบาท"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "kùeap"
+   }
+  },
+  {
+   "id": "num-0163",
+   "section": "fractions",
+   "polish": "mniej więcej sto bahtów",
+   "thaiPhonetic": "nùeng-ráwy bàat raao-raao",
+   "pronunciationPolish": "nyng-roy baat raau-raau",
+   "toneGuide": "nùeng — ton niski; ráwy — ton wysoki; bàat — ton niski; raao — ton średni; raao — ton średni",
+   "ttsThai": "หนึ่งร้อยบาทราวๆ",
+   "ttsSplit": [9, 3, 4],
+   "colloquial": {
+    "thaiPhonetic": "nùeng-láwy bàat laao-laao",
+    "rules": ["r-l"],
+    "pronunciationPolish": "nyng-loy baat laau-laau",
+    "ttsThai": "หนึ่งร้อยบาทราวๆ"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "raao-raao"
+   }
+  },
+  {
+   "id": "num-0164",
+   "section": "fractions",
+   "polish": "więcej niż pięćdziesiąt",
+   "thaiPhonetic": "mâak kwàa hâa-sìp",
+   "pronunciationPolish": "maak kłaa haa-sip",
+   "toneGuide": "mâak — ton opadający; kwàa — ton niski; hâa — ton opadający; sìp — ton niski",
+   "ttsThai": "มากกว่าห้าสิบ",
+   "ttsSplit": [3, 4, 6],
+   "colloquial": {
+    "thaiPhonetic": "mâak kwàa hâ-sìp",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "maak kłaa ha-sip",
+    "ttsThai": "มากกว่าห้าสิบ"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "mâak kwàa"
+   }
+  },
+  {
+   "id": "num-0165",
+   "section": "fractions",
+   "polish": "mniej niż pięćdziesiąt",
+   "thaiPhonetic": "náwy kwàa hâa-sìp",
+   "pronunciationPolish": "noy kłaa haa-sip",
+   "toneGuide": "náwy — ton wysoki; kwàa — ton niski; hâa — ton opadający; sìp — ton niski",
+   "ttsThai": "น้อยกว่าห้าสิบ",
+   "ttsSplit": [4, 4, 6],
+   "colloquial": {
+    "thaiPhonetic": "náwy kwàa hâ-sìp",
+    "rules": ["vowel-short"],
+    "pronunciationPolish": "noy kłaa ha-sip",
+    "ttsThai": "น้อยกว่าห้าสิบ"
+   },
+   "meta": {
+    "kind": "approx",
+    "word": "náwy kwàa"
+   }
+  }
+ ]
+}
