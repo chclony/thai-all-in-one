@@ -1,0 +1,352 @@
+# -*- coding: utf-8 -*-
+"""Sesja F — JEDZENIE: potrawy, skladniki, sztucce, sposob zamawiania.
+
+Uwaga systemowa o nazwach dan: wiekszosc nazw to opis sposobu przyrzadzenia
+plus skladnik. „phàt” (smazone na patelni) + „thai” = phàt thai;
+„tôm” (gotowane) + „yam” (kwasno-ostra salatka) = tôm yam. Kto zna szesc
+czasownikow kuchennych i dziesiec skladnikow, odczyta polowe menu bez
+uczenia sie nazw dan na pamiec.
+
+Uwaga o ostrosci: „mâi phèt” znaczy „nielostre”, ale w praktyce oznacza
+mniej ostre niz standard, nie zero chili. Zeby faktycznie nie bylo chili,
+mowi sie „mâi sài phrík” — nie dodawac chili.
+"""
+
+JN = "Jedzenie i napoje"
+RE = "Restauracja"
+
+FOOD = [
+
+# ============================================================ POTRAWY
+("A1", "ryż smażony", "khâao phàt", "ข้าวผัด", JN, "Potrawy", 5, "n",
+ "Najbezpieczniejszy wybór, gdy nie chce się ryzykować ostrości. Doprecyzowuje się dodatkiem: khâao phàt kài, khâao phàt kûng.",
+ "ryż smażyć",
+ [("Poproszę ryż smażony z kurczakiem.", "khǎw khâao phàt kài khráp", "ขอข้าวผัดไก่ครับ"),
+  ("Ryż smażony z krewetkami, proszę.", "khâao phàt kûng nùeng jaan khráp", "ข้าวผัดกุ้งหนึ่งจานครับ")],
+ ["ryż", "smażyć na patelni", "kurczak"], []),
+
+("A1", "makaron smażony po tajsku", "phàt thai", "ผัดไทย", JN, "Potrawy", 5, "n",
+ "Danie narodowe: makaron ryżowy smażony z tamaryndowcem, jajkiem i kiełkami. Zwykle podawane z orzeszkami i limonką osobno.",
+ "smażyć tajski",
+ [("Poproszę pad thai.", "khǎw phàt thai khráp", "ขอผัดไทยครับ"),
+  ("Pad thai bez orzeszków, proszę.", "phàt thai mâi sài thùa khráp", "ผัดไทยไม่ใส่ถั่วครับ")],
+ ["makaron", "smażyć na patelni", "kiełki fasoli"], ["pad thai"]),
+
+("A2", "zupa tom yam", "tôm yam", "ต้มยำ", JN, "Potrawy", 4, "n",
+ "„tôm” to gotować w wodzie, „yam” to kwaśno-ostra sałatka. Tom yam kung to wersja z krewetkami.",
+ "gotować sałatka kwaśna",
+ [("Poproszę tom yam z krewetkami.", "khǎw tôm yam kûng khráp", "ขอต้มยำกุ้งครับ"),
+  ("Tom yam jest ostry.", "tôm yam phèt khráp", "ต้มยำเผ็ดครับ")],
+ ["krewetka", "ostry", "gotować w wodzie"], []),
+
+("A2", "zupa mleczno-kokosowa", "tôm khàa", "ต้มข่า", JN, "Potrawy", 3, "n",
+ "„khàa” to galangal — korzeń podobny do imbiru. Łagodniejsza alternatywa dla tom yam.",
+ "gotować galangal",
+ [("Poproszę tom kha z kurczakiem.", "khǎw tôm khàa kài khráp", "ขอต้มข่าไก่ครับ"),
+  ("To nie jest ostre.", "an níi mâi phèt khráp", "อันนี้ไม่เผ็ดครับ")],
+ ["zupa tom yam", "mleko kokosowe", "kurczak"], []),
+
+("A2", "curry zielone", "kaeng khǐao wǎan", "แกงเขียวหวาน", JN, "Potrawy", 4, "n",
+ "Dosłownie „curry zielone słodkie” — ale mimo nazwy zwykle jest ostre. „kaeng” to ogólnie curry.",
+ "curry zielony słodki",
+ [("Poproszę zielone curry.", "khǎw kaeng khǐao wǎan khráp", "ขอแกงเขียวหวานครับ"),
+  ("Zielone curry z kurczakiem.", "kaeng khǐao wǎan kài khráp", "แกงเขียวหวานไก่ครับ")],
+ ["zielony", "ostry", "mleko kokosowe"], []),
+
+("A2", "curry masaman", "má-sà-màn", "มัสมั่น", JN, "Potrawy", 3, "n",
+ "Curry o korzeniach perskich, łagodne, z ziemniakiem i orzeszkami. Dobry wybór dla osób nieznoszących ostrości.",
+ "",
+ [("Poproszę masaman.", "khǎw kaeng má-sà-màn khráp", "ขอแกงมัสมั่นครับ"),
+  ("Masaman nie jest ostre.", "má-sà-màn mâi phèt khráp", "มัสมั่นไม่เผ็ดครับ")],
+ ["curry zielone", "ziemniak", "ostry"], []),
+
+("A2", "sałatka z papai", "sôm tam", "ส้มตำ", JN, "Potrawy", 4, "n",
+ "„tam” znaczy tłuc w moździerzu. Domyślnie bardzo ostra — warto od razu powiedzieć, ile chili.",
+ "kwaśny tłuc",
+ [("Poproszę som tam, jedno chili.", "sôm tam phrík nùeng mét khráp", "ส้มตำพริกหนึ่งเม็ดครับ"),
+  ("Som tam bez chili, proszę.", "sôm tam mâi sài phrík khráp", "ส้มตำไม่ใส่พริกครับ")],
+ ["chili", "ostry", "kwaśny"], []),
+
+("A2", "kurczak z grilla", "kài yâang", "ไก่ย่าง", JN, "Potrawy", 4, "n",
+ "„yâang” to grillować nad ogniem. Klasyczne połączenie: kài yâang, sôm tam i khâao nǐao.",
+ "kurczak grillować",
+ [("Poproszę kurczaka z grilla.", "khǎw kài yâang khráp", "ขอไก่ย่างครับ"),
+  ("Kurczak z grilla i ryż kleisty.", "kài yâang kàp khâao nǐao khráp", "ไก่ย่างกับข้าวเหนียวครับ")],
+ ["kurczak", "grillować", "ryż kleisty"], []),
+
+("A2", "ryż kleisty", "khâao nǐao", "ข้าวเหนียว", JN, "Potrawy", 4, "n",
+ "Je się rękami, formując kulkę. Podstawa kuchni północno-wschodniej. Także w deserze z mango.",
+ "ryż kleisty",
+ [("Poproszę ryż kleisty.", "khǎw khâao nǐao khráp", "ขอข้าวเหนียวครับ"),
+  ("Ryż kleisty z mango.", "khâao nǐao má-mûang khráp", "ข้าวเหนียวมะม่วงครับ")],
+ ["ryż", "kurczak z grilla", "mango"], []),
+
+("A2", "makaron w rosole", "kǔai-tǐao nám", "ก๋วยเตี๋ยวน้ำ", JN, "Potrawy", 4, "n",
+ "„nám” to wersja w bulionie, „hâeng” to wersja bez zupy. To pierwsze pytanie sprzedawcy.",
+ "makaron woda",
+ [("Poproszę makaron w rosole.", "khǎw kǔai-tǐao nám khráp", "ขอก๋วยเตี๋ยวน้ำครับ"),
+  ("Bez zupy, proszę.", "kǔai-tǐao hâeng khráp", "ก๋วยเตี๋ยวแห้งครับ")],
+ ["makaron", "zupa", "miska"], []),
+
+("A2", "omlet z ryżem", "khâao khài jiao", "ข้าวไข่เจียว", JN, "Potrawy", 3, "n",
+ "Najtańsze i najbezpieczniejsze danie w każdej knajpce. „jiao” to smażyć na omlet.",
+ "ryż jajko omlet",
+ [("Poproszę ryż z omletem.", "khǎw khâao khài jiao khráp", "ขอข้าวไข่เจียวครับ"),
+  ("Omlet z mielonym mięsem.", "khài jiao mǔu sàp khráp", "ไข่เจียวหมูสับครับ")],
+ ["jajko", "ryż", "smażyć w głębokim tłuszczu"], []),
+
+("A2", "wieprzowina z bazylią", "phàt kà-phrao mǔu", "ผัดกะเพราหมู", JN, "Potrawy", 4, "n",
+ "Najczęściej zamawiane danie w Tajlandii. Zwykle z jajkiem sadzonym: „ràat khâao khài daao”.",
+ "smażyć bazylia wieprzowina",
+ [("Poproszę wieprzowinę z bazylią i jajkiem.", "khǎw kà-phrao mǔu khài daao khráp", "ขอกะเพราหมูไข่ดาวครับ"),
+  ("Mniej ostre, proszę.", "phèt nói nói khráp", "เผ็ดน้อยๆครับ")],
+ ["wieprzowina", "jajko", "ostry"], []),
+
+("A2", "smażony ryż z bazylią i kurczakiem", "kà-phrao kài", "กะเพราไก่", JN, "Potrawy", 3, "n",
+ "Ten sam schemat co z wieprzowiną, tylko inne mięso — dobry przykład produktywności nazw.",
+ "bazylia kurczak",
+ [("Poproszę kurczaka z bazylią.", "khǎw kà-phrao kài khráp", "ขอกะเพราไก่ครับ"),
+  ("Na wynos, proszę.", "sài klàwng khráp", "ใส่กล่องครับ")],
+ ["wieprzowina z bazylią", "kurczak", "pudełko"], []),
+
+("A2", "sajgonki", "pàw-pía thâwt", "ปอเปี๊ยะทอด", JN, "Potrawy", 3, "n",
+ "„thâwt” to smażyć w głębokim tłuszczu. „pàw-pía sòt” to wersja niesmażona.",
+ "sajgonka smażony",
+ [("Poproszę sajgonki.", "khǎw pàw-pía thâwt khráp", "ขอปอเปี๊ยะทอดครับ"),
+  ("Sajgonki są chrupiące.", "pàw-pía kràwp dii khráp", "ปอเปี๊ยะกรอบดีครับ")],
+ ["smażyć w głębokim tłuszczu", "chrupiący", "przystawka"], []),
+
+("A2", "szaszłyk wieprzowy", "mǔu pîng", "หมูปิ้ง", JN, "Potrawy", 3, "n",
+ "Uliczne śniadanie, kupowane zwykle z ryżem kleistym. „pîng” to opiekać na małym grillu.",
+ "wieprzowina opiekać",
+ [("Poproszę dwa szaszłyki.", "khǎw mǔu pîng sǎwng mái khráp", "ขอหมูปิ้งสองไม้ครับ"),
+  ("Szaszłyk i ryż kleisty.", "mǔu pîng kàp khâao nǐao khráp", "หมูปิ้งกับข้าวเหนียวครับ")],
+ ["wieprzowina", "grillować", "ryż kleisty"], []),
+
+# ============================================================ SKLADNIKI
+("A1", "wieprzowina", "mǔu", "หมู", JN, "Składniki", 5, "n",
+ "To samo słowo znaczy „świnia”. Ton rosnący — nie mylić z „mûu” (grupa).",
+ "",
+ [("Nie jem wieprzowiny.", "phǒm mâi kin mǔu khráp", "ผมไม่กินหมูครับ"),
+  ("Poproszę z wieprzowiną.", "khǎw sài mǔu khráp", "ขอใส่หมูครับ")],
+ ["kurczak", "wołowina", "świnia"], []),
+
+("A1", "kurczak", "kài", "ไก่", JN, "Składniki", 5, "n",
+ "Uwaga na parę minimalną: „kài” (kurczak) i „klâi” (blisko) bywają mylone przez uczących się.",
+ "",
+ [("Poproszę z kurczakiem.", "khǎw sài kài khráp", "ขอใส่ไก่ครับ"),
+  ("Jajko kurze.", "khài kài khráp", "ไข่ไก่ครับ")],
+ ["wieprzowina", "jajko", "kurczak z grilla"], []),
+
+("A2", "wołowina", "núea", "เนื้อ", JN, "Składniki", 4, "n",
+ "Samo „núea” znaczy „mięso” ogólnie, ale domyślnie rozumiane jako wołowina.",
+ "",
+ [("Nie jem wołowiny.", "phǒm mâi kin núea khráp", "ผมไม่กินเนื้อครับ"),
+  ("Poproszę z wołowiną.", "khǎw sài núea khráp", "ขอใส่เนื้อครับ")],
+ ["wieprzowina", "kurczak", "mięso"], []),
+
+("A2", "ryba", "plaa", "ปลา", JN, "Składniki", 4, "n",
+ "„nám plaa” to sos rybny — obecny niemal w każdym daniu, ważne przy diecie bezmięsnej.",
+ "",
+ [("Poproszę rybę.", "khǎw plaa khráp", "ขอปลาครับ"),
+  ("Bez sosu rybnego, proszę.", "mâi sài nám plaa khráp", "ไม่ใส่น้ำปลาครับ")],
+ ["sos rybny", "krewetka", "wegetariański"], []),
+
+("A2", "sos rybny", "nám plaa", "น้ำปลา", JN, "Składniki", 4, "n",
+ "Podstawowa przyprawa kuchni tajskiej. Wegetarianie muszą wprost prosić o jego pominięcie.",
+ "woda ryba",
+ [("Bez sosu rybnego.", "mâi sài nám plaa khráp", "ไม่ใส่น้ำปลาครับ"),
+  ("Poproszę sos rybny.", "khǎw nám plaa nòi khráp", "ขอน้ำปลาหน่อยครับ")],
+ ["ryba", "sól", "wegetariański"], []),
+
+("A2", "sos sojowy", "sii-íu", "ซีอิ๊ว", JN, "Składniki", 3, "n",
+ "„sii-íu khǎao” to jasny, „sii-íu dam” to ciemny i słodkawy.",
+ "",
+ [("Poproszę sos sojowy.", "khǎw sii-íu nòi khráp", "ขอซีอิ๊วหน่อยครับ"),
+  ("Ciemny sos sojowy.", "sii-íu dam khráp", "ซีอิ๊วดำครับ")],
+ ["sos rybny", "słony", "czarny"], []),
+
+("A2", "mleko kokosowe", "kà-thí", "กะทิ", JN, "Składniki", 3, "n",
+ "Baza curry i deserów. Inne słowo niż „nám má-phráao” — woda kokosowa do picia.",
+ "",
+ [("W tym jest mleko kokosowe.", "an níi sài kà-thí khráp", "อันนี้ใส่กะทิครับ"),
+  ("Bez mleka kokosowego.", "mâi sài kà-thí khráp", "ไม่ใส่กะทิครับ")],
+ ["curry zielone", "kokos", "deser"], []),
+
+("A2", "cukier", "nám-taan", "น้ำตาล", JN, "Składniki", 4, "n",
+ "Dosłownie „woda palmy cukrowej”. „wǎan” to słodki jako cecha smaku.",
+ "woda palma",
+ [("Bez cukru, proszę.", "mâi sài nám-taan khráp", "ไม่ใส่น้ำตาลครับ"),
+  ("Mało cukru.", "wǎan nói khráp", "หวานน้อยครับ")],
+ ["słodki", "kawa", "sól"], []),
+
+("A2", "sól", "kluea", "เกลือ", JN, "Składniki", 3, "n",
+ "Uwaga na parę: „kluea” (sól) i „klua” (bać się) — różnica w samogłosce jest subtelna.",
+ "",
+ [("Poproszę sól.", "khǎw kluea nòi khráp", "ขอเกลือหน่อยครับ"),
+  ("Za słone.", "khem koen pai khráp", "เค็มเกินไปครับ")],
+ ["słony", "cukier", "bać się"], []),
+
+("A2", "olej", "nám man", "น้ำมัน", JN, "Składniki", 3, "n",
+ "To samo słowo znaczy „paliwo”: „tooem nám man” to zatankować.",
+ "woda tłusty",
+ [("Za dużo oleju.", "nám man yóe koen pai khráp", "น้ำมันเยอะเกินไปครับ"),
+  ("Muszę zatankować.", "phǒm tâwng tooem nám man khráp", "ผมต้องเติมน้ำมันครับ")],
+ ["smażyć na patelni", "paliwo", "tłusty"], []),
+
+("A2", "orzeszki ziemne", "thùa lí-sǒng", "ถั่วลิสง", JN, "Składniki", 3, "n",
+ "Kluczowe przy alergii: „phǒm pháe thùa” — jestem uczulony na orzeszki.",
+ "fasola lisong",
+ [("Jestem uczulony na orzeszki.", "phǒm pháe thùa khráp", "ผมแพ้ถั่วครับ"),
+  ("Bez orzeszków, proszę.", "mâi sài thùa khráp", "ไม่ใส่ถั่วครับ")],
+ ["alergia", "makaron smażony po tajsku", "sałatka z papai"], []),
+
+("A2", "limonka", "má-naao", "มะนาว", JN, "Składniki", 4, "n",
+ "„má-” zaczyna wiele nazw owoców: má-mûang (mango), má-lá-kaw (papaja), má-phráao (kokos).",
+ "",
+ [("Poproszę limonkę.", "khǎw má-naao nòi khráp", "ขอมะนาวหน่อยครับ"),
+  ("Woda z limonką.", "nám má-naao khráp", "น้ำมะนาวครับ")],
+ ["kwaśny", "zupa tom yam", "mango"], []),
+
+("A2", "mango", "má-mûang", "มะม่วง", JN, "Składniki", 4, "n",
+ "„má-mûang sùk” to dojrzałe, słodkie; „má-mûang dìp” to zielone, kwaśne, jedzone z solą i chili.",
+ "",
+ [("Poproszę mango.", "khǎw má-mûang khráp", "ขอมะม่วงครับ"),
+  ("Ryż kleisty z mango.", "khâao nǐao má-mûang khráp", "ข้าวเหนียวมะม่วงครับ")],
+ ["ryż kleisty", "owoc", "słodki"], []),
+
+("A2", "kokos", "má-phráao", "มะพร้าว", JN, "Składniki", 3, "n",
+ "„nám má-phráao” to woda kokosowa — sprzedawana wprost w orzechu.",
+ "",
+ [("Poproszę wodę kokosową.", "khǎw nám má-phráao khráp", "ขอน้ำมะพร้าวครับ"),
+  ("Kokos jest zimny.", "má-phráao yen khráp", "มะพร้าวเย็นครับ")],
+ ["mleko kokosowe", "owoc", "zimny"], []),
+
+("A2", "arbuz", "taeng moo", "แตงโม", JN, "Składniki", 3, "n",
+ "„taeng” to rodzina dyniowatych — to samo słowo w „taeng kwaa” (ogórek).",
+ "",
+ [("Poproszę arbuza.", "khǎw taeng moo khráp", "ขอแตงโมครับ"),
+  ("Sok z arbuza.", "nám taeng moo khráp", "น้ำแตงโมครับ")],
+ ["ogórek", "owoc", "sok"], []),
+
+("A2", "ananas", "sàp-pà-rót", "สับปะรด", JN, "Składniki", 3, "n",
+ "Sprzedawany na ulicy pokrojony, w torebce z patyczkiem — jeden z najbezpieczniejszych ulicznych zakupów.",
+ "",
+ [("Poproszę ananasa.", "khǎw sàp-pà-rót khráp", "ขอสับปะรดครับ"),
+  ("Ananas jest słodki.", "sàp-pà-rót wǎan khráp", "สับปะรดหวานครับ")],
+ ["owoc", "słodki", "arbuz"], []),
+
+("A2", "banan", "klûai", "กล้วย", JN, "Składniki", 4, "n",
+ "„klûai” pojawia się w wielu deserach. Potocznie „klûai klûai” znaczy też „łatwizna”.",
+ "",
+ [("Poproszę banany.", "khǎw klûai khráp", "ขอกล้วยครับ"),
+  ("To bardzo łatwe.", "klûai klûai khráp", "กล้วยๆครับ")],
+ ["owoc", "łatwy", "deser"], []),
+
+("A2", "owoc", "phǒn-lá-mái", "ผลไม้", JN, "Składniki", 4, "n",
+ "Dosłownie „plon drzewa”. Wersja skrócona w mowie: „phǒn-mái”.",
+ "plon drzewo",
+ [("Lubię owoce.", "phǒm châwp phǒn-lá-mái khráp", "ผมชอบผลไม้ครับ"),
+  ("Jakie owoce macie?", "mii phǒn-lá-mái à-rai bâang khráp", "มีผลไม้อะไรบ้างครับ")],
+ ["mango", "banan", "drzewo"], []),
+
+# ============================================================ SZTUCCE
+("A1", "łyżka", "cháwn", "ช้อน", RE, "Sztućce", 4, "n",
+ "Podstawowe narzędzie tajskiego stołu — je się łyżką, widelec służy tylko do nakładania na łyżkę.",
+ "",
+ [("Poproszę łyżkę.", "khǎw cháwn nòi khráp", "ขอช้อนหน่อยครับ"),
+  ("Nie ma łyżki.", "mâi mii cháwn khráp", "ไม่มีช้อนครับ")],
+ ["widelec", "talerz", "jeść"], []),
+
+("A1", "widelec", "sâwm", "ส้อม", RE, "Sztućce", 4, "n",
+ "Widelca trzyma się w lewej ręce i używa do przesuwania jedzenia na łyżkę, nie do wkładania do ust.",
+ "",
+ [("Poproszę widelec.", "khǎw sâwm nòi khráp", "ขอส้อมหน่อยครับ"),
+  ("Łyżka i widelec.", "cháwn kàp sâwm khráp", "ช้อนกับส้อมครับ")],
+ ["łyżka", "nóż", "jeść"], []),
+
+("A2", "pałeczki", "tà-kìap", "ตะเกียบ", RE, "Sztućce", 3, "n",
+ "Używane głównie do makaronu i w restauracjach chińskich, nie do ryżu.",
+ "",
+ [("Poproszę pałeczki.", "khǎw tà-kìap khráp", "ขอตะเกียบครับ"),
+  ("Nie umiem jeść pałeczkami.", "phǒm chái tà-kìap mâi pen khráp", "ผมใช้ตะเกียบไม่เป็นครับ")],
+ ["makaron", "łyżka", "umieć"], []),
+
+("A2", "nóż", "mîit", "มีด", RE, "Sztućce", 3, "n",
+ "Na stole rzadko potrzebny — jedzenie kroi się w kuchni na kęsy.",
+ "",
+ [("Poproszę nóż.", "khǎw mîit nòi khráp", "ขอมีดหน่อยครับ"),
+  ("Nóż jest ostry.", "mîit khom khráp", "มีดคมครับ")],
+ ["kroić", "ostry (o krawędzi)", "widelec"], []),
+
+("A2", "talerz", "jaan", "จาน", RE, "Sztućce", 4, "n",
+ "Także klasyfikator porcji: „khâao phàt nùeng jaan” to jedna porcja ryżu smażonego.",
+ "",
+ [("Poproszę jeszcze jeden talerz.", "khǎw jaan ìik bai khráp", "ขอจานอีกใบครับ"),
+  ("Jedna porcja ryżu smażonego.", "khâao phàt nùeng jaan khráp", "ข้าวผัดหนึ่งจานครับ")],
+ ["miska", "łyżka", "zmywać naczynia"], []),
+
+("A2", "szklanka", "kâew", "แก้ว", RE, "Sztućce", 4, "n",
+ "Także klasyfikator napojów: „kaa-fae nùeng kâew”. To samo słowo znaczy szkło naczyniowe.",
+ "",
+ [("Poproszę szklankę wody.", "khǎw nám nùeng kâew khráp", "ขอน้ำหนึ่งแก้วครับ"),
+  ("Szklanka jest pęknięta.", "kâew tàek khráp", "แก้วแตกครับ")],
+ ["szkło", "woda", "pękać"], []),
+
+("A2", "słomka", "làwt", "หลอด", RE, "Sztućce", 3, "n",
+ "To samo „làwt” co w „làwt fai” (żarówka) — oznacza rurkę.",
+ "",
+ [("Poproszę słomkę.", "khǎw làwt nòi khráp", "ขอหลอดหน่อยครับ"),
+  ("Nie potrzebuję słomki.", "mâi ao làwt khráp", "ไม่เอาหลอดครับ")],
+ ["szklanka", "żarówka", "napój"], []),
+
+("A2", "serwetka", "krà-dàat chét pàak", "กระดาษเช็ดปาก", RE, "Sztućce", 3, "n",
+ "Dosłownie „papier do wycierania ust”. W ulicznych barach zwykle na stole w pojemniku.",
+ "papier wycierać usta",
+ [("Poproszę serwetki.", "khǎw krà-dàat chét pàak khráp", "ขอกระดาษเช็ดปากครับ"),
+  ("Nie ma serwetek.", "mâi mii krà-dàat chét pàak khráp", "ไม่มีกระดาษเช็ดปากครับ")],
+ ["papier", "wycierać", "usta"], []),
+
+# ============================================================ ZAMAWIANIE
+("A2", "porcja", "thîi", "ที่", RE, "Zamawianie", 4, "n",
+ "Uniwersalny klasyfikator porcji: „khǎw ìik nùeng thîi” — poproszę jeszcze jedną porcję. To samo słowo znaczy „miejsce”.",
+ "",
+ [("Poproszę jeszcze jedną porcję.", "khǎw ìik nùeng thîi khráp", "ขออีกหนึ่งที่ครับ"),
+  ("Dwie porcje, proszę.", "sǎwng thîi khráp", "สองที่ครับ")],
+ ["talerz", "zamawiać", "miejsce"], []),
+
+("A2", "na wynos", "sài klàwng", "ใส่กล่อง", RE, "Zamawianie", 4, "n",
+ "Dosłownie „włożyć do pudełka”. Alternatywa: „klàp bâan” — do domu. Odwrotność: „kin thîi nîi” — na miejscu.",
+ "wkładać pudełko",
+ [("Na wynos, proszę.", "sài klàwng khráp", "ใส่กล่องครับ"),
+  ("Zjem na miejscu.", "kin thîi nîi khráp", "กินที่นี่ครับ")],
+ ["pudełko", "wkładać", "jeść"], []),
+
+("A2", "dodatek do ryżu", "ràat khâao", "ราดข้าว", RE, "Zamawianie", 3, "n",
+ "„ràat” znaczy polać. „ràat khâao” to danie podane na ryżu — najtańszy sposób zamówienia obiadu.",
+ "polać ryż",
+ [("Poproszę na ryżu.", "khǎw ràat khâao khráp", "ขอราดข้าวครับ"),
+  ("Bazylia z wieprzowiną na ryżu.", "kà-phrao mǔu ràat khâao khráp", "กะเพราหมูราดข้าวครับ")],
+ ["ryż", "wieprzowina z bazylią", "porcja"], []),
+
+("A2", "bez chili", "mâi sài phrík", "ไม่ใส่พริก", RE, "Zamawianie", 5, "n",
+ "Skuteczniejsze niż samo „mâi phèt”, które oznacza tylko „mniej ostro”. Jeśli chili ma naprawdę nie być, mówi się tak.",
+ "nie wkładać chili",
+ [("Bez chili, proszę.", "mâi sài phrík khráp", "ไม่ใส่พริกครับ"),
+  ("Naprawdę nie jem ostrego.", "phǒm kin phèt mâi dâai jing jing khráp", "ผมกินเผ็ดไม่ได้จริงๆครับ")],
+ ["chili", "ostry", "wkładać"], []),
+
+("A2", "polecenie kucharza", "meen-nuu nǎe-nam", "เมนูแนะนำ", RE, "Zamawianie", 3, "n",
+ "Przydatne, gdy menu jest tylko po tajsku: „mii à-rai nǎe-nam mǎi khráp”.",
+ "menu polecać",
+ [("Co pan poleca?", "mii à-rai nǎe-nam mǎi khráp", "มีอะไรแนะนำไหมครับ"),
+  ("Poproszę to, co polecacie.", "khǎw meen-nuu nǎe-nam khráp", "ขอเมนูแนะนำครับ")],
+ ["polecać", "menu"], []),
+
+("A2", "rachunek", "chék bin", "เช็คบิล", RE, "Zamawianie", 5, "p",
+ "Zapożyczenie „check bill”. Formalnie „khǎw bin khráp”. Gestem: rysowanie prostokąta w powietrzu.",
+ "",
+ [("Poproszę rachunek.", "chék bin khráp", "เช็คบิลครับ"),
+  ("Płacimy osobno.", "jàai yâek kan khráp", "จ่ายแยกกันครับ")],
+ ["płacić", "paragon", "osobno"], []),
+]

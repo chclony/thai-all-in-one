@@ -1,0 +1,335 @@
+# -*- coding: utf-8 -*-
+"""Sesja F — PORY DNIA, LICZEBNIKI PORZADKOWE, ZWIERZETA.
+
+Trzy male systemy zamkniete, ktore audyt wskazal jako niepelne.
+
+Liczebniki porzadkowe sa w tajskim regularne do bolu: „thîi” + liczba glowna.
+Nie ma zadnych form nieregularnych, wiec caly system to jedna zasada plus
+lista liczebnikow glownych, ktore uczacy sie juz zna.
+"""
+
+CATT = "Czas i daty"
+SUBP = "Pory dnia"
+CATN = "Liczby i liczenie"
+SUBO = "Liczebniki porządkowe"
+CATZ = "Pogoda i przyroda"
+SUBZ = "Zwierzęta"
+
+DAYPART = [
+
+# ================================================================== pory dnia
+("A1", "rano", "tawn cháo", "ตอนเช้า", CATT, SUBP, 5, "n",
+ "„tawn” to wskaźnik pory i stoi przed każdą z nich: tawn cháo, tawn bàai, tawn yen. Bez niego nazwa pory działa jak przymiotnik.",
+ "pora rano",
+ [("Rano piję kawę.", "tawn cháo phǒm dùuem kaa-fae khráp", "ตอนเช้าผมดื่มกาแฟครับ"),
+  ("Przyjdę rano.", "phǒm jà maa tawn cháo khráp", "ผมจะมาตอนเช้าครับ"),
+  ("Rano jest chłodno.", "tawn cháo aa-kàat yen khráp", "ตอนเช้าอากาศเย็นครับ")],
+ ["późny ranek", "południe", "wieczór"], []),
+
+("A2", "późny ranek", "tawn sǎai", "ตอนสาย", CATT, SUBP, 4, "n",
+ "Pora między dziewiątą a jedenastą, dla której polski nie ma jednego słowa. Nie podaje się jej jako godziny — mówi się opisowo: „maa tawn sǎai” (przyjdę późnym rankiem).",
+ "pora późna-poranna",
+ [("Przyjdę późnym rankiem.", "phǒm jà maa tawn sǎai khráp", "ผมจะมาตอนสายครับ"),
+  ("Dziś wstałem późno.", "wan-níi phǒm tùen sǎai khráp", "วันนี้ผมตื่นสายครับ")],
+ ["rano", "południe", "spóźnić się (na godzinę)"], []),
+
+("A1", "popołudnie", "tawn bàai", "ตอนบ่าย", CATT, SUBP, 5, "n",
+ "Trzynasta do piętnastej. Od szesnastej mówi się już „tawn yen”.",
+ "pora popołudniowa",
+ [("Po południu jest gorąco.", "tawn bàai ráwn mâak khráp", "ตอนบ่ายร้อนมากครับ"),
+  ("Spotkajmy się po południu.", "jòoe kan tawn bàai khráp", "เจอกันตอนบ่ายครับ"),
+  ("Po południu mam spotkanie.", "tawn bàai phǒm mii prà-chum khráp", "ตอนบ่ายผมมีประชุมครับ")],
+ ["południe", "wieczór", "pierwsza po południu"], []),
+
+("A1", "wieczór", "tawn yen", "ตอนเย็น", CATT, SUBP, 5, "n",
+ "„yen” znaczy też „chłodny” — pora nazwana od spadku temperatury. „aa-hǎan yen” to kolacja.",
+ "pora chłodna",
+ [("Wieczorem idę do restauracji.", "tawn yen phǒm pai ráan aa-hǎan khráp", "ตอนเย็นผมไปร้านอาหารครับ"),
+  ("Do zobaczenia wieczorem.", "jòoe kan tawn yen khráp", "เจอกันตอนเย็นครับ"),
+  ("Wieczorem jest przyjemnie.", "tawn yen sà-baai khráp", "ตอนเย็นสบายครับ")],
+ ["popołudnie", "noc", "czwarta po południu"], []),
+
+("A2", "późny wieczór", "tawn khâm", "ตอนค่ำ", CATT, SUBP, 3, "n",
+ "Po zmierzchu, ale przed nocą — mniej więcej dziewiętnasta do dwudziestej pierwszej. Bardziej formalne niż „tawn yen”.",
+ "pora ciemniejąca",
+ [("Wrócę późnym wieczorem.", "phǒm jà klàp tawn khâm khráp", "ผมจะกลับตอนค่ำครับ"),
+  ("Późnym wieczorem jest spokojnie.", "tawn khâm ngîap dii khráp", "ตอนค่ำเงียบดีครับ")],
+ ["wieczór", "noc", "zmierzch"], []),
+
+("A1", "noc", "tawn klaang khuen", "ตอนกลางคืน", CATT, SUBP, 5, "n",
+ "Dosłownie „pora środka nocy”. Para do „tawn klaang wan” — pora dzienna.",
+ "pora środek noc",
+ [("W nocy jest cicho.", "tawn klaang khuen ngîap khráp", "ตอนกลางคืนเงียบครับ"),
+  ("Nie jeżdżę w nocy.", "phǒm mâi khàp rót tawn klaang khuen khráp", "ผมไม่ขับรถตอนกลางคืนครับ"),
+  ("W nocy pada.", "tawn klaang khuen fǒn tòk khráp", "ตอนกลางคืนฝนตกครับ")],
+ ["wieczór", "północ", "dzień (pora dzienna)"], []),
+
+("A2", "dzień (pora dzienna)", "tawn klaang wan", "ตอนกลางวัน", CATT, SUBP, 4, "n",
+ "Odróżnia porę jasną od nocy. Nie mylić z „wan”, które znaczy dzień jako datę.",
+ "pora środek dzień",
+ [("W dzień jest bardzo gorąco.", "tawn klaang wan ráwn mâak khráp", "ตอนกลางวันร้อนมากครับ"),
+  ("Pracuję w dzień.", "phǒm tham ngaan tawn klaang wan khráp", "ผมทำงานตอนกลางวันครับ")],
+ ["noc", "popołudnie"], []),
+
+("A2", "świt", "rûng-cháo", "รุ่งเช้า", CATT, SUBP, 3, "n",
+ "Moment wschodu, około piątej–szóstej. W mowie codziennej częściej powie się po prostu „tii hâa”.",
+ "brzask rano",
+ [("Wyruszamy o świcie.", "rao àwk doen thaang rûng-cháo khráp", "เราออกเดินทางรุ่งเช้าครับ"),
+  ("O świcie mnisi zbierają jałmużnę.", "rûng-cháo phrá àwk bìn-thá-bàat khráp", "รุ่งเช้าพระออกบิณฑบาตครับ")],
+ ["zmierzch", "rano", "piąta nad ranem"], []),
+
+("A2", "zmierzch", "phlóp khâm", "พลบค่ำ", CATT, SUBP, 2, "n",
+ "Krótka chwila po zachodzie. Słowo raczej opisowe niż codzienne — w rozmowie wystarczy „tawn khâm”.",
+ "zapadać ciemność",
+ [("O zmierzchu robi się chłodniej.", "phlóp khâm aa-kàat yen long khráp", "พลบค่ำอากาศเย็นลงครับ"),
+  ("Wróćmy przed zmierzchem.", "klàp kàwn phlóp khâm ná khráp", "กลับก่อนพลบค่ำนะครับ")],
+ ["świt", "późny wieczór", "wieczór"], []),
+
+("A2", "cały dzień", "tháng wan", "ทั้งวัน", CATT, SUBP, 4, "n",
+ "„tháng” znaczy „cały, w całości” i łączy się z jednostkami czasu: tháng wan, tháng khuen, tháng pii.",
+ "cały dzień",
+ [("Pracowałem cały dzień.", "phǒm tham ngaan tháng wan khráp", "ผมทำงานทั้งวันครับ"),
+  ("Padało cały dzień.", "fǒn tòk tháng wan khráp", "ฝนตกทั้งวันครับ")],
+ ["cała noc", "dzień (pora dzienna)"], []),
+
+("A2", "cała noc", "tháng khuen", "ทั้งคืน", CATT, SUBP, 3, "n",
+ "Para do „tháng wan”. Częste przy skardze na hałas albo brak snu.",
+ "cała noc",
+ [("Nie spałem całą noc.", "phǒm mâi dâai nawn tháng khuen khráp", "ผมไม่ได้นอนทั้งคืนครับ"),
+  ("Hałasowali całą noc.", "kháo sǐang dang tháng khuen khráp", "เขาเสียงดังทั้งคืนครับ")],
+ ["cały dzień", "noc"], []),
+
+# ==================================================== liczebniki porzadkowe
+("A1", "trzeci", "thîi sǎam", "ที่สาม", CATN, SUBO, 4, "n",
+ "Cały system porządkowy to jedna zasada: „thîi” plus liczba główna. Żadnych form nieregularnych — jeśli umiesz liczyć, umiesz wszystkie liczebniki porządkowe.",
+ "miejsce trzy",
+ [("Trzecie piętro.", "chán thîi sǎam", "ชั้นที่สาม"),
+  ("To już trzeci raz.", "níi khráng thîi sǎam láew khráp", "นี่ครั้งที่สามแล้วครับ")],
+ ["czwarty", "piąty", "drugi raz"], []),
+
+("A1", "czwarty", "thîi sìi", "ที่สี่", CATN, SUBO, 4, "n",
+ "Uwaga na ton: „sìi” (cztery) ma ton niski, „sǐi” (kolor) rosnący. Różnią się tylko tonem.",
+ "miejsce cztery",
+ [("Czwarte piętro.", "chán thîi sìi", "ชั้นที่สี่"),
+  ("Siedzę w czwartym rzędzie.", "phǒm nâng thǎew thîi sìi khráp", "ผมนั่งแถวที่สี่ครับ")],
+ ["trzeci", "piąty", "kolor (barwa)"], []),
+
+("A1", "piąty", "thîi hâa", "ที่ห้า", CATN, SUBO, 4, "n",
+ "Ton opadający na „hâa”. To samo słowo co „pięć”.",
+ "miejsce pięć",
+ [("Piąte piętro.", "chán thîi hâa", "ชั้นที่ห้า"),
+  ("To piąty dzień.", "wan thîi hâa láew khráp", "วันที่ห้าแล้วครับ")],
+ ["czwarty", "szósty"], []),
+
+("A1", "szósty", "thîi hòk", "ที่หก", CATN, SUBO, 3, "n",
+ "Końcowe „k” niezwolnione: zatrzymujesz dźwięk w gardle.",
+ "miejsce sześć",
+ [("Szósty rząd.", "thǎew thîi hòk", "แถวที่หก"),
+  ("Mieszkam na szóstym piętrze.", "phǒm yùu chán thîi hòk khráp", "ผมอยู่ชั้นที่หกครับ")],
+ ["piąty", "siódmy"], []),
+
+("A1", "siódmy", "thîi jèt", "ที่เจ็ด", CATN, SUBO, 3, "n",
+ "„j” czytaj jak „dź”, końcowe „t” niezwolnione.",
+ "miejsce siedem",
+ [("Siódmy dzień miesiąca.", "wan thîi jèt", "วันที่เจ็ด"),
+  ("To siódmy raz.", "khráng thîi jèt láew khráp", "ครั้งที่เจ็ดแล้วครับ")],
+ ["szósty", "ósmy"], []),
+
+("A1", "ósmy", "thîi pàet", "ที่แปด", CATN, SUBO, 3, "n",
+ "„p” bez przydechu. Liczba osiem uchodzi w Tajlandii za szczęśliwą.",
+ "miejsce osiem",
+ [("Ósme piętro.", "chán thîi pàet", "ชั้นที่แปด"),
+  ("Pokój numer osiem.", "hâwng thîi pàet", "ห้องที่แปด")],
+ ["siódmy", "dziewiąty"], []),
+
+("A1", "dziewiąty", "thîi kâo", "ที่เก้า", CATN, SUBO, 3, "n",
+ "Dziewiątka jest w Tajlandii liczbą pomyślną — „kâo” brzmi jak „kâao”, czyli „iść naprzód”.",
+ "miejsce dziewięć",
+ [("Dziewiąte piętro.", "chán thîi kâo", "ชั้นที่เก้า"),
+  ("Dziewiąty dzień.", "wan thîi kâo", "วันที่เก้า")],
+ ["ósmy", "dziesiąty"], []),
+
+("A1", "dziesiąty", "thîi sìp", "ที่สิบ", CATN, SUBO, 3, "n",
+ "Od dziesięciu liczebniki główne składa się dalej, a „thîi” zostaje bez zmian.",
+ "miejsce dziesięć",
+ [("Dziesiąte miejsce.", "an-dàp thîi sìp", "อันดับที่สิบ"),
+  ("Dziesiąty dzień miesiąca.", "wan thîi sìp", "วันที่สิบ")],
+ ["dziewiąty", "jedenasty"], []),
+
+("A2", "jedenasty", "thîi sìp-èt", "ที่สิบเอ็ด", CATN, SUBO, 3, "n",
+ "Jedynka w liczbach złożonych to „èt”, nie „nùeng”. Ta nieregularność dotyczy tylko jedynki i tylko na końcu.",
+ "miejsce jedenaście",
+ [("Jedenaste piętro.", "chán thîi sìp-èt", "ชั้นที่สิบเอ็ด"),
+  ("Jedenasty dzień.", "wan thîi sìp-èt", "วันที่สิบเอ็ด")],
+ ["dziesiąty", "dwunasty"], []),
+
+("A2", "dwunasty", "thîi sìp-sǎwng", "ที่สิบสอง", CATN, SUBO, 3, "n",
+ "Od dwunastu wraca pełna regularność: dziesięć plus liczba.",
+ "miejsce dwanaście",
+ [("Dwunaste piętro.", "chán thîi sìp-sǎwng", "ชั้นที่สิบสอง"),
+  ("Dwunasty miesiąc to grudzień.", "duean thîi sìp-sǎwng khue than-waa-khom", "เดือนที่สิบสองคือธันวาคม")],
+ ["jedenasty", "trzynasty"], []),
+
+("A2", "trzynasty", "thîi sìp-sǎam", "ที่สิบสาม", CATN, SUBO, 2, "n",
+ "Trzynastka nie jest w Tajlandii uważana za pechową — to przesąd zachodni.",
+ "miejsce trzynaście",
+ [("Trzynasty dzień.", "wan thîi sìp-sǎam", "วันที่สิบสาม"),
+  ("Pokój trzynasty.", "hâwng thîi sìp-sǎam", "ห้องที่สิบสาม")],
+ ["dwunasty", "czternasty"], []),
+
+("A2", "czternasty", "thîi sìp-sìi", "ที่สิบสี่", CATN, SUBO, 2, "n",
+ "Dwa tony niskie z rzędu — nie podnoś głosu na końcu.",
+ "miejsce czternaście",
+ [("Czternasty dzień.", "wan thîi sìp-sìi", "วันที่สิบสี่"),
+  ("Czternaste piętro.", "chán thîi sìp-sìi", "ชั้นที่สิบสี่")],
+ ["trzynasty", "piętnasty"], []),
+
+("A2", "piętnasty", "thîi sìp-hâa", "ที่สิบห้า", CATN, SUBO, 2, "n",
+ "Piętnasty dzień miesiąca księżycowego to pełnia — ważna data w kalendarzu buddyjskim.",
+ "miejsce piętnaście",
+ [("Piętnasty dzień miesiąca.", "wan thîi sìp-hâa", "วันที่สิบห้า"),
+  ("Piętnaste miejsce.", "an-dàp thîi sìp-hâa", "อันดับที่สิบห้า")],
+ ["czternasty", "szesnasty"], []),
+
+("A2", "szesnasty", "thîi sìp-hòk", "ที่สิบหก", CATN, SUBO, 2, "n",
+ "Regularne złożenie: dziesięć plus sześć.",
+ "miejsce szesnaście",
+ [("Szesnasty dzień.", "wan thîi sìp-hòk", "วันที่สิบหก"),
+  ("Szesnaste piętro.", "chán thîi sìp-hòk", "ชั้นที่สิบหก")],
+ ["piętnasty", "siedemnasty"], []),
+
+("A2", "siedemnasty", "thîi sìp-jèt", "ที่สิบเจ็ด", CATN, SUBO, 2, "n",
+ "Dwie sylaby z tonem niskim i końcowym „t” niezwolnionym.",
+ "miejsce siedemnaście",
+ [("Siedemnasty dzień.", "wan thîi sìp-jèt", "วันที่สิบเจ็ด"),
+  ("Siedemnaste miejsce.", "an-dàp thîi sìp-jèt", "อันดับที่สิบเจ็ด")],
+ ["szesnasty", "osiemnasty"], []),
+
+("A2", "osiemnasty", "thîi sìp-pàet", "ที่สิบแปด", CATN, SUBO, 2, "n",
+ "Osiemnaste urodziny to w Tajlandii nie jest granica pełnoletności — ta wypada w wieku dwudziestu lat.",
+ "miejsce osiemnaście",
+ [("Osiemnasty dzień.", "wan thîi sìp-pàet", "วันที่สิบแปด"),
+  ("Osiemnaste piętro.", "chán thîi sìp-pàet", "ชั้นที่สิบแปด")],
+ ["siedemnasty", "dziewiętnasty"], []),
+
+("A2", "dziewiętnasty", "thîi sìp-kâo", "ที่สิบเก้า", CATN, SUBO, 2, "n",
+ "Ostatnia liczba przed przejściem na „yîi-sìp” — dwadzieścia ma nieregularną formę dziesiątek.",
+ "miejsce dziewiętnaście",
+ [("Dziewiętnasty dzień.", "wan thîi sìp-kâo", "วันที่สิบเก้า"),
+  ("Dziewiętnaste miejsce.", "an-dàp thîi sìp-kâo", "อันดับที่สิบเก้า")],
+ ["osiemnasty", "dwudziesty"], []),
+
+("A2", "dwudziesty", "thîi yîi-sìp", "ที่ยี่สิบ", CATN, SUBO, 3, "n",
+ "Dwadzieścia to „yîi-sìp”, nie „sǎwng sìp”. To jedyna nieregularna dziesiątka w tajskim.",
+ "miejsce dwadzieścia",
+ [("Dwudziesty dzień miesiąca.", "wan thîi yîi-sìp", "วันที่ยี่สิบ"),
+  ("Dwudzieste piętro.", "chán thîi yîi-sìp", "ชั้นที่ยี่สิบ")],
+ ["dziewiętnasty", "ostatni"], []),
+
+("A2", "ostatni", "sùt-tháai", "สุดท้าย", CATN, SUBO, 4, "n",
+ "Zamknięcie systemu porządkowego. Dosłownie „skrajny tył”. Częste na dworcu: „rót khan sùt-tháai” — ostatni kurs.",
+ "kraniec tył",
+ [("Ostatni autobus odjeżdża o dziewiątej.", "rót khan sùt-tháai àwk sǎam thûm khráp", "รถคันสุดท้ายออกสามทุ่มครับ"),
+  ("To ostatni raz.", "níi khráng sùt-tháai khráp", "นี่ครั้งสุดท้ายครับ")],
+ ["dwudziesty", "trzeci"], []),
+
+# ========================================================== zwierzeta
+("A1", "krowa", "wua", "วัว", CATZ, SUBZ, 4, "n",
+ "„núea wua” to wołowina — nazwa zwierzęcia wchodzi wprost w nazwę mięsa.",
+ "",
+ [("Nie jem wołowiny.", "phǒm mâi kin núea wua khráp", "ผมไม่กินเนื้อวัวครับ"),
+  ("Na polu są krowy.", "nai thûng mii wua khráp", "ในทุ่งมีวัวครับ")],
+ ["świnia", "kurczak", "wołowina"], []),
+
+("A1", "świnia", "mǔu", "หมู", CATZ, SUBZ, 5, "n",
+ "To samo słowo oznacza wieprzowinę i jest jednym z najczęstszych wyrazów w karcie dań: „khâao mǔu daeng”, „mǔu krà-thiam”.",
+ "",
+ [("Nie jem wieprzowiny.", "phǒm mâi kin mǔu khráp", "ผมไม่กินหมูครับ"),
+  ("Poproszę ryż z wieprzowiną.", "khǎw khâao mǔu khráp", "ขอข้าวหมูครับ")],
+ ["krowa", "kurczak", "czosnek"], ["wieprzowina"]),
+
+("A2", "mysz", "nǔu", "หนู", CATZ, SUBZ, 3, "n",
+ "Uwaga kulturowa: tym samym słowem dziecko albo młoda kobieta mówi o sobie „ja” w rozmowie z kimś starszym. To grzeczna forma, nie żart.",
+ "",
+ [("W pokoju jest mysz.", "nai hâwng mii nǔu khráp", "ในห้องมีหนูครับ"),
+  ("Boję się myszy.", "phǒm klua nǔu khráp", "ผมกลัวหนูครับ")],
+ ["pająk", "gekon"], []),
+
+("A2", "pająk", "maeng mum", "แมงมุม", CATZ, SUBZ, 3, "n",
+ "„maeng” to przedrostek nazw owadów i pajęczaków, jak w „maeng-pàwng” (skorpion).",
+ "",
+ [("W łazience jest pająk.", "nai hâwng-nám mii maeng mum khráp", "ในห้องน้ำมีแมงมุมครับ"),
+  ("Ten pająk nie jest groźny.", "maeng mum tua níi mâi an-tà-raai khráp", "แมงมุมตัวนี้ไม่อันตรายครับ")],
+ ["mysz", "komar", "jaszczurka"], []),
+
+("A2", "jaszczurka", "jîng-jòk", "จิ้งจก", CATZ, SUBZ, 4, "n",
+ "Mała, jasna jaszczurka domowa, którą zobaczysz na ścianie w każdym tajskim mieszkaniu. Uchodzi za pożyteczną — zjada komary.",
+ "",
+ [("Na ścianie jest jaszczurka.", "thîi fǎa mii jîng-jòk khráp", "ที่ฝามีจิ้งจกครับ"),
+  ("Jaszczurki zjadają komary.", "jîng-jòk kin yung khráp", "จิ้งจกกินยุงครับ")],
+ ["gekon", "komar", "pająk"], []),
+
+("A2", "gekon (tokay)", "túk-kae", "ตุ๊กแก", CATZ, SUBZ, 3, "n",
+ "Duży, głośny gekon, którego nazwa naśladuje jego krzyk. Usłyszysz go nocą i nie da się go pomylić z niczym innym.",
+ "",
+ [("W nocy słychać gekona.", "tawn klaang khuen dâai yin túk-kae khráp", "ตอนกลางคืนได้ยินตุ๊กแกครับ"),
+  ("Gekon jest duży.", "túk-kae tua yài khráp", "ตุ๊กแกตัวใหญ่ครับ")],
+ ["jaszczurka", "noc"], ["gekon"]),
+
+("A2", "żółw", "tào", "เต่า", CATZ, SUBZ, 3, "n",
+ "Ton niski, „ao” czytaj jak „au”. W przenośni oznacza kogoś powolnego, podobnie jak po polsku.",
+ "",
+ [("W stawie są żółwie.", "nai bàw mii tào khráp", "ในบ่อมีเต่าครับ"),
+  ("Idziesz wolno jak żółw.", "khun doen cháa mǔean tào loei", "คุณเดินช้าเหมือนเต่าเลย")],
+ ["ryba", "wolny (powolny)"], []),
+
+("A1", "krewetka", "kûng", "กุ้ง", CATZ, SUBZ, 5, "n",
+ "Jedno z najważniejszych słów w restauracji — składnik tom yum i pad thai. Częsty alergen, więc warto je znać także po to, by go odmówić.",
+ "",
+ [("Poproszę tom yum z krewetkami.", "khǎw tôm yam kûng khráp", "ขอต้มยำกุ้งครับ"),
+  ("Mam alergię na krewetki.", "phǒm pháe kûng khráp", "ผมแพ้กุ้งครับ"),
+  ("Poproszę bez krewetek.", "mâi sài kûng khráp", "ไม่ใส่กุ้งครับ")],
+ ["krab", "ryba", "alergia"], []),
+
+("A2", "kalmar", "plaa mùek", "ปลาหมึก", CATZ, SUBZ, 4, "n",
+ "Dosłownie „ryba atramentowa”. Częsty na grillu i w sałatkach.",
+ "ryba atrament",
+ [("Poproszę grillowanego kalmara.", "khǎw plaa mùek yâang khráp", "ขอปลาหมึกย่างครับ"),
+  ("Nie lubię kalmarów.", "phǒm mâi châwp plaa mùek khráp", "ผมไม่ชอบปลาหมึกครับ")],
+ ["krewetka", "ryba"], []),
+
+("A2", "komar", "yung", "ยุง", CATZ, SUBZ, 4, "n",
+ "Praktyczne słowo — przyda się przy prośbie o środek odstraszający albo moskitierę.",
+ "",
+ [("Jest dużo komarów.", "yung yóe khráp", "ยุงเยอะครับ"),
+  ("Poproszę środek na komary.", "khǎw yaa kan yung khráp", "ขอยากันยุงครับ")],
+ ["jaszczurka", "pająk"], []),
+
+("A2", "mrówka", "mót", "มด", CATZ, SUBZ, 3, "n",
+ "Krótka samogłoska, końcowe „t” niezwolnione. Przydatne przy zgłaszaniu problemu w pokoju.",
+ "",
+ [("W pokoju są mrówki.", "nai hâwng mii mót khráp", "ในห้องมีมดครับ"),
+  ("Mrówki weszły do cukru.", "mót khâo nám-taan khráp", "มดเข้าน้ำตาลครับ")],
+ ["komar", "pająk"], []),
+
+("A2", "wąż", "nguu", "งู", CATZ, SUBZ, 3, "n",
+ "„ng” na początku sylaby to jeden dźwięk, jak w polskim „bank” bez „k”. Trudne dla Polaka — ćwicz osobno.",
+ "",
+ [("Uważaj, wąż.", "rá-wang nguu khráp", "ระวังงูครับ"),
+  ("Ten wąż jest jadowity.", "nguu tua níi mii phít khráp", "งูตัวนี้มีพิษครับ")],
+ ["jaszczurka", "uważaj"], []),
+
+("A1", "słoń", "cháang", "ช้าง", CATZ, SUBZ, 4, "n",
+ "Symbol narodowy Tajlandii. „ch” czytaj jak „cz”, ton opadający.",
+ "",
+ [("Widziałem słonia.", "phǒm hěn cháang khráp", "ผมเห็นช้างครับ"),
+  ("Słoń jest bardzo duży.", "cháang tua yài mâak khráp", "ช้างตัวใหญ่มากครับ")],
+ ["małpa", "krowa"], []),
+
+("A2", "małpa", "ling", "ลิง", CATZ, SUBZ, 3, "n",
+ "Przy świątyniach potrafią kraść jedzenie i telefony — słowo bardziej praktyczne, niż się wydaje.",
+ "",
+ [("Uważaj na małpy.", "rá-wang ling khráp", "ระวังลิงครับ"),
+  ("Małpa zabrała mi jedzenie.", "ling ao aa-hǎan phǒm pai khráp", "ลิงเอาอาหารผมไปครับ")],
+ ["słoń", "uważaj"], []),
+]
