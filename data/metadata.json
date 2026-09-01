@@ -1,0 +1,62 @@
+{
+ "name": "Thai All-in-One",
+ "version": "1.19.0",
+ "language": {
+  "interface": "pl",
+  "target": "th"
+ },
+ "description": "Baza do nauki tajskiego dla Polaków — bez pisma tajskiego w interfejsie.",
+ "phoneticSystem": {
+  "name": "Thai All-in-One PL",
+  "toneMarks": {
+   "ā": "średni",
+   "à": "niski",
+   "â": "opadający",
+   "á": "wysoki",
+   "ǎ": "rosnący"
+  },
+  "notes": "Samogłoski długie zapisujemy podwójnie (aa, ii, uu). ue ≈ polskie y, oe ≈ e z zaokrąglonymi wargami, aw ≈ długie o."
+ },
+ "conventions": {
+  "colon": "Zniesiona w sesji G. Wstawki słownikowe w mianowniku („Poproszę: woda”) zostały przepisane na poprawną polszczyznę z odmianą („Poproszę wodę”). Dwukropek zostaje wyłącznie tam, gdzie jest poprawny po polsku: wprowadza cytat albo wyliczenie.",
+  "gender": "Formy zależne od płci mówiącego mają w rekordzie osobny wariant. Treść domyślna (thaiPhonetic, pronunciationPolish, ttsThai, toneGuide) jest formą męską: phǒm, khráp. Wariant żeński leży w opcjonalnym polu genderVariant.female i zawiera chǎn albo dì-chǎn oraz khâ, a w pytaniu khá. Pole jest dodatkowe — rekordy bez form zależnych od płci go nie mają, a starsza wersja aplikacji czyta bazę bez zmian."
+ },
+ "hiddenField": {
+  "name": "ttsThai",
+  "purpose": "Wejście dla SpeechSynthesis API.",
+  "rule": "Nigdy nie renderowane w DOM, nieindeksowane w wyszukiwarce, usuwane z eksportu."
+ },
+ "levels": {
+  "Survival": 778,
+  "A1": 4049,
+  "A2": 9561,
+  "B1": 4219,
+  "B2": 2184
+ },
+ "totalRecords": 20791,
+ "dialogues": 184,
+ "dialogueLines": 1682,
+ "grammarTopics": 81,
+ "license": "Do weryfikacji przed publiczną publikacją",
+ "source": "Baza projektu Thai All-in-One",
+ "updated": "2026-09-01",
+ "exampleSentences": 25196,
+ "lexicalCore": {
+  "wordRecords": 3512,
+  "uniqueSyllableTokens": 1977,
+  "note": "Miara realnego zasobu słownictwa: liczba rekordów typu word oraz liczba różnych sylab występujących w bazie."
+ },
+ "classifiers": {
+  "file": "classifiers.json",
+  "count": 139,
+  "wordOrder": "rzeczownik + liczba + klasyfikator",
+  "note": "Pełny wykaz klasyfikatorów z listą rzeczowników i przykładami liczenia."
+ },
+ "genderVariants": {
+  "field": "genderVariant.female",
+  "default": "męska",
+  "records": 16405,
+  "examples": 24799,
+  "dialogueLines": 1155
+ }
+}
