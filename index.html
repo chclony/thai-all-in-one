@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thai All-in-One — tajski dla Polaków</title>
+<meta name="description" content="Nauka języka tajskiego dla Polaków: słownik, zwroty, dialogi, słuchanie, mówienie i powtórki. Bez pisma tajskiego, wyłącznie czytelna fonetyka z tonami.">
+<meta name="theme-color" content="#12203c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Thai AIO">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="auto">
+
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<header class="topbar">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M4 22c6-14 18-14 24 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="16" cy="9" r="2.6" fill="currentColor"/>
+    </svg>
+    <span>Thai <em>All-in-One</em></span>
+  </div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="btn-theme" aria-label="Zmień motyw" title="Zmień motyw">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+    </button>
+    <button class="chip gender-chip" id="btn-gender" title="Mówię jako" aria-label="Mówię jako">
+      <span id="btn-gender-label">mężczyzna</span>
+    </button>
+    <button class="icon-btn" id="btn-stop-audio" aria-label="Zatrzymaj odtwarzanie" title="Zatrzymaj odtwarzanie">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidenav" aria-label="Nawigacja główna">
+    <ul id="sidenav-list"></ul>
+    <p class="sidenav-foot" id="db-status">Ładowanie bazy…</p>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <p class="loading-more" id="loading-more" role="status" aria-live="polite" hidden>Wczytuję resztę bazy…</p>
+    <!-- DZISIAJ -->
+    <section class="screen" id="screen-today" aria-labelledby="h-today">
+      <h1 id="h-today">Dzisiaj</h1>
+      <div class="stat-row" id="today-stats"></div>
+      <div class="card hero" id="today-session"></div>
+      <div class="card" id="today-milestone" hidden></div>
+      <div class="card" id="today-goal"></div>
+      <div class="card" id="today-coverage"></div>
+      <div class="card" id="today-recommend"></div>
+      <div class="card" id="today-word"></div>
+    </section>
+
+    <!-- SESJA DNIA -->
+    <section class="screen" id="screen-session" hidden aria-labelledby="h-session">
+      <h1 id="h-session">Sesja dnia</h1>
+      <p class="muted" id="session-hint">Jedna zaplanowana sesja zamiast dwudziestu decyzji. Skład dobiera się z tego, gdzie jesteś: zaległe powtórki idą pierwsze, najsłabszy obszar dostaje dodatkowy blok, wymowa wraca co kilka dni. Sesję można przerwać w dowolnym momencie — wróci w tym samym miejscu.</p>
+      <div class="card" id="session-head"></div>
+      <div class="card" id="session-area"></div>
+    </section>
+
+    <!-- MAPA DROGI DO CELU -->
+    <section class="screen" id="screen-roadmap" hidden aria-labelledby="h-roadmap">
+      <h1 id="h-roadmap">Droga do celu</h1>
+      <p class="muted" id="roadmap-hint">Ile brakuje do progu rozumienia w każdej sytuacji, ile to haseł, ile lekcji i ile czasu przy Twoim obecnym tempie.</p>
+      <div class="stat-row" id="roadmap-stats"></div>
+      <div class="card" id="roadmap-method"></div>
+      <div id="roadmap-list" class="list"></div>
+    </section>
+
+    <!-- TYDZIEŃ -->
+    <section class="screen" id="screen-week" hidden aria-labelledby="h-week">
+      <h1 id="h-week">Tydzień</h1>
+      <div class="stat-row" id="week-stats"></div>
+      <div class="card" id="week-recommend"></div>
+      <div class="card" id="week-goal"></div>
+      <div class="card" id="week-moved"></div>
+      <div class="card" id="week-days"></div>
+      <div class="card" id="week-history"></div>
+    </section>
+
+    <!-- TEST POZIOMUJĄCY -->
+    <section class="screen" id="screen-placement" hidden aria-labelledby="h-placement">
+      <h1 id="h-placement">Test poziomujący</h1>
+      <div class="card" id="placement-area"></div>
+    </section>
+
+    <!-- EGZAMIN POZIOMOWY -->
+    <section class="screen" id="screen-exam" hidden aria-labelledby="h-exam">
+      <h1 id="h-exam">Egzamin poziomowy</h1>
+      <p class="muted" id="exam-hint">Test poziomujący mówi, od czego zacząć. Egzamin mówi, czy poziom naprawdę został osiągnięty: cztery sprawności mierzone osobno, każda z własnym progiem, zaliczenie dopiero przy komplecie.</p>
+      <div id="exam-area"></div>
+    </section>
+
+    <!-- PRÓBKA KONTROLNA -->
+    <section class="screen" id="screen-checkpoint" hidden aria-labelledby="h-checkpoint">
+      <h1 id="h-checkpoint">Próbki kontrolne</h1>
+      <p class="muted" id="checkpoint-hint">Co 20 lekcji krótki test z materiału sprzed 20 lekcji. Wykrywa zapominanie wcześniej, niż zdąży to zrobić kolejka powtórek.</p>
+      <div id="checkpoint-area"></div>
+    </section>
+
+    <!-- KURS -->
+    <section class="screen" id="screen-course" hidden aria-labelledby="h-course">
+      <h1 id="h-course">Kurs</h1>
+      <div class="stat-row" id="course-stats"></div>
+      <div class="card" id="course-pace"></div>
+      <div class="card" id="course-next"></div>
+      <div class="filters">
+        <label class="sr-only" for="course-level">Pokaż poziom</label>
+        <select id="course-level"><option value="">Cała ścieżka</option></select>
+        <button class="btn ghost" id="course-jump" type="button">Skocz do bieżącej lekcji</button>
+      </div>
+      <div id="course-map" class="course-map"></div>
+    </section>
+
+    <!-- MODUŁ 0 — TRENING SŁUCHU -->
+    <section class="screen" id="screen-module0" hidden aria-labelledby="h-module0">
+      <h1 id="h-module0">Moduł 0 — trening słuchu</h1>
+      <p class="muted" id="module0-hint">Ćwiczenia wyłącznie na słuch, bez znaczeń i bez zapisu. Da się je przejść bez patrzenia na ekran: cyfry wybierają odpowiedź, R powtarza dźwięk, P porównuje oba warianty, Enter przechodzi dalej.</p>
+      <div id="module0-area"></div>
+    </section>
+
+    <!-- LICZBY -->
+    <section class="screen" id="screen-numbers" hidden aria-labelledby="h-numbers">
+      <h1 id="h-numbers">Liczby w mowie</h1>
+      <p class="muted" id="numbers-hint">Liczby to nie słownictwo, tylko szybkość. Można znać wszystkie cyfry i nie wyłapać ceny powiedzianej w tempie kasjera — dlatego te ćwiczenia mierzą przede wszystkim czas reakcji.</p>
+      <div class="mode-row" role="group" aria-label="Tryb ćwiczenia liczbowego" id="numbers-modes"></div>
+      <div class="card" id="numbers-area"></div>
+      <div class="card" id="numbers-map"></div>
+    </section>
+
+    <!-- STRATEGIE RATUNKOWE -->
+    <section class="screen" id="screen-rescue" hidden aria-labelledby="h-rescue">
+      <h1 id="h-rescue">Ratowanie rozmowy</h1>
+      <p class="muted" id="rescue-hint">Formuły, które ratują rozmowę, gdy przestajesz nadążać. Trzeba ich użyć odruchowo — dlatego obok listy stoi dryl, w którym kwestia jest podana tak, żeby się nie dało.</p>
+      <div class="mode-row" role="group" aria-label="Tryb modułu ratunkowego" id="rescue-modes"></div>
+      <div class="card" id="rescue-area"></div>
+    </section>
+
+    <!-- PRODUKCJA -->
+    <section class="screen" id="screen-produce" hidden aria-labelledby="h-produce">
+      <h1 id="h-produce">Mówienie po tajsku</h1>
+      <p class="muted" id="produce-hint">Polski na wejściu, tajski na wyjściu — te ćwiczenia sprawdzają, czy potrafisz coś powiedzieć, a nie tylko rozpoznać.</p>
+      <div class="mode-row" role="group" aria-label="Tryb ćwiczenia produkcyjnego" id="produce-modes"></div>
+      <div class="card" id="produce-area"></div>
+    </section>
+
+    <!-- SŁOWNIK I ZWROTY -->
+    <section class="screen" id="screen-dict" hidden aria-labelledby="h-dict">
+      <h1 id="h-dict">Słownik i zwroty</h1>
+      <div class="search-bar">
+        <label class="sr-only" for="dict-q">Szukaj po polsku lub po fonetyce</label>
+        <input id="dict-q" type="search" placeholder="Szukaj: woda, náam, taxi…" autocomplete="off" enterkeyhint="search">
+      </div>
+      <div class="filters" role="group" aria-label="Gotowe zestawy" id="dict-presets">
+        <button class="chip" type="button" data-preset="all" aria-pressed="true">Cała baza</button>
+        <button class="chip" type="button" data-preset="phrase" aria-pressed="false">Zwroty</button>
+        <button class="chip" type="button" data-preset="travel" aria-pressed="false">Tryb wyjazdowy</button>
+      </div>
+      <p class="muted" id="dict-preset-hint">Wszystkie hasła — słowa, zwroty i zdania.</p>
+      <div class="filters">
+        <label class="sr-only" for="f-level">Poziom</label>
+        <select id="f-level"><option value="">Wszystkie poziomy</option></select>
+        <label class="sr-only" for="f-cat">Kategoria</label>
+        <select id="f-cat"><option value="">Wszystkie kategorie</option></select>
+        <label class="sr-only" for="f-type">Typ</label>
+        <select id="f-type"><option value="">Wszystkie typy</option></select>
+        <label class="sr-only" for="f-sort">Sortowanie</label>
+        <select id="f-sort">
+          <option value="freq">Najczęstsze</option>
+          <option value="az">Alfabetycznie (polski)</option>
+          <option value="easy">Od najłatwiejszych</option>
+          <option value="hard">Od najtrudniejszych</option>
+        </select>
+        <button class="chip" id="f-fav" aria-pressed="false">Tylko ulubione</button>
+      </div>
+      <p class="muted" id="dict-count" role="status"></p>
+      <div id="dict-results" class="list"></div>
+      <button class="btn ghost" id="dict-more" hidden>Pokaż więcej</button>
+    </section>
+
+    <!-- GRAMATYKA -->
+    <section class="screen" id="screen-grammar" hidden aria-labelledby="h-grammar">
+      <h1 id="h-grammar">Gramatyka</h1>
+      <p class="muted" id="grammar-hint">Progresja konstrukcji w ośmiu etapach oraz trzy ćwiczenia: wykrywanie struktury ze słuchu, przekształcanie zdań i partykuły końcowe. Temat wchodzi do kursu dopiero wtedy, gdy da się go pokazać słowami, które już znasz.</p>
+      <div class="mode-row" role="group" aria-label="Tryb gramatyczny">
+        <button class="chip" data-gram="map" aria-pressed="true">Progresja</button>
+        <button class="chip" data-gram="structure" aria-pressed="false">Struktura ze słuchu</button>
+        <button class="chip" data-gram="transform" aria-pressed="false">Przekształcenia</button>
+        <button class="chip" data-gram="particles" aria-pressed="false">Partykuły — ćwiczenie</button>
+        <button class="chip" data-gram="guide" aria-pressed="false">Partykuły — przegląd</button>
+      </div>
+      <div class="card" id="grammar-area"></div>
+    </section>
+
+    <!-- SŁUCHANIE -->
+    <section class="screen" id="screen-listen" hidden aria-labelledby="h-listen">
+      <h1 id="h-listen">Słuchanie</h1>
+      <div class="mode-row" role="group" aria-label="Tryb ćwiczenia">
+        <button class="chip" data-listen="choice" aria-pressed="true">Wybierz tłumaczenie</button>
+        <button class="chip" data-listen="dictation" aria-pressed="false">Dyktando fonetyczne</button>
+        <button class="chip" data-listen="assemble" aria-pressed="false">Ułóż zdanie</button>
+        <button class="chip" data-listen="spot" aria-pressed="false">Znajdź słowo</button>
+        <button class="chip" data-listen="gender" aria-pressed="false">Forma męska czy żeńska?</button>
+        <button class="chip" data-listen="noise" aria-pressed="false">Rozumienie w hałasie</button>
+        <button class="chip" data-listen="gap" aria-pressed="false">Luki na słuch</button>
+        <button class="chip" data-listen="unknown" aria-pressed="false">Nieznane słowo z kontekstu</button>
+      </div>
+      <div class="card" id="listen-area"></div>
+    </section>
+
+    <!-- MÓWIENIE -->
+    <section class="screen" id="screen-speak" hidden aria-labelledby="h-speak">
+      <h1 id="h-speak">Powtarzaj za wzorem</h1>
+      <p class="muted" id="speak-hint">Wzór masz przed sobą: posłuchaj, nagraj siebie i sprawdź, czy trafiłeś w tony. To ćwiczenie na dokładność wymowy, nie na pamięć — jeśli chcesz mówić z samego polskiego, bez wzoru, wejdź w „Mówienie po tajsku”, tryb „Powiedz na głos”. Ocena liczy się w tej przeglądarce — nagranie nigdzie nie jest wysyłane.</p>
+      <div class="card" id="speak-area"></div>
+    </section>
+
+    <!-- DIALOGI -->
+    <section class="screen" id="screen-dialogues" hidden aria-labelledby="h-dlg">
+      <h1 id="h-dlg">Dialogi</h1>
+      <div class="filters">
+        <label class="sr-only" for="dlg-select">Wybierz dialog</label>
+        <select id="dlg-select"></select>
+        <button class="chip" id="dlg-hide" aria-pressed="false">Ukryj tłumaczenia</button>
+        <button class="chip" id="dlg-role" aria-pressed="false">Tylko rola A</button>
+      </div>
+      <div class="card" id="dlg-view"></div>
+    </section>
+
+    <!-- SCENY -->
+    <section class="screen" id="screen-scenes" hidden aria-labelledby="h-scenes">
+      <h1 id="h-scenes">Sceny</h1>
+      <p class="muted" id="scenes-hint">Jedna sytuacja od wejścia do wyjścia, dwadzieścia kilka kwestii pod rząd. Pytania dotyczą sensu całości, nie pojedynczych zdań — a nieznane słowa masz przepuszczać, nie rozszyfrowywać.</p>
+      <div id="scenes-area"></div>
+    </section>
+
+    <!-- SŁUCHANIE EKSTENSYWNE -->
+    <section class="screen" id="screen-extensive" hidden aria-labelledby="h-ext">
+      <h1 id="h-ext">Słuchanie ekstensywne</h1>
+      <p class="muted" id="extensive-hint">Trzy do pięciu minut ciągłego materiału w trzech przejściach: bez tekstu, z tekstem i znów bez tekstu. Różnica między pierwszym a trzecim przejściem pokazuje, czego nie usłyszałeś, a nie czego nie wiedziałeś.</p>
+      <div id="extensive-area"></div>
+    </section>
+
+    <!-- POWTÓRKI -->
+    <section class="screen" id="screen-srs" hidden aria-labelledby="h-srs">
+      <h1 id="h-srs">Powtórki</h1>
+      <div class="stat-row" id="srs-stats"></div>
+      <div class="card" id="srs-area"></div>
+      <div class="card" id="srs-history"></div>
+    </section>
+
+    <!-- SESJA NAPRAWCZA -->
+    <section class="screen" id="screen-repair" hidden aria-labelledby="h-repair">
+      <h1 id="h-repair">Sesja naprawcza</h1>
+      <div class="stat-row" id="repair-stats"></div>
+      <div class="card" id="repair-area"></div>
+    </section>
+
+    <!-- WYMOWA -->
+    <section class="screen" id="screen-pron" hidden aria-labelledby="h-pron">
+      <h1 id="h-pron">Tony i wymowa — przewodnik</h1>
+      <p class="muted">Materiał do czytania i odsłuchu. Ćwiczenia tonów są na ekranie „Mówienie po tajsku” (tryb „Tony — pary minimalne”), a powtarzanie za wzorem — na ekranie „Powtarzaj za wzorem”.</p>
+      <div id="pron-content"></div>
+    </section>
+
+    <!-- POSTĘP -->
+    <section class="screen" id="screen-progress" hidden aria-labelledby="h-prog">
+      <h1 id="h-prog">Postęp</h1>
+      <div class="stat-row" id="prog-stats"></div>
+      <div class="card" id="prog-tempo"></div>
+      <div class="card" id="prog-course"></div>
+      <div class="card" id="prog-perception"></div>
+      <div class="card" id="prog-sides"></div>
+      <div class="card" id="prog-grammar"></div>
+      <div class="card" id="prog-weak"></div>
+      <div class="card" id="prog-errors"></div>
+      <div class="card" id="prog-retention"></div>
+      <div class="card" id="prog-tuning"></div>
+      <div class="card" id="prog-fluency"></div>
+      <div class="card" id="prog-numbers"></div>
+      <div class="card" id="prog-reflex"></div>
+      <div class="card" id="prog-levels"></div>
+      <div class="card" id="prog-cats"></div>
+      <div class="card">
+        <h2>Eksport słownictwa do Anki</h2>
+        <p class="muted">Plik CSV z fonetyką, wymową po polsku i tłumaczeniem. Bez pisma tajskiego — tak samo jak cała aplikacja.</p>
+        <div class="filters">
+          <label class="sr-only" for="anki-scope">Zakres eksportu</label>
+          <select id="anki-scope">
+            <option value="srs">Hasła z powtórek</option>
+            <option value="favourites">Ulubione</option>
+            <option value="seen">Wszystko, co poznałem</option>
+            <option value="level">Wybrany poziom</option>
+            <option value="all">Cała baza</option>
+          </select>
+          <label class="sr-only" for="anki-level">Poziom do eksportu</label>
+          <select id="anki-level" hidden></select>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="btn-anki">Pobierz CSV dla Anki</button>
+        </div>
+        <p class="muted" id="anki-status" role="status"></p>
+      </div>
+      <div class="card">
+        <h2>Kopia danych</h2>
+        <p class="muted">Eksport zawiera wyłącznie Twój postęp i ustawienia. Ukryte dane techniczne TTS nigdy nie są eksportowane.</p>
+        <div class="btn-row">
+          <button class="btn" id="btn-export">Eksportuj JSON</button>
+          <label class="btn ghost" for="import-file">Importuj JSON</label>
+          <input id="import-file" type="file" accept="application/json" class="sr-only">
+        </div>
+      </div>
+    </section>
+
+    <!-- USTAWIENIA -->
+    <section class="screen" id="screen-settings" hidden aria-labelledby="h-set">
+      <h1 id="h-set">Ustawienia</h1>
+      <div class="card" id="settings-form"></div>
+      <div class="card" id="voice-info"></div>
+      <div class="card">
+        <h2>Dane aplikacji</h2>
+        <p class="muted">Postęp i ustawienia są zapisane w tej przeglądarce. Kopię wyniesiesz przyciskiem eksportu wyżej.</p>
+        <div class="btn-row">
+          <button class="btn ghost" id="btn-clear">Wyczyść postęp i ustawienia</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<nav class="tabbar" aria-label="Nawigacja dolna">
+  <ul id="tabbar-list"></ul>
+</nav>
+
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet-inner">
+    <button class="icon-btn sheet-close" id="sheet-close" aria-label="Zamknij">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </button>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div id="gender-ask" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="gender-ask-title">
+  <div class="sheet-inner">
+    <h2 id="gender-ask-title">Mówię jako</h2>
+    <p>W tajskim końcówka grzecznościowa i zaimek „ja” zależą od płci osoby mówiącej — nie od płci rozmówcy. Mężczyzna kończy zdanie <b>khráp</b> i mówi o sobie <b>phǒm</b>, kobieta kończy <b>khâ</b> (w pytaniu <b>khá</b>) i mówi <b>chǎn</b> albo <b>dì-chǎn</b>. To obowiązek gramatyczny, nie wybór stylu.</p>
+    <p class="muted">Aplikacja pokaże Ci formy, których faktycznie użyjesz. Obie formy zobaczysz zawsze w szczegółach hasła — ze słuchu warto rozpoznawać jedną i drugą. Wybór zmienisz w Ustawieniach.</p>
+    <div class="btn-row">
+      <button class="btn gold" type="button" data-gender="female">Jestem kobietą</button>
+      <button class="btn gold" type="button" data-gender="male">Jestem mężczyzną</button>
+    </div>
+  </div>
+</div>
+
+<p id="m0-live" class="sr-only" role="status" aria-live="polite"></p>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/utils.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/gender.js"></script>
+<script src="js/speech.js"></script>
+<script src="js/dsp.js"></script>
+<script src="js/capture.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/pitch.js"></script>
+<script src="js/tone-score.js"></script>
+<script src="js/pron-view.js"></script>
+<script src="js/search.js"></script>
+<script src="js/srs.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/extensive.js"></script>
+<script src="js/comprehension.js"></script>
+<script src="js/numbers.js"></script>
+<script src="js/rescue.js"></script>
+<script src="js/grammar-stats.js"></script>
+<script src="js/grammar.js"></script>
+<script src="js/coverage.js"></script>
+<script src="js/production.js"></script>
+<script src="js/course.js"></script>
+<script src="js/repair.js"></script>
+<script src="js/perception.js"></script>
+<script src="js/placement.js"></script>
+<script src="js/exam.js"></script>
+<script src="js/exam-view.js"></script>
+<script src="js/checkpoint.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/progress-migration.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/goals.js"></script>
+<script src="js/session.js"></script>
+<script src="js/retro.js"></script>
+<script src="js/module-zero-view.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
