@@ -375,9 +375,8 @@ znacznikami `<script>`.
 
 Trzy rzeczy, które trzeba wiedzieć, zanim zainwestujesz w ten kurs czas.
 
-**1. Około 88% materiału nie zostało zweryfikowane przez rodzimego użytkownika
-języka.** Zweryfikowanych jest 2460 rekordów z 20 791, czyli 11,8%. Reszta to
-materiał wzorcowy: zdania budowane automatycznie z białych list słów według
+**1. Materiał nie został zweryfikowany przez rodzimego użytkownika
+języka.** Jest to materiał wzorcowy: zdania budowane automatycznie z białych list słów według
 sprawdzonych szablonów. Są gramatycznie poprawne i nie zawierają wykrywalnych
 błędów, ale nikt, kto mówi po tajsku od urodzenia, ich nie przeczytał.
 Oznacza to, że część zdań może brzmieć sztywno albo książkowo. **To jest
