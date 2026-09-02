@@ -1,0 +1,1364 @@
+/* Thai All-in-One — style główne
+   Paleta: granat (baza), koral (akcja), złoto (ton/akcent).
+   Fonetyka z tonami jest bohaterem interfejsu, więc dostaje krój szeryfowy
+   (znaki diakrytyczne czytają się w nim wyraźniej) i największą skalę. */
+
+:root {
+  --navy-900: #0d182e;
+  --navy-800: #12203c;
+  --navy-700: #1c2f52;
+  --navy-100: #dde3ee;
+  --coral: #e4573f;
+  --coral-soft: #ff8a72;
+  --gold: #d69a2c;
+  --gold-soft: #f0c766;
+  --paper: #f7f5f2;
+  --paper-2: #ffffff;
+  --ink: #16203a;
+  --ink-soft: #55607a;
+  --line: #e2ddd5;
+  --ok: #2f7d5d;
+  --bad: #b4402c;
+
+  --bg: var(--paper);
+  --surface: var(--paper-2);
+  --text: var(--ink);
+  --text-soft: var(--ink-soft);
+  --border: var(--line);
+  --accent: var(--coral);
+  --accent-2: var(--gold);
+
+  /* Kolor akcentu jako TŁO to osobna zmienna. Koral #e4573f pod białym
+     tekstem daje 3,66:1 — poniżej progu WCAG AA (4,5:1). Do wypełnień
+     używamy więc ciemniejszego wariantu, a --accent zostaje do obramowań
+     i tekstu, gdzie leży na jasnym tle i kontrast jest wysoki. */
+  --accent-bg: #bd3f28;      /* z białym tekstem: 5,38:1 */
+  --on-accent: #ffffff;
+  /* Akcent jako TEKST na jasnym tle. Koral #e4573f daje na bieli 3,66:1 —
+     za mało dla pisma tej wielkości. Fonetyka jest głównym nośnikiem treści
+     w tej aplikacji, więc musi spełniać próg dla zwykłego tekstu. */
+  --accent-text: #bd3f28;    /* na białej karcie: 5,38:1 */
+  /* Zieleń i czerwień stanu jako TEKST. Wartości --ok i --bad są dobrane do
+     obramowań i tła; jako pismo na karcie muszą spełniać 4,5:1 osobno
+     w każdym motywie. */
+  --ok-text: #24694c;        /* na białej karcie: 6,00:1 */
+  --bad-text: #a83a26;       /* na białej karcie: 6,37:1 */
+
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 1px 2px rgba(13, 24, 46, .06), 0 8px 24px rgba(13, 24, 46, .07);
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --scale: 1;
+  --tap: 48px;
+}
+
+[data-theme="dark"] {
+  --bg: var(--navy-900);
+  --surface: var(--navy-800);
+  --text: #eef2f9;
+  --text-soft: #9fb0cc;
+  --border: #26375a;
+  --accent: var(--coral-soft);
+  --accent-2: var(--gold-soft);
+  /* W ciemnym motywie akcent jest jasny, więc tekst na nim musi być ciemny.
+     #ff8a72 z #2b1008 daje 7,74:1. */
+  --accent-bg: var(--coral-soft);
+  --on-accent: #2b1008;
+  --accent-text: var(--coral-soft);   /* na granacie: 7,04:1 */
+  --ok-text: #6fd3a4;                 /* na granacie: 8,90:1 */
+  --bad-text: #ff9d86;                /* na granacie: 7,60:1 */
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px rgba(0, 0, 0, .35);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --bg: var(--navy-900);
+    --surface: var(--navy-800);
+    --text: #eef2f9;
+    --text-soft: #9fb0cc;
+    --border: #26375a;
+    --accent: var(--coral-soft);
+    --accent-2: var(--gold-soft);
+    --accent-bg: var(--coral-soft);
+    --on-accent: #2b1008;
+    --accent-text: var(--coral-soft);
+    --ok-text: #6fd3a4;
+    --bad-text: #ff9d86;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px rgba(0, 0, 0, .35);
+  }
+}
+
+* { box-sizing: border-box; }
+
+/* Atrybut hidden musi być silniejszy niż układy nadane klasom
+   (.sheet, .btn-row, .tokens itd. ustawiają display i przykryłyby go). */
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: calc(16px * var(--scale));
+  line-height: 1.55;
+  padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  /* Polszczyzna ma długie wyrazy — „dwudziestominutowej”, „grzecznościowa”,
+     „Rozpoznawanie”. Domyślnie przeglądarka NIE łamie wyrazu w środku, więc
+     przy powiększeniu tekstu do 200% pojedyncze słowo bywa szersze niż
+     kolumna, w której stoi, i wychodzi poza kartę — a tam, gdzie karta ma
+     obcinanie, znika bez możliwości doczytania. `break-word` łamie wyłącznie
+     te wyrazy, które inaczej by nie zmieściły się w wierszu; przy zwykłej
+     wielkości tekstu nie zmienia niczego. */
+  overflow-wrap: break-word;
+}
+
+h1 { font-family: var(--font-display); font-size: 1.7rem; letter-spacing: -.01em; margin: .2rem 0 1rem; }
+h2 { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 .5rem; }
+h3 { font-size: 1rem; margin: 0 0 .35rem; }
+p { margin: .4rem 0; }
+.muted { color: var(--text-soft); font-size: .92rem; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: var(--accent-bg); color: var(--on-accent);
+  padding: .6rem 1rem; z-index: 100; border-radius: 0 0 var(--radius) 0;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- topbar */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; padding: .55rem .9rem;
+  padding-top: calc(.55rem + env(safe-area-inset-top));
+  background: var(--navy-800); color: #fff;
+}
+.brand { display: flex; align-items: center; gap: .5rem; font-weight: 600; letter-spacing: .01em;
+  min-width: 0; }
+.brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.brand em { font-style: normal; color: var(--gold-soft); font-family: var(--font-display); }
+.brand-mark { width: 26px; height: 26px; color: var(--coral-soft); flex: 0 0 auto; }
+.topbar-actions { display: flex; gap: .25rem; flex: 0 0 auto; }
+.icon-btn {
+  min-width: var(--tap); min-height: var(--tap);
+  display: grid; place-items: center;
+  background: transparent; border: 0; color: inherit; cursor: pointer; border-radius: 12px;
+}
+.icon-btn svg { width: 22px; height: 22px; }
+.icon-btn:hover { background: rgba(255, 255, 255, .12); }
+
+/* ----------------------------------------------------------------- układ */
+.shell { display: block; }
+main { padding: 1rem .9rem 2rem; max-width: 900px; margin: 0 auto; }
+main:focus { outline: none; }
+.sidenav { display: none; }
+
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tabbar ul { display: flex; margin: 0; padding: 0; list-style: none; }
+.tabbar li { flex: 1 1 0; min-width: 0; }
+.tabbar button {
+  width: 100%; min-height: var(--tap); padding: .45rem .2rem .35rem;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: none; border: 0; color: var(--text-soft); font-size: .7rem; cursor: pointer;
+}
+/* Podpis zakładki nie może rozpychać paska — przy 200% powiększenia siedem
+   pozycji po pełnej nazwie nie mieści się w szerokości ekranu. Ikona i nazwa
+   dostępna (aria-label) zostają nienaruszone. */
+.tabbar button span {
+  max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.tabbar button svg { width: 22px; height: 22px; }
+.tabbar button[aria-current="page"] { color: var(--accent); font-weight: 600; }
+
+@media (min-width: 860px) {
+  body { padding-bottom: 0; }
+  .shell { display: grid; grid-template-columns: 240px 1fr; }
+  .tabbar { display: none; }
+  .sidenav {
+    display: block; padding: 1rem .6rem; border-right: 1px solid var(--border);
+    position: sticky; top: 56px; height: calc(100vh - 56px); overflow: auto;
+  }
+  .sidenav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+  /* Nagłówek grupy w menu bocznym (sesja VI). Nie jest przyciskiem i nie da
+     się w niego wejść — ma tylko dzielić dwadzieścia kilka pozycji na pięć
+     czytelnych kawałków. Kolor i wielkość celowo poniżej pozycji listy:
+     nagłówek ma być widoczny, gdy się go szuka, i niewidoczny, gdy się
+     przebiega wzrokiem po nazwach ekranów. */
+  .sidenav-group {
+    font-size: .72rem; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--text-soft); padding: .9rem .7rem .25rem;
+  }
+  .sidenav-group:first-child { padding-top: .2rem; }
+  .sidenav ul ul { gap: 2px; }
+  .sidenav button {
+    width: 100%; display: flex; align-items: center; gap: .6rem;
+    padding: .6rem .7rem; border: 0; border-radius: 10px; background: none;
+    color: var(--text); font-size: .95rem; cursor: pointer; text-align: left;
+  }
+  .sidenav button svg { width: 20px; height: 20px; color: var(--text-soft); }
+  .sidenav button:hover { background: var(--bg); }
+  .sidenav button[aria-current="page"] { background: var(--accent); color: #fff; }
+  .sidenav button[aria-current="page"] svg { color: #fff; }
+  .sidenav-foot { font-size: .78rem; color: var(--text-soft); padding: .8rem .7rem; }
+  main { padding: 1.6rem 2rem 3rem; }
+}
+
+/* ------------------------------------------------------------ komponenty */
+
+/* Nagłówek grupy w arkuszu „Więcej”. Ten arkusz jest jedynym miejscem, gdzie
+   ekran ogląda się przed wejściem, więc pozycje mają tam dwie linijki: nazwę
+   i zdanie o tym, po co tam iść. Nazwa jest pogrubiona, opis stonowany. */
+.sheet-group {
+  font-size: .78rem; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--text-soft); margin: 1.1rem 0 .35rem;
+}
+.sheet-group:first-of-type { margin-top: .6rem; }
+.list .row-main strong { display: block; }
+.list .row-main .small { display: block; margin-top: .1rem; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1rem; margin-bottom: .9rem;
+  box-shadow: var(--shadow);
+}
+.list { display: grid; gap: .55rem; }
+.row {
+  display: flex; align-items: center; gap: .7rem; width: 100%;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .7rem .8rem; text-align: left;
+  color: inherit; cursor: pointer; font: inherit;
+  /* Wiersz wyniku w słowniku niesie znaczenie, fonetykę i metrykę. Przy
+     powiększeniu tekstu suma tych trzech była szersza niż ekran — element
+     zginający się (row-main) ma min-width: 0, ale sam wiersz też musi mieć
+     prawo się zwęzić, inaczej rozpycha listę. */
+  max-width: 100%; min-width: 0; flex-wrap: wrap;
+}
+.row:hover { border-color: var(--accent); }
+
+/* row-main jest teraz przyciskiem (patrz recordRow w app.js), więc trzeba mu
+   zdjąć wygląd przycisku — ma wyglądać jak treść wiersza, którą był wcześniej.
+   Obrys przy nawigacji klawiaturą zostaje: to jedyny sygnał, gdzie jest focus. */
+.row .row-main { flex: 1; min-width: 0; }
+/* Reset TYLKO dla wariantu przyciskowego — w innych wierszach .row-main jest
+   zwykłym <div> i nie wolno mu dawać kursora wskazującego akcję, której nie ma. */
+.row > button.row-main {
+  background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
+}
+.row > button.row-main:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+/* Ikona odtwarzania nie może się kurczyć, gdy treść wiersza jest długa. */
+.row .row-play { flex: 0 0 auto; }
+.row .row-pl { font-weight: 600; }
+.row .row-ph { font-family: var(--font-display); color: var(--accent-text); font-size: 1.05rem; }
+.row .row-meta { font-size: .75rem; color: var(--text-soft); }
+
+.btn {
+  min-height: var(--tap); padding: .6rem 1.1rem; border-radius: 999px;
+  border: 1px solid transparent; background: var(--accent-bg); color: var(--on-accent);
+  font: inherit; font-weight: 600; cursor: pointer;
+  /* Przy powiększeniu tekstu przycisk z długim podpisem („Rozumiem
+     konsekwencje — pomiń moduł”) był szerszy niż ekran i wystawał poza
+     krawędź. Podpis ma się łamać, przycisk ma zostać w kadrze. */
+  max-width: 100%; overflow-wrap: anywhere;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--border); }
+.btn.gold { background: var(--accent-2); color: #221a06; }
+.btn-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .6rem; }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+.chip {
+  min-height: 40px; padding: .35rem .8rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); font: inherit; font-size: .88rem; cursor: pointer;
+  /* Etykieta bywa dwuczłonowa („1,4x potoczne”). Przy powiększeniu tekstu
+     pojedynczy znacznik był szerszy niż rząd, w którym stoi. */
+  max-width: 100%;
+}
+.chip[aria-pressed="true"], .chip.active {
+  background: var(--accent-bg); color: var(--on-accent); border-color: var(--accent-bg);
+}
+
+.filters { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .8rem; }
+.filters select {
+  min-height: 40px; padding: .3rem .6rem; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+  /* Lista rozwijana domyślnie przyjmuje szerokość NAJDŁUŻSZEJ pozycji
+     („Wszystkie kategorie / Awarie i pomoc / …”). Przy powiększeniu tekstu
+     wychodziło to poza ekran. Pole ma się mieścić w wierszu; pełne nazwy
+     widać po rozwinięciu, którym zarządza system. */
+  max-width: 100%; min-width: 0;
+}
+.search-bar input {
+  width: 100%; min-height: var(--tap); padding: .7rem .9rem;
+  border-radius: var(--radius); border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font: inherit; font-size: 1rem;
+  margin-bottom: .7rem;
+}
+
+.stat-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: .55rem; margin-bottom: .9rem; }
+@media (min-width: 620px) { .stat-row { grid-template-columns: repeat(4, 1fr); } }
+/* Przy 200% powiększenia dwie kolumny dają ok. 85 px na kafelek — liczba
+   i podpis przestają się w nim mieścić i wychodzą poza obrys. Poniżej tej
+   szerokości kafelki idą jeden pod drugim. */
+@media (max-width: 400px) { .stat-row { grid-template-columns: 1fr; } }
+.stat {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .7rem; text-align: center; min-width: 0; overflow-wrap: anywhere;
+}
+.stat b { display: block; font-family: var(--font-display); font-size: 1.5rem; line-height: 1.1; }
+.stat span { font-size: .75rem; color: var(--text-soft); }
+
+.progress { height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; }
+.progress i { display: block; height: 100%; background: var(--accent-2); }
+
+/* ------------------------------------------- fonetyka i sygnatura tonowa */
+.phonetic {
+  font-family: var(--font-display);
+  font-size: 1.9rem; line-height: 1.35; color: var(--accent);
+  display: flex; flex-wrap: wrap; gap: .1rem .55rem; align-items: flex-end;
+}
+/* Sylaba jest nierozerwalna: „khǎaw” nie wolno złamać, bo znak tonu straciłby
+   swoją samogłoskę, a to zmienia odczyt. Skoro nie można jej złamać, przy
+   bardzo wąskim widoku (powiększenie tekstu do 200%) zmniejszamy stopień
+   pisma zapisu fonetycznego — pozostaje największym elementem na ekranie,
+   ale przestaje wystawać poza kartę. */
+@media (max-width: 420px) {
+  .phonetic { font-size: 1.45rem; gap: .1rem .4rem; }
+  .syl .tone-mark { width: 20px; height: 10px; }
+}
+@media (max-width: 260px) {
+  .phonetic { font-size: 1.15rem; }
+  .syl .tone-mark { width: 16px; height: 8px; }
+}
+
+/* Sylaba jest niepodzielna — znak tonu musi zostać nad swoją samogłoską.
+   Może się natomiast przenieść do następnego wiersza w całości. */
+.syl { display: inline-flex; flex-direction: column; align-items: center; max-width: 100%; }
+.syl .tone-mark { width: 26px; height: 13px; color: var(--accent-2); margin-bottom: -2px; }
+.syl .tone-mark path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.no-tones .tone-mark { visibility: hidden; }
+.pl-read { color: var(--text-soft); font-size: .92rem; }
+.tone-guide { font-size: .85rem; color: var(--text-soft); }
+
+/* Bez jawnej definicji kolumny element siatki nie ma prawa zejść poniżej
+   swojej naturalnej szerokości (domyślne min-width: auto). Przy powiększeniu
+   tekstu karta ze zwrotem rozpychała wtedy siatkę ponad szerokość ekranu. */
+.bigcards { display: grid; gap: .8rem; grid-template-columns: minmax(0, 1fr); }
+.bigcard {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1rem; box-shadow: var(--shadow);
+}
+.bigcard .bc-pl { font-size: 1.05rem; font-weight: 600; }
+
+/* Kwestia dialogu to kółko z rolą, tekst i przycisk odsłuchu. Kolumna
+   tekstowa musi mieć prawo zejść poniżej swojej naturalnej szerokości
+   (minmax(0, 1fr)), inaczej przy powiększeniu tekstu cały wiersz — razem
+   z przyciskiem odtwarzania — wychodzi poza ekran. */
+.line {
+  display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: .6rem;
+  align-items: start; padding: .55rem 0; border-bottom: 1px dashed var(--border);
+}
+.line:last-child { border-bottom: 0; }
+.role {
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  font-size: .8rem; font-weight: 700; color: #fff; background: var(--navy-700);
+}
+.role.b { background: var(--accent); }
+.line .l-ph { font-family: var(--font-display); font-size: 1.05rem; }
+.line .l-pl { font-size: .92rem; color: var(--text-soft); }
+.hide-pl .l-pl { visibility: hidden; }
+.line.dim { opacity: .35; }
+
+.opt {
+  display: block; width: 100%; text-align: left; margin-bottom: .5rem;
+  min-height: var(--tap); padding: .7rem .9rem; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  font: inherit; cursor: pointer;
+}
+.opt:hover { border-color: var(--accent); }
+.opt.correct { border-color: var(--ok); background: rgba(47, 125, 93, .12); }
+.opt.wrong { border-color: var(--bad); background: rgba(180, 64, 44, .12); }
+
+.tokens { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; min-height: 48px; }
+.token {
+  padding: .45rem .7rem; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); font-family: var(--font-display); cursor: pointer; font-size: 1rem;
+}
+.token { color: var(--text); }
+.token.picked { background: var(--accent-bg); color: var(--on-accent); border-color: var(--accent-bg); }
+
+.field { display: block; margin: .6rem 0; }
+.field span { display: block; font-size: .85rem; color: var(--text-soft); margin-bottom: .2rem; }
+.field input[type="text"], .field input[type="number"], .field select {
+  width: 100%; min-height: var(--tap); padding: .55rem .7rem; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--text); font: inherit;
+}
+.field input[type="range"] { width: 100%; }
+/* Etykieta przełącznika w Ustawieniach bywa całym zdaniem. Przy powiększeniu
+   tekstu wypychała sam przełącznik poza prawą krawędź — a to jedyny element,
+   którym da się tę opcję zmienić. Tekst ma się zwężać i łamać, kontrolka
+   zostaje w kadrze. */
+.switch { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem 0;
+  flex-wrap: wrap; }
+.switch > * { min-width: 0; }
+/* Natywne pole wyboru ma około 13 px — poniżej progu celu dotykowego.
+   Klikalna jest cała etykieta, ale sam wskaźnik musi być widoczny także
+   dla osoby, która patrzy na ekran przez lupę systemową. */
+.switch input { flex: 0 0 auto; width: 24px; height: 24px; }
+/* 24 px, nie 22: WCAG 2.2 (2.5.8) wymaga celu 24x24 px, a przy równych
+   22 px pomiar w teście powiększenia bywał raz 22, raz 21,99 przez
+   zaokrąglenie podpikselowe — ten sam kod dawał raz wynik zielony,
+   raz czerwony. Zapas dwóch pikseli usuwa i niezgodność, i chwiejność. */
+
+.badge {
+  display: inline-block; padding: .1rem .5rem; border-radius: 999px;
+  font-size: .7rem; background: var(--bg); border: 1px solid var(--border); color: var(--text-soft);
+}
+.badge.lvl { border-color: var(--accent-2); color: var(--accent-2); }
+
+.playing { animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .55; } }
+
+.sheet {
+  position: fixed; inset: 0; z-index: 40; background: rgba(9, 15, 28, .55);
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.sheet-inner {
+  position: relative; width: 100%; max-width: 640px; max-height: 88vh; overflow: auto;
+  background: var(--surface); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 1.2rem 1rem calc(1.4rem + env(safe-area-inset-bottom));
+}
+.sheet-close { position: absolute; right: .3rem; top: .3rem; }
+@media (min-width: 860px) {
+  .sheet { align-items: center; }
+  .sheet-inner { border-radius: var(--radius-lg); }
+}
+
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(88px + env(safe-area-inset-bottom)); z-index: 60;
+  background: var(--navy-800); color: #fff; padding: .8rem 1.1rem;
+  /* Komunikaty bywają wielolinijkowe (np. instrukcja o głosie tajskim),
+     więc prostokąt z zaokrągleniem zamiast pigułki. */
+  border-radius: 16px; text-align: left; line-height: 1.45;
+  font-size: .9rem; max-width: min(92vw, 460px); box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+
+table.simple { width: 100%; border-collapse: collapse; font-size: .92rem; }
+table.simple th, table.simple td { text-align: left; padding: .4rem .3rem; border-bottom: 1px solid var(--border); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ------------------------------------------------ elementy dodane w JS */
+.screen { animation: fade .18s ease-out; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } }
+
+.mode-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .9rem; }
+
+.fb { margin: .8rem 0 .2rem; padding: .6rem .8rem; border-radius: var(--radius); }
+.fb.ok { background: rgba(47, 125, 93, .12); color: var(--ok); }
+.fb.bad { background: rgba(180, 64, 44, .12); color: var(--bad); }
+[data-theme="dark"] .fb.ok { color: #7fd2ab; }
+[data-theme="dark"] .fb.bad { color: #ff9b85; }
+
+.reveal { margin: .6rem 0; }
+
+.tokens { display: flex; flex-wrap: wrap; gap: .45rem; margin: .6rem 0; }
+.tokens.answer {
+  min-height: calc(var(--tap) + 4px); align-items: center; padding: .4rem;
+  border: 2px dashed var(--border); border-radius: var(--radius);
+}
+.token[disabled] { opacity: .3; }
+
+.line.current { background: rgba(214, 154, 44, .14); border-radius: 10px; }
+
+.chart { display: flex; align-items: flex-end; gap: 4px; height: 90px; margin-top: .5rem; }
+.chart i { flex: 1; background: var(--accent-2); border-radius: 3px 3px 0 0; min-height: 3px; }
+
+.row svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.play-btn svg { width: 18px; height: 18px; margin-right: .35rem; vertical-align: -3px; }
+.play-btn { display: inline-flex; align-items: center; }
+
+details { border-top: 1px solid var(--border); padding: .5rem 0; }
+/* Nagłówek rozwijanego bloku był układem elastycznym wyłącznie po to, by
+   wyśrodkować tekst w pionie. Przy powiększeniu tekstu nie dawał się zwęzić
+   poniżej najdłuższego słowa razem ze znacznikiem rozwinięcia. Zwykły blok
+   z dopełnieniem daje ten sam efekt wizualny i łamie się normalnie. */
+details summary { cursor: pointer; font-weight: 600; min-height: var(--tap);
+  display: block; padding: .7rem 0; min-width: 0; }
+details[open] summary { color: var(--accent); }
+details .bigcard { margin: .5rem 0; }
+
+@media (min-width: 700px) { .bigcards { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+body.hide-tones .tone-mark { visibility: hidden; }
+
+/* Pasek informujący, że reszta bazy jeszcze się dociąga. Pojawia się tylko
+   wtedy, gdy użytkownik wejdzie na ekran wymagający pełnych danych szybciej,
+   niż zdąży zadziałać ładowanie w tle. */
+.loading-more {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  font-size: calc(.85rem * var(--scale));
+}
+#db-status[data-warn] { color: var(--bad); }
+
+/* ====================================================== PŁEĆ MÓWIĄCEGO */
+/* W tajskim cząstka grzecznościowa i zaimek „ja” zależą od płci osoby
+   mówiącej. Aplikacja pokazuje formę zgodną z ustawieniem, ale obie formy
+   muszą być czytelnie odróżnialne tam, gdzie stoją obok siebie. */
+
+.gender-chip {
+  min-height: 40px; padding: .2rem .7rem;
+  font-size: calc(.78rem * var(--scale)); white-space: nowrap;
+}
+.gender-chip::before { content: "\2642"; margin-right: .3rem; font-size: 1rem; }
+.gender-chip[data-gender="female"]::before { content: "\2640"; }
+.gender-chip[data-gender="female"] { border-color: var(--accent-2); color: var(--accent-2); }
+
+/* Przy powiększeniu tekstu do 200% pasek nagłówka ma realnie ok. 180 px
+   szerokości w jednostkach CSS. Słowo „mężczyzna” zajmuje wtedy więcej niż
+   cały nagłówek i wypychało zawartość poza ekran, zmuszając do przewijania
+   w dwóch osiach (WCAG 1.4.10). Chowamy sam NAPIS — symbol ♂/♀ zostaje,
+   a nazwa dostępna przycisku jest w aria-label, więc czytnik ekranu i tak
+   czyta pełną treść. Nic nie znika, zmienia się tylko zapis. */
+@media (max-width: 400px) {
+  .gender-chip { padding: .2rem .5rem; }
+  .gender-chip #btn-gender-label {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  .gender-chip::before { margin-right: 0; }
+  .brand span { font-size: .92rem; }
+}
+
+.gform {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem .6rem;
+  align-items: start; padding: .55rem 0; border-bottom: 1px dashed var(--border);
+}
+.gform:last-of-type { border-bottom: 0; }
+.gform-label {
+  grid-column: 1 / -1;
+  font-size: calc(.72rem * var(--scale)); letter-spacing: .04em;
+  text-transform: uppercase; color: var(--text-soft);
+}
+.gform-main { min-width: 0; }
+.gender-card { margin-top: .8rem; }
+.gender-card h3 { margin-top: 0; }
+
+/* Kropka przy wierszu listy — hasło ma osobną formę żeńską. */
+.row.has-gender .row-pl::after {
+  content: "\2640\2642"; margin-left: .4rem;
+  font-size: .7rem; color: var(--text-soft); letter-spacing: -.05em;
+}
+
+/* Rola w dialogu z płcią wynikającą ze scenariusza (kelnerka, policjant). */
+.role[data-gender="female"] { background: var(--accent-2); color: #221a06; }
+.role[data-gender="male"] { background: var(--navy-700); }
+
+#gender-ask .sheet-inner { text-align: left; }
+#gender-ask h2 { margin-top: 0; }
+#gender-ask .btn-row { margin-top: 1rem; }
+#gender-ask .btn-row .btn { flex: 1 1 45%; justify-content: center; }
+/* Hasło opisujące jedną konkretną formę — nie przełącza się z resztą. */
+.gender-lexicon { opacity: .95; }
+
+/* ============================================================== KURS
+   Mapa postępu. Stan lekcji musi być czytelny bez koloru — stąd ikona
+   w plakietce (kłódka, ptaszek, numer) i opis w aria-label. */
+.course-level {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin: 1.4rem 0 .5rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.course-map { display: flex; flex-direction: column; gap: .5rem; }
+
+/* --- rozdziały ---
+   Nagłówek rozdziału musi być odróżnialny od karty lekcji bez polegania na
+   kolorze: inny kształt (pełna szerokość, bez lewej krechy), inna typografia
+   i procent po prawej. Stan (zrobiony / w toku / przed nami) niesie także
+   grubość lewej krawędzi, więc czyta się go w trybie monochromatycznym. */
+.chapter-head {
+  margin: 1rem 0 .2rem;
+  border-top: 1px solid var(--border);
+  padding-top: .7rem;
+}
+.chapter-line {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  width: 100%;
+  min-height: var(--tap);
+  padding: .5rem .2rem;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.chapter-num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-main { flex: 1 1 auto; display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.chapter-title { font-family: var(--font-display); font-size: 1rem; }
+.chapter-meta { font-size: .78rem; color: var(--muted); }
+.chapter-pct {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-size: .85rem;
+  color: var(--muted);
+}
+.chapter-milestone { margin: .1rem 0 .4rem 2.4rem; font-size: .85rem; }
+.chapter-head.is-done .chapter-num { border-width: 2px; font-weight: 600; }
+.chapter-head.is-active { border-top-width: 2px; }
+.chapter-head.is-ahead .chapter-title { color: var(--muted); }
+.small { font-size: .78rem; }
+
+.lesson-card {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  width: 100%;
+  min-height: var(--tap);
+  padding: .7rem .9rem;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.lesson-card:hover { border-color: var(--accent); }
+
+.lesson-badge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.lesson-badge svg { width: 18px; height: 18px; }
+
+.lesson-main { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.lesson-title { font-weight: 600; }
+.lesson-meta { font-size: .8rem; color: var(--text-soft); }
+
+.lesson-card.is-passed { border-left-color: var(--ok); }
+.lesson-card.is-passed .lesson-badge { border-color: var(--ok); color: var(--ok); }
+.lesson-card.is-skipped { border-left-color: var(--accent-2); }
+.lesson-card.is-skipped .lesson-badge { border-color: var(--accent-2); color: var(--accent-2); }
+.lesson-card.is-open { border-left-color: var(--accent); }
+.lesson-card.is-locked { opacity: .62; }
+.lesson-card.is-locked .lesson-badge { color: var(--text-soft); }
+
+/* ==================================================== ĆWICZENIA PRODUKCJI */
+.opt-main {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+.opt-sub { display: block; font-size: .82rem; color: var(--text-soft); margin-top: .2rem; }
+.opt .tone-mark { width: 26px; height: 13px; color: var(--accent-2); }
+.opt .tone-mark path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+
+.tone-compare { display: flex; gap: .8rem; flex-wrap: wrap; }
+.tone-cell {
+  flex: 1 1 44%;
+  padding: .6rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+.tone-line {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+.tone-line .tone-mark { width: 26px; height: 13px; color: var(--accent-2); }
+.tone-line .tone-mark path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+
+/* --------------------------------------------------------- role-play */
+.roleplay { margin: .6rem 0; }
+.rp-line { align-items: flex-start; }
+.rp-mine { background: rgba(214, 154, 44, .08); border-radius: 10px; }
+.rp-actions { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; }
+
+/* Przycisk nagrywania w karcie oceny wymowy. Stan „nagrywam” niesie kolor
+   obramowania, napis i migający wskaźnik — nie sam kolor. */
+.btn.recording { border-color: var(--bad); box-shadow: inset 0 0 0 1px var(--bad); }
+.btn.recording::before {
+  content: '';
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin-right: .4rem;
+  border-radius: 50%;
+  background: var(--bad);
+  animation: rec-pulse 1s infinite;
+}
+
+.rec-btn { border-color: var(--accent); }
+.rec-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+}
+.rec-btn.recording { border-color: var(--bad); }
+.rec-btn.recording .rec-dot { background: var(--bad); animation: rec-pulse 1s infinite; }
+
+@keyframes rec-pulse { 50% { opacity: .3; } }
+
+.play-btn.loading { opacity: .6; }
+/* Ten sam sygnał dla wiersza słownika i jego ikony dźwięku: pełny rekord
+   dociągany jest z pliku poziomu i to potrafi potrwać. */
+.row > button.row-main.loading, .row .row-play.loading { opacity: .6; }
+
+/* ================================================ TABELE I WYKRES SRS */
+/* Tabela z wieloma kolumnami (tydzień, progresja gramatyki, wyniki egzaminu)
+   przy powiększeniu tekstu do 200% jest szersza niż ekran. Zwężanie kolumn
+   robi z liczb kolumnę pojedynczych znaków, więc zamiast tego tabela dostaje
+   własne przewijanie w poziomie — a strona przestaje przewijać się na boki.
+   Opakowanie jest osiągalne z klawiatury (tabindex w app.js), bo inaczej
+   przewinięcie tabeli byłoby możliwe wyłącznie myszą lub palcem. */
+.table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; }
+.table-scroll .data-table { margin-bottom: .6rem; }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .7rem 0 1.1rem;
+  font-size: .88rem;
+}
+.data-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: .3rem;
+  color: var(--text-soft);
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: .4rem .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.data-table thead th { color: var(--text-soft); font-weight: 600; }
+.data-table td { font-variant-numeric: tabular-nums; }
+.data-table tbody th { font-weight: 500; }
+
+.chart-block { margin: .6rem 0 0; }
+.retention-chart { width: 100%; height: auto; }
+.retention-chart .grid { stroke: var(--border); stroke-width: 1; }
+.retention-chart .axis { fill: var(--text-soft); font-size: 9px; font-family: var(--font-body); }
+.retention-chart .curve { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linejoin: round; }
+.retention-chart .dot { fill: var(--accent-2); stroke: var(--surface); stroke-width: 2; }
+.chart-block figcaption { font-size: .85rem; color: var(--text-soft); margin-top: .4rem; }
+
+/* Redukcja ruchu: pulsowanie kropki nagrywania to dekoracja, nie informacja —
+   stan nagrywania niesie też kolor obramowania i tekst obok przycisku. */
+@media (prefers-reduced-motion: reduce) {
+  .rec-btn.recording .rec-dot { animation: none; }
+  .btn.recording::before { animation: none; }
+}
+
+/* ======================================== OCENA WYMOWY (kontur tonalny) */
+.pron-result { margin-top: .8rem; }
+
+.pron-head {
+  margin: .2rem 0 .5rem;
+  padding: .55rem .7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  line-height: 1.45;
+}
+.pron-head.ok { border-color: var(--ok); color: var(--ok-text); }
+.pron-head.near { border-color: var(--accent); color: var(--accent-text); }
+.pron-head.bad { border-color: var(--bad); color: var(--bad-text); }
+.pron-head strong { color: inherit; }
+
+.pron-chart { width: 100%; height: auto; }
+.pron-chart .grid { stroke: var(--border); stroke-width: 1; }
+.pron-chart .sylline { stroke: var(--border); stroke-width: 1; stroke-dasharray: 2 3; }
+.pron-chart .axis { fill: var(--text-soft); font-size: 9px; font-family: var(--font-body); }
+.pron-chart .axis.syl { fill: var(--text); font-family: var(--font-display); font-size: 11px; }
+.pron-chart .axis.good { fill: var(--ok-text); }
+.pron-chart .axis.miss { fill: var(--bad-text); }
+.pron-chart .ref-line {
+  fill: none; stroke: var(--accent-2); stroke-width: 2.2;
+  stroke-dasharray: 5 3; stroke-linecap: round; stroke-linejoin: round;
+}
+.pron-chart .user-line {
+  fill: none; stroke: var(--accent); stroke-width: 2.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.pron-chart .user-line.miss { stroke: var(--bad); }
+.pron-chart .user-dot { fill: var(--accent); }
+
+.chart-legend { display: flex; align-items: center; gap: .3rem; flex-wrap: wrap; font-size: .82rem; }
+.key { display: inline-block; width: 22px; height: 0; border-top-width: 3px; border-top-style: solid; }
+.key-ref { border-top-color: var(--accent-2); border-top-style: dashed; }
+.key-user { border-top-color: var(--accent); }
+
+.advice-list { margin: .3rem 0 .6rem; padding-left: 1.1rem; }
+.advice-list li { margin-bottom: .35rem; line-height: 1.5; }
+.data-table tr.row-miss th[scope="row"] { color: var(--bad-text); }
+.muted.small { font-size: .8rem; line-height: 1.5; }
+
+/* Pasek stanu nagrywania i oceny — wspólny dla ekranu Wymowa hasła,
+   role-play i trybu „Wymów poprawnie”. */
+.rec-status { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; margin: .4rem 0; }
+.rec-status .meter {
+  flex: 1 1 120px; height: 6px; border-radius: 3px;
+  background: var(--border); overflow: hidden; min-width: 90px;
+}
+.rec-status .meter i { display: block; height: 100%; width: 0; background: var(--accent-bg); }
+.pron-inline { margin-top: .4rem; }
+.rt-note { font-size: .82rem; color: var(--text-soft); }
+.slow-list { margin: .3rem 0 0; padding-left: 1.1rem; }
+.slow-list li { margin-bottom: .25rem; }
+.rp-control { margin: -.2rem 0 .7rem 2.2rem; }
+.rp-control .pron-result { margin-top: .3rem; }
+
+/* Przycisk wyglądający jak odsyłacz — używany na listach haseł w statystykach.
+   Kolor --accent-text spełnia próg kontrastu w obu motywach. */
+.linkish {
+  background: none;
+  border: 0;
+  padding: .2rem 0;
+  min-height: var(--tap);
+  color: var(--accent-text);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.linkish:hover { text-decoration: none; }
+
+/* ------------------------------------------------- Moduł 0: trening słuchu
+
+   Ćwiczenia są czysto słuchowe, więc interfejs ma jedno zadanie: nie
+   przeszkadzać. Zapis fonetyczny jest zasłonięty do czasu odpowiedzi (gdyby
+   był widoczny, uczący się odpowiadałby z zapisu, nie ze słuchu), a numer
+   odpowiedzi jest widoczny, bo obsługa idzie głównie klawiaturą. */
+
+.m0-block { margin-bottom: .4rem; }
+.m0-card { border-left-color: var(--accent-2); }
+.m0-gate-note { margin: .4rem 0 .8rem; }
+
+.m0-task .m0-kind {
+  text-transform: uppercase; letter-spacing: .06em;
+  font-size: .74rem; margin-bottom: .2rem;
+}
+
+.m0-options { margin-top: .8rem; }
+.m0-options .opt { display: flex; align-items: center; gap: .7rem; }
+.opt-tone .tone-mark { flex: 0 0 auto; width: 34px; height: 17px; color: var(--accent-2); }
+.opt-tone .tone-mark path { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.opt[disabled] { cursor: default; opacity: 1; }
+.opt[disabled]:hover { border-color: var(--border); }
+.opt[disabled].correct:hover { border-color: var(--ok); }
+.opt[disabled].wrong:hover { border-color: var(--bad); }
+
+.m0-reveal {
+  margin-top: .9rem; padding-top: .7rem;
+  border-top: 1px solid var(--border);
+}
+.m0-stim {
+  display: flex; align-items: center; gap: .7rem;
+  padding: .35rem 0; flex-wrap: wrap;
+}
+.m0-stim .phonetic { margin: 0; }
+
+.plain-list { margin: .4rem 0 .6rem 1.1rem; }
+/* Punkt listy bywa parą „nazwa sprawności: opis”. Przy powiększeniu tekstu
+   sama nazwa bywa szersza niż punkt listy i wychodziła poza kartę — dlatego
+   pozwalamy łamać ją w środku, zamiast rozpychać układ. */
+.plain-list li { margin-bottom: .2rem; min-width: 0; overflow-wrap: anywhere; }
+
+/* --- zapis potoczny obok słownikowego (sesja L) ---------------------------
+   Zapis potoczny stoi zawsze POD słownikowym i jest wyraźnie oznaczony.
+   Kolejność nie jest przypadkowa: forma słownikowa to punkt odniesienia,
+   potoczna to jej realizacja. Odwrotnie uczący się nie wiedziałby, co jest
+   czym, a przy ukrytych znakach tonów obie linie wyglądałyby podobnie. */
+.coll-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem .6rem;
+  align-items: start; margin-top: .5rem; padding-top: .5rem;
+  border-top: 1px dashed var(--border);
+}
+.coll-label {
+  grid-column: 1 / -1;
+  font-size: calc(.72rem * var(--scale)); letter-spacing: .04em;
+  text-transform: uppercase; color: var(--text-soft);
+}
+.coll-row .phonetic { min-width: 0; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+
+
+/* ===================================================== SESJA M — ROZUMIENIE */
+
+/* Wybór tempa. Stan drabiny jest częścią przycisku, bo uczący się musi
+   widzieć, w którym tempie właśnie odpowiada — wynik liczy się tylko tam. */
+.tempo-row { margin: 12px 0; }
+.tempo-lead { margin-bottom: 6px; }
+.tempo-chip { flex-direction: column; align-items: flex-start; gap: 2px; }
+.tempo-chip .tempo-state { font-size: 0.78em; opacity: 0.75; }
+.tempo-chip.done { border-color: var(--accent-2); }
+.tempo-chip.done .tempo-state { color: var(--accent-text); }
+
+/* Słowo kluczowe sceny odtwarza wymowę — to przycisk akcji, nie przełącznik,
+   więc wygląda jak żeton, ale nie udaje stanu wciśnięcia. */
+.chip-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.kw-chip {
+  display: inline-flex; flex-direction: column; align-items: flex-start;
+  gap: 2px; min-height: var(--tap); padding: 6px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface); color: var(--text);
+  font: inherit; cursor: pointer; text-align: left;
+}
+.kw-chip .tempo-state { font-size: 0.82em; color: var(--text-soft); }
+.kw-chip:hover { border-color: var(--accent-2); }
+
+/* Scena: zapis rozmowy z podświetleniem bieżącej kwestii. */
+.scene-lines { margin-top: 12px; }
+.scene-beat {
+  margin: 14px 0 6px; font-weight: 600; font-size: 0.92em;
+  color: var(--text-soft); border-bottom: 1px solid var(--border); padding-bottom: 4px;
+}
+.scene-line {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 7px 6px; border-radius: 8px;
+}
+.scene-line.current { background: rgba(214, 154, 44, .16); }
+.scene-line > div { flex: 1; }
+
+.block-arc { margin: 10px 0 0 18px; padding: 0; }
+.block-arc li { margin: 4px 0; }
+
+/* Przejścia w słuchaniu ekstensywnym: widać, gdzie się jest. */
+.pass-card { opacity: 0.6; }
+.pass-card.current { opacity: 1; border-color: var(--accent-2); }
+.pass-card.done { opacity: 0.85; }
+
+/* Zdanie z luką i zdanie z nieznanym słowem. */
+.gap-sentence { font-size: 1.25em; line-height: 1.8; margin: 12px 0; }
+.gap-blank {
+  display: inline-block; min-width: 5em; text-align: center;
+  border-bottom: 2px dashed var(--accent-2); font-weight: 600;
+}
+.gap-blank.filled-ok { border-bottom-color: var(--ok); color: var(--ok-text); }
+.gap-blank.filled-bad { border-bottom-color: var(--bad); color: var(--bad-text); }
+.unknown-word {
+  border-bottom: 2px solid var(--accent-2); font-weight: 600; padding-bottom: 1px;
+}
+.cue-word { background: rgba(214, 154, 44, .22); border-radius: 4px; padding: 0 3px; }
+
+.cues {
+  margin-top: 14px; padding: 12px; border-radius: var(--radius);
+  background: var(--bg); border: 1px solid var(--border);
+}
+.cues h3 { margin: 0 0 8px; font-size: 1em; }
+.cues ol { margin: 0 0 8px 18px; padding: 0; }
+.cues li { margin: 6px 0; }
+
+.tuning { margin-top: 18px; border-top: 1px solid var(--border); padding-top: 12px; }
+
+.q-card { margin-top: 10px; }
+.q-prompt { font-size: 1.1em; font-weight: 600; margin: 6px 0 10px; }
+.q-explain { margin-top: 6px; }
+
+/* Mapa drabiny tempa. Kolumny to tempa, wiersze to ćwiczenia. */
+.tempo-map { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.92em; }
+.tempo-map th, .tempo-map td {
+  padding: 7px 6px; text-align: left; border-bottom: 1px solid var(--border);
+}
+.tempo-map th[scope="row"] { font-weight: 500; }
+.tempo-map td.pass { color: var(--ok-text); font-weight: 600; }
+.tempo-map td.part { color: var(--text-soft); }
+.tempo-map td.none { color: var(--text-soft); opacity: 0.75; }
+.tempo-map tr.untouched th[scope="row"] { opacity: 0.6; }
+
+/* ------------------------------------------------- sesja dnia i pokrycie */
+
+/* Karta wiodąca. Sesja dnia ma być na ekranie „Dzisiaj” pierwszą rzeczą,
+   którą widać — inaczej nadal trzeba wybierać, a o to właśnie chodziło,
+   żeby nie trzeba było. */
+.card.hero {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+.card.hero h2 { margin-top: 0; }
+
+/* Wiersz listy, który nie jest przyciskiem. Ta sama siatka co .row, ale bez
+   kursora i podświetlenia — nic się po kliknięciu nie stanie. */
+.row.static { cursor: default; display: block; }
+.row.static:hover { border-color: var(--border); }
+.row.static .row-main > b { display: block; margin-bottom: .3rem; }
+.row.static .row-main > p { margin: .3rem 0 0; }
+.row.static .progress { margin: .35rem 0; }
+.row.static .btn-row { margin-top: .55rem; }
+
+/* Pasek postępu jako element o roli progressbar musi mieć wysokość także
+   wtedy, gdy wypełnienie jest zerowe — inaczej czytnik ekranu widzi element,
+   którego nie da się zlokalizować wzrokiem. */
+.progress[role="progressbar"] { min-height: 8px; }
+
+#session-area .options,
+#session-area .btn-row { margin-top: .8rem; }
+#session-head .progress { margin: .5rem 0; }
+
+/* ==================================================== EKRAN GRAMATYKI */
+/* Mapa progresji i trzy tryby. Tematy nieotwarte zostają widoczne —
+   kolejność jest tu komunikatem sama w sobie, więc jej chowanie
+   odbierałoby informację, a nie porządkowało ekran. */
+.card.sub {
+  margin: .9rem 0;
+  padding: .9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.card.sub h2 { margin-top: 0; }
+
+.lesson-row {
+  display: flex;
+  gap: .7rem;
+  align-items: flex-start;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.lesson-row:last-child { border-bottom: none; }
+.lesson-row > div { min-width: 0; flex: 1; }
+.lesson-row h3 { margin: 0 0 .2rem; font-size: .98rem; }
+.lesson-row p { margin: .25rem 0; }
+
+/* Temat jeszcze nieotwarty. Stan niesie plakietka z numerem lekcji
+   i aria-label, nie sam kolor — przygaszenie jest dodatkiem. */
+.lesson-row.locked { opacity: .72; }
+
+.pattern {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin: .4rem 0 0;
+}
+.pattern .phonetic { flex: 1; min-width: 0; }
+
+/* Zapis zasłonięty do czasu odpowiedzi. Gdyby był widoczny, uczący się
+   odczytywałby cząstkę z tekstu zamiast wyłapywać ją ze słuchu. */
+.veil { font-style: italic; }
+
+.situation {
+  margin: .8rem 0;
+  padding: .7rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-2, var(--surface));
+}
+
+.warn {
+  margin: .4rem 0;
+  padding: .5rem .7rem;
+  border-radius: var(--radius);
+  background: rgba(180, 64, 44, .12);
+  color: var(--bad);
+}
+
+.field-label {
+  display: block;
+  font-size: .85rem;
+  color: var(--text-soft);
+  margin-bottom: .2rem;
+}
+.gap-list { margin-top: .4rem; }
+
+/* ============================================ MODUŁ LICZBOWY I RATUNKOWY
+
+   Zegar ćwiczenia jest tu elementem treści, nie ozdobą: przy liczbach czas
+   reakcji jest główną miarą opanowania. Musi być czytelny kątem oka, więc
+   ma i pasek, i liczbę — sam pasek niósłby wyłącznie kolor, a sama liczba
+   nie pokazywałaby, ile zostało w stosunku do całości.
+
+   Odliczanie NIE jest ogłaszane przez czytnik ekranu na bieżąco
+   (aria-live="off" w js/numbers.js): komunikat co sto milisekund zagłuszyłby
+   wszystko inne. Stan po zakończeniu ogłasza informacja zwrotna zadania. */
+
+.num-timer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 26px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.num-timer-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 100%;
+  background: var(--accent-bg);
+  opacity: 0.18;
+  transition: width 0.1s linear;
+}
+
+.num-timer-text {
+  position: relative;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.num-timer.stopped .num-timer-fill { opacity: 0.07; }
+
+/* Ograniczenie ruchu: pasek przestaje płynąć, liczba zostaje. Sama informacja
+   nie ginie — znika tylko animacja. */
+@media (prefers-reduced-motion: reduce) {
+  .num-timer-fill { transition: none; }
+}
+
+.num-input {
+  width: 100%;
+  max-width: 260px;
+  padding: 12px 14px;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.num-big {
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  margin: 6px 0 2px;
+}
+
+.clock-face {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+.clock-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clock-label { color: var(--text-soft); }
+
+.clock-val {
+  min-width: 2.4em;
+  text-align: center;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.clock-readout {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.rescue-card h3 { margin-bottom: 2px; }
+
+.trigger-label {
+  font-weight: 600;
+  color: var(--accent-text);
+}
+
+/* Opcja drylu niesie dwie linie: zapis tajski i polskie znaczenie. Bez tego
+   drugiego ćwiczenie sprawdzałoby czytanie fonetyki, a nie dobór formuły.
+
+   Druga linia dziedziczy kolor po przycisku, a nie bierze --text-soft:
+   przycisk opcji ma własne tło i własny kolor pisma, więc barwa „przygaszona”
+   dobrana do karty dawała na nim 1,17:1. Odróżnienie linii niesie tu wielkość
+   pisma, nie kolor — i tak jest bezpieczniej, bo działa też w trybie wysokiego
+   kontrastu. */
+.option .opt-thai,
+.option .opt-pl {
+  display: block;
+}
+
+.option .opt-pl {
+  font-size: 0.86em;
+  color: inherit;
+  margin-top: 2px;
+}
+
+.scene-role {
+  font-weight: 600;
+  min-width: 1.4em;
+  color: var(--text-soft);
+}
+
+/* ------------------------------------------------- EGZAMIN POZIOMOWY (sesja U) */
+
+/* Zegar sekcji. Widoczny, bo ukryty limit czasu jest nieuczciwy — zdający ma
+   prawo wiedzieć, ile mu zostało. Ostatnia minuta zmienia barwę, ale nie miga:
+   migotanie w trakcie zadania na słuch przeszkadza bardziej, niż ostrzega. */
+.exam-clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  margin: .2rem 0 .4rem;
+  color: var(--text-soft);
+}
+
+.exam-clock.low { color: var(--bad); }
+[data-theme="dark"] .exam-clock.low { color: #ff9b85; }
+
+.exam-head h2 { margin-top: .2rem; }
+
+/* Trzeci wariant informacji zwrotnej, obok .fb.ok i .fb.bad: ostrzeżenie.
+   Nie jest błędem („nie zdałeś”) ani pochwałą — mówi o warunku, który zmienia
+   znaczenie wyniku: za mało przerobionego materiału, karencja przed powtórką,
+   nagranie niepasujące długością do wzorca. */
+.fb.warn {
+  background: rgba(214, 154, 44, .16);
+  color: #7a5710;
+}
+
+[data-theme="dark"] .fb.warn { color: #f0c766; }
+
+.plan-step {
+  border-top: 1px solid var(--border);
+  padding-top: .7rem;
+  margin-top: .7rem;
+}
+
+.plan-step:first-of-type { border-top: 0; padding-top: 0; }
+.plan-step h4 { margin: 0 0 .25rem; font-size: 1rem; }
+.plan-step p { margin: .2rem 0 .5rem; }
+
+.exam-claim { margin-top: .6rem; }
+
+/* ==========================================================================
+   UKŁAD PRZY POWIĘKSZONYM TEKŚCIE (sesja V)
+
+   Te reguły muszą stać na KOŃCU arkusza. Mają tę samą szczegółowość co
+   definicje bazowe, które nadpisują, więc o pierwszeństwie decyduje wyłącznie
+   kolejność — umieszczone wyżej były przez tamte zbijane i nie działały.
+
+   Wspólny problem: układy wielokolumnowe zaprojektowane dla zwykłej wielkości
+   tekstu. Przy tekście powiększonym do 200% stała kolumna (kółko roli 34 px,
+   przycisk odsłuchu 48 px) zjada tyle miejsca, że na treść zostaje kilkanaście
+   pikseli i zapis fonetyczny zostaje obcięty. Sylaby nie wolno złamać — znak
+   tonu musi zostać nad swoją samogłoską — więc rozwiązaniem jest oddanie
+   tekstowi całej szerokości, a nie zwężanie go dalej.
+
+   Kolejność czytania i kolejność focusu zostają bez zmian; zmienia się
+   wyłącznie rozmieszczenie. */
+
+@media (max-width: 480px) {
+  /* Kwestia dialogu: rola i przycisk nad tekstem, tekst przez całą szerokość.
+     Druga kolumna musi mieć minmax(0, 1fr) — samo `1fr` nie schodzi poniżej
+     naturalnej szerokości treści i wiersz nadal wystaje. */
+  .line { grid-template-columns: auto minmax(0, 1fr); grid-auto-flow: row; }
+  .line > :nth-child(3) { grid-column: 1 / -1; justify-self: start; }
+
+  /* Zapis potoczny pod słownikowym — jedna kolumna, przycisk pod spodem. */
+  .coll-row { grid-template-columns: minmax(0, 1fr); }
+  .coll-row > :last-child { justify-self: start; }
+
+  /* Para form męska/żeńska: przycisk odsłuchu schodzi pod zapis fonetyczny,
+     zamiast odbierać mu połowę i tak wąskiej kolumny. */
+  .gform { grid-template-columns: minmax(0, 1fr); }
+  .gform > :last-child { justify-self: start; }
+}
+
+/* Nagłówek karty egzaminu łączy poziom ze stanem podejścia („Poziom Survival
+   niepodchodzony”). Przy powiększeniu tekstu ta para nie mieści się w karcie,
+   a nagłówki mają większy stopień pisma niż tekst bieżący, więc globalne
+   łamanie wyrazów samo nie wystarcza. Nagłówki dostają dzielenie wyrazów. */
+@media (max-width: 480px) {
+  h1, h2, h3, h4 { hyphens: auto; overflow-wrap: anywhere; }
+}
+
+/* ---------------------------------------------- Moduł 0: odprawa o tonach */
+.m0-keyidea { border-left: 3px solid var(--accent-2); padding-left: .7rem; }
+
+.m0-tone-row { display: flex; gap: .8rem; align-items: flex-start;
+  padding: .8rem 0; border-top: 1px solid var(--border); }
+.m0-tone-row:first-of-type { border-top: 0; }
+.m0-tone-fig { flex: 0 0 auto; text-align: center; }
+.m0-tone-body { flex: 1 1 auto; min-width: 0; }
+.m0-tone-body p { margin: .2rem 0; }
+.m0-tone-name { font-weight: 600; }
+.m0-listen-for { font-size: .9rem; color: var(--text-soft); }
+
+.m0-tone-glyph { width: 76px; height: 40px; display: block; }
+.m0-glyph-grid { stroke: var(--border); stroke-width: 1; }
+.m0-glyph-line { fill: none; stroke: var(--accent-2); stroke-width: 2.4;
+  stroke-linecap: round; stroke-linejoin: round; }
+.m0-chao { font-size: .75rem; color: var(--text-soft); }
+
+.m0-min-row, .m0-pair-row { padding: .6rem 0; border-top: 1px solid var(--border); }
+.m0-min-row { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+.m0-pair-row p { margin: .2rem 0; }
+.m0-tips li { margin-bottom: .45rem; }
+
+/* Na wąskim ekranie rysunek konturu idzie nad tekst, żeby opis miał pełną
+   szerokość — inaczej „ton opadający” łamie się na trzy linijki. */
+@media (max-width: 420px) {
+  .m0-tone-row { flex-direction: column; gap: .3rem; }
+}
