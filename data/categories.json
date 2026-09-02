@@ -1,0 +1,2422 @@
+{
+ "file": "categories.json",
+ "count": 20,
+ "records": [
+  {
+   "id": "cat-01",
+   "name": "Awarie i pomoc",
+   "icon": "alert",
+   "count": 595,
+   "subcategories": [
+    {
+     "name": "Alarm",
+     "count": 6
+    },
+    {
+     "name": "Ambasada",
+     "count": 6
+    },
+    {
+     "name": "Awaria",
+     "count": 4
+    },
+    {
+     "name": "Awarie",
+     "count": 27
+    },
+    {
+     "name": "Bezpieczeństwo",
+     "count": 2
+    },
+    {
+     "name": "Braki",
+     "count": 58
+    },
+    {
+     "name": "Formalności",
+     "count": 1
+    },
+    {
+     "name": "Kradzież",
+     "count": 3
+    },
+    {
+     "name": "Lokalizacja",
+     "count": 9
+    },
+    {
+     "name": "Lotnisko",
+     "count": 1
+    },
+    {
+     "name": "Ludzie",
+     "count": 3
+    },
+    {
+     "name": "Nagłe wypadki",
+     "count": 8
+    },
+    {
+     "name": "Naprawy",
+     "count": 1
+    },
+    {
+     "name": "Obiekty",
+     "count": 14
+    },
+    {
+     "name": "Odpowiedzialność",
+     "count": 41
+    },
+    {
+     "name": "Ogólne",
+     "count": 3
+    },
+    {
+     "name": "Ostrzeżenia",
+     "count": 1
+    },
+    {
+     "name": "Oszustwo",
+     "count": 3
+    },
+    {
+     "name": "Policja",
+     "count": 1
+    },
+    {
+     "name": "Poszukiwanie",
+     "count": 30
+    },
+    {
+     "name": "Problemy",
+     "count": 155
+    },
+    {
+     "name": "Prośby",
+     "count": 137
+    },
+    {
+     "name": "Ratunek",
+     "count": 1
+    },
+    {
+     "name": "Reklamacje",
+     "count": 56
+    },
+    {
+     "name": "Usterki",
+     "count": 1
+    },
+    {
+     "name": "Wypadek",
+     "count": 7
+    },
+    {
+     "name": "Zaginięcie",
+     "count": 3
+    },
+    {
+     "name": "Zguby",
+     "count": 13
+    }
+   ]
+  },
+  {
+   "id": "cat-02",
+   "name": "Cechy i opinie",
+   "icon": "star",
+   "count": 1681,
+   "subcategories": [
+    {
+     "name": "Argumentacja",
+     "count": 41
+    },
+    {
+     "name": "Braki",
+     "count": 42
+    },
+    {
+     "name": "Cena",
+     "count": 9
+    },
+    {
+     "name": "Charakter",
+     "count": 11
+    },
+    {
+     "name": "Decyzje",
+     "count": 1
+    },
+    {
+     "name": "Emocje",
+     "count": 72
+    },
+    {
+     "name": "Godzenie",
+     "count": 5
+    },
+    {
+     "name": "Idiomy",
+     "count": 17
+    },
+    {
+     "name": "Ilość",
+     "count": 10
+    },
+    {
+     "name": "Kolokacje",
+     "count": 3
+    },
+    {
+     "name": "Kolory",
+     "count": 20
+    },
+    {
+     "name": "Konflikt",
+     "count": 2
+    },
+    {
+     "name": "Kontrargument",
+     "count": 15
+    },
+    {
+     "name": "Ludzie",
+     "count": 6
+    },
+    {
+     "name": "Marzenia",
+     "count": 2
+    },
+    {
+     "name": "Niechęć",
+     "count": 85
+    },
+    {
+     "name": "Niezgoda",
+     "count": 12
+    },
+    {
+     "name": "Ocena",
+     "count": 247
+    },
+    {
+     "name": "Oczekiwania",
+     "count": 75
+    },
+    {
+     "name": "Odległość",
+     "count": 10
+    },
+    {
+     "name": "Określenia",
+     "count": 22
+    },
+    {
+     "name": "Opinie",
+     "count": 112
+    },
+    {
+     "name": "Podtrzymywanie",
+     "count": 1
+    },
+    {
+     "name": "Pogoda",
+     "count": 1
+    },
+    {
+     "name": "Porównania",
+     "count": 61
+    },
+    {
+     "name": "Preferencje",
+     "count": 96
+    },
+    {
+     "name": "Przestrzeń",
+     "count": 2
+    },
+    {
+     "name": "Przeszłość",
+     "count": 1
+    },
+    {
+     "name": "Przypuszczenie",
+     "count": 45
+    },
+    {
+     "name": "Reakcje",
+     "count": 8
+    },
+    {
+     "name": "Rejestr",
+     "count": 8
+    },
+    {
+     "name": "Rekomendacje",
+     "count": 76
+    },
+    {
+     "name": "Rozmiar",
+     "count": 15
+    },
+    {
+     "name": "Samopoczucie",
+     "count": 43
+    },
+    {
+     "name": "Serce",
+     "count": 2
+    },
+    {
+     "name": "Slang",
+     "count": 8
+    },
+    {
+     "name": "Smak",
+     "count": 31
+    },
+    {
+     "name": "Sprostowania",
+     "count": 12
+    },
+    {
+     "name": "Sprostowanie",
+     "count": 12
+    },
+    {
+     "name": "Stan",
+     "count": 63
+    },
+    {
+     "name": "Stopień",
+     "count": 5
+    },
+    {
+     "name": "Sugestie",
+     "count": 5
+    },
+    {
+     "name": "Temperatura",
+     "count": 15
+    },
+    {
+     "name": "Tempo",
+     "count": 10
+    },
+    {
+     "name": "Trudność",
+     "count": 10
+    },
+    {
+     "name": "Ubrania",
+     "count": 2
+    },
+    {
+     "name": "Umiejętności",
+     "count": 44
+    },
+    {
+     "name": "Wygląd",
+     "count": 15
+    },
+    {
+     "name": "Wymiary",
+     "count": 6
+    },
+    {
+     "name": "Wątpliwości",
+     "count": 53
+    },
+    {
+     "name": "Właściwości",
+     "count": 6
+    },
+    {
+     "name": "Zachęta",
+     "count": 26
+    },
+    {
+     "name": "Zaskoczenie",
+     "count": 36
+    },
+    {
+     "name": "Zastrzeżenia",
+     "count": 2
+    },
+    {
+     "name": "Zgoda",
+     "count": 18
+    },
+    {
+     "name": "Zmiana",
+     "count": 52
+    },
+    {
+     "name": "Łagodzenie",
+     "count": 36
+    },
+    {
+     "name": "Żal",
+     "count": 36
+    }
+   ]
+  },
+  {
+   "id": "cat-03",
+   "name": "Czas i daty",
+   "icon": "clock",
+   "count": 295,
+   "subcategories": [
+    {
+     "name": "Czas",
+     "count": 4
+    },
+    {
+     "name": "Częstotliwość",
+     "count": 53
+    },
+    {
+     "name": "Dni",
+     "count": 15
+    },
+    {
+     "name": "Dni tygodnia",
+     "count": 29
+    },
+    {
+     "name": "Godziny",
+     "count": 31
+    },
+    {
+     "name": "Jednostki",
+     "count": 25
+    },
+    {
+     "name": "Kolejność",
+     "count": 2
+    },
+    {
+     "name": "Kradzież",
+     "count": 1
+    },
+    {
+     "name": "Miesiące",
+     "count": 12
+    },
+    {
+     "name": "Ogólne",
+     "count": 3
+    },
+    {
+     "name": "Określenia",
+     "count": 12
+    },
+    {
+     "name": "Pory dnia",
+     "count": 30
+    },
+    {
+     "name": "Punktualność",
+     "count": 2
+    },
+    {
+     "name": "Punkty w czasie",
+     "count": 1
+    },
+    {
+     "name": "Rozkład",
+     "count": 20
+    },
+    {
+     "name": "Spotkania",
+     "count": 17
+    },
+    {
+     "name": "Terminy",
+     "count": 22
+    },
+    {
+     "name": "Trwanie",
+     "count": 3
+    },
+    {
+     "name": "Użycie",
+     "count": 9
+    },
+    {
+     "name": "Święta",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "id": "cat-04",
+   "name": "Czasowniki",
+   "icon": "verb",
+   "count": 776,
+   "subcategories": [
+    {
+     "name": "Codzienne",
+     "count": 107
+    },
+    {
+     "name": "Czynności",
+     "count": 33
+    },
+    {
+     "name": "Części ciała",
+     "count": 1
+    },
+    {
+     "name": "Emocje",
+     "count": 18
+    },
+    {
+     "name": "Formalności",
+     "count": 2
+    },
+    {
+     "name": "Jedzenie",
+     "count": 27
+    },
+    {
+     "name": "Kolory",
+     "count": 1
+    },
+    {
+     "name": "Komunikacja",
+     "count": 81
+    },
+    {
+     "name": "Ludzie",
+     "count": 2
+    },
+    {
+     "name": "Modalne",
+     "count": 36
+    },
+    {
+     "name": "Możliwość",
+     "count": 2
+    },
+    {
+     "name": "Myślenie",
+     "count": 9
+    },
+    {
+     "name": "Mówienie",
+     "count": 12
+    },
+    {
+     "name": "Obsługa",
+     "count": 9
+    },
+    {
+     "name": "Percepcja",
+     "count": 3
+    },
+    {
+     "name": "Podróż",
+     "count": 37
+    },
+    {
+     "name": "Podstawowe",
+     "count": 120
+    },
+    {
+     "name": "Praca",
+     "count": 18
+    },
+    {
+     "name": "Przebieg",
+     "count": 2
+    },
+    {
+     "name": "Próba",
+     "count": 3
+    },
+    {
+     "name": "Relacje",
+     "count": 14
+    },
+    {
+     "name": "Rozrywka",
+     "count": 51
+    },
+    {
+     "name": "Ruch",
+     "count": 132
+    },
+    {
+     "name": "Wymiana",
+     "count": 6
+    },
+    {
+     "name": "Zakupy",
+     "count": 45
+    },
+    {
+     "name": "Zmiana",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "id": "cat-05",
+   "name": "Dom i codzienność",
+   "icon": "home",
+   "count": 290,
+   "subcategories": [
+    {
+     "name": "Awaria",
+     "count": 3
+    },
+    {
+     "name": "Awarie",
+     "count": 7
+    },
+    {
+     "name": "Codzienne",
+     "count": 47
+    },
+    {
+     "name": "Codzienność",
+     "count": 4
+    },
+    {
+     "name": "Czynności",
+     "count": 2
+    },
+    {
+     "name": "Elektronika",
+     "count": 33
+    },
+    {
+     "name": "Internet",
+     "count": 8
+    },
+    {
+     "name": "Kosmetyki",
+     "count": 12
+    },
+    {
+     "name": "Kuchnia",
+     "count": 3
+    },
+    {
+     "name": "Materiały",
+     "count": 5
+    },
+    {
+     "name": "Mieszkanie",
+     "count": 15
+    },
+    {
+     "name": "Najem",
+     "count": 9
+    },
+    {
+     "name": "Naprawy",
+     "count": 9
+    },
+    {
+     "name": "Narzędzia",
+     "count": 10
+    },
+    {
+     "name": "Obowiązki",
+     "count": 4
+    },
+    {
+     "name": "Porządki",
+     "count": 2
+    },
+    {
+     "name": "Rachunki",
+     "count": 3
+    },
+    {
+     "name": "Rejestr",
+     "count": 4
+    },
+    {
+     "name": "Sprzątanie",
+     "count": 6
+    },
+    {
+     "name": "Sprzęt",
+     "count": 4
+    },
+    {
+     "name": "Sąsiedzi",
+     "count": 9
+    },
+    {
+     "name": "Technika",
+     "count": 3
+    },
+    {
+     "name": "Technologia",
+     "count": 15
+    },
+    {
+     "name": "Usterki",
+     "count": 1
+    },
+    {
+     "name": "Wieczór",
+     "count": 1
+    },
+    {
+     "name": "Wnętrze",
+     "count": 8
+    },
+    {
+     "name": "Wyjaśnianie",
+     "count": 3
+    },
+    {
+     "name": "Wynajem",
+     "count": 20
+    },
+    {
+     "name": "Wyposażenie",
+     "count": 37
+    },
+    {
+     "name": "Łazienka",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "id": "cat-06",
+   "name": "Gramatyka użytkowa",
+   "icon": "dict",
+   "count": 1578,
+   "subcategories": [
+    {
+     "name": "Argumentacja",
+     "count": 7
+    },
+    {
+     "name": "Cele",
+     "count": 20
+    },
+    {
+     "name": "Chęci",
+     "count": 36
+    },
+    {
+     "name": "Czas",
+     "count": 52
+    },
+    {
+     "name": "Częstotliwość",
+     "count": 25
+    },
+    {
+     "name": "Decyzje",
+     "count": 42
+    },
+    {
+     "name": "Doświadczenie",
+     "count": 46
+    },
+    {
+     "name": "Dyskusja",
+     "count": 1
+    },
+    {
+     "name": "Ilość",
+     "count": 2
+    },
+    {
+     "name": "Kolejność",
+     "count": 43
+    },
+    {
+     "name": "Konieczność",
+     "count": 30
+    },
+    {
+     "name": "Marzenia",
+     "count": 24
+    },
+    {
+     "name": "Niepewność",
+     "count": 16
+    },
+    {
+     "name": "Obawy",
+     "count": 20
+    },
+    {
+     "name": "Odmowa",
+     "count": 36
+    },
+    {
+     "name": "Określenia",
+     "count": 1
+    },
+    {
+     "name": "Opinie",
+     "count": 5
+    },
+    {
+     "name": "Opowiadanie",
+     "count": 9
+    },
+    {
+     "name": "Pamięć",
+     "count": 76
+    },
+    {
+     "name": "Parafraza",
+     "count": 4
+    },
+    {
+     "name": "Pewność",
+     "count": 2
+    },
+    {
+     "name": "Plany",
+     "count": 165
+    },
+    {
+     "name": "Pojęcia",
+     "count": 4
+    },
+    {
+     "name": "Porównania",
+     "count": 80
+    },
+    {
+     "name": "Posiadanie",
+     "count": 32
+    },
+    {
+     "name": "Postanowienie",
+     "count": 14
+    },
+    {
+     "name": "Postęp",
+     "count": 14
+    },
+    {
+     "name": "Problemy",
+     "count": 14
+    },
+    {
+     "name": "Prowadzenie rozmowy",
+     "count": 6
+    },
+    {
+     "name": "Prośby",
+     "count": 36
+    },
+    {
+     "name": "Przeszłość",
+     "count": 250
+    },
+    {
+     "name": "Przyimki",
+     "count": 7
+    },
+    {
+     "name": "Przysłówki częstotliwości",
+     "count": 7
+    },
+    {
+     "name": "Przysłówki sposobu",
+     "count": 12
+    },
+    {
+     "name": "Przysłówki stopnia",
+     "count": 6
+    },
+    {
+     "name": "Przyzwyczajenie",
+     "count": 21
+    },
+    {
+     "name": "Rada",
+     "count": 18
+    },
+    {
+     "name": "Rady",
+     "count": 14
+    },
+    {
+     "name": "Rejestr",
+     "count": 6
+    },
+    {
+     "name": "Rozmowa",
+     "count": 3
+    },
+    {
+     "name": "Spójniki",
+     "count": 43
+    },
+    {
+     "name": "Stopniowanie",
+     "count": 15
+    },
+    {
+     "name": "Teraźniejszość",
+     "count": 25
+    },
+    {
+     "name": "Ustępstwo",
+     "count": 12
+    },
+    {
+     "name": "Warunek",
+     "count": 61
+    },
+    {
+     "name": "Wyjaśnianie",
+     "count": 36
+    },
+    {
+     "name": "Zależności",
+     "count": 68
+    },
+    {
+     "name": "Zaprzestanie",
+     "count": 25
+    },
+    {
+     "name": "Zastrzeżenia",
+     "count": 4
+    },
+    {
+     "name": "Zgoda",
+     "count": 1
+    },
+    {
+     "name": "Zmiana",
+     "count": 16
+    },
+    {
+     "name": "Zwyczaje",
+     "count": 39
+    },
+    {
+     "name": "Żal",
+     "count": 27
+    }
+   ]
+  },
+  {
+   "id": "cat-07",
+   "name": "Hotel",
+   "icon": "hotel",
+   "count": 189,
+   "subcategories": [
+    {
+     "name": "Doba hotelowa",
+     "count": 1
+    },
+    {
+     "name": "Ludzie",
+     "count": 1
+    },
+    {
+     "name": "Meldunek",
+     "count": 3
+    },
+    {
+     "name": "Mieszkanie",
+     "count": 10
+    },
+    {
+     "name": "Naprawy",
+     "count": 1
+    },
+    {
+     "name": "Obiekty",
+     "count": 14
+    },
+    {
+     "name": "Obsługa",
+     "count": 35
+    },
+    {
+     "name": "Pokój",
+     "count": 8
+    },
+    {
+     "name": "Problemy",
+     "count": 33
+    },
+    {
+     "name": "Recepcja",
+     "count": 14
+    },
+    {
+     "name": "Rejestr",
+     "count": 2
+    },
+    {
+     "name": "Reklamacje",
+     "count": 1
+    },
+    {
+     "name": "Rezerwacje",
+     "count": 32
+    },
+    {
+     "name": "Wyposażenie",
+     "count": 33
+    },
+    {
+     "name": "Wyżywienie",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "cat-08",
+   "name": "Jedzenie i napoje",
+   "icon": "food",
+   "count": 630,
+   "subcategories": [
+    {
+     "name": "Dania główne",
+     "count": 100
+    },
+    {
+     "name": "Desery",
+     "count": 20
+    },
+    {
+     "name": "Dieta",
+     "count": 7
+    },
+    {
+     "name": "Doświadczenia",
+     "count": 15
+    },
+    {
+     "name": "Głód",
+     "count": 1
+    },
+    {
+     "name": "Jakość",
+     "count": 1
+    },
+    {
+     "name": "Kuchnia",
+     "count": 5
+    },
+    {
+     "name": "Mięso i ryby",
+     "count": 70
+    },
+    {
+     "name": "Napoje",
+     "count": 123
+    },
+    {
+     "name": "Ogólne",
+     "count": 10
+    },
+    {
+     "name": "Owoce",
+     "count": 80
+    },
+    {
+     "name": "Posiłki",
+     "count": 39
+    },
+    {
+     "name": "Potrawy",
+     "count": 10
+    },
+    {
+     "name": "Preferencje",
+     "count": 18
+    },
+    {
+     "name": "Produkty",
+     "count": 40
+    },
+    {
+     "name": "Przygotowanie",
+     "count": 7
+    },
+    {
+     "name": "Przyprawy",
+     "count": 50
+    },
+    {
+     "name": "Rejestr",
+     "count": 2
+    },
+    {
+     "name": "Składniki",
+     "count": 3
+    },
+    {
+     "name": "Smaki",
+     "count": 6
+    },
+    {
+     "name": "Sposoby przyrządzania",
+     "count": 1
+    },
+    {
+     "name": "Warzywa",
+     "count": 22
+    }
+   ]
+  },
+  {
+   "id": "cat-09",
+   "name": "Liczby i liczenie",
+   "icon": "num",
+   "count": 159,
+   "subcategories": [
+    {
+     "name": "Ilość",
+     "count": 32
+    },
+    {
+     "name": "Liczebniki",
+     "count": 101
+    },
+    {
+     "name": "Liczebniki porządkowe",
+     "count": 19
+    },
+    {
+     "name": "Określenia",
+     "count": 3
+    },
+    {
+     "name": "Rejestr",
+     "count": 1
+    },
+    {
+     "name": "Użycie",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "id": "cat-10",
+   "name": "Ludzie i rodzina",
+   "icon": "people",
+   "count": 183,
+   "subcategories": [
+    {
+     "name": "Dane osobowe",
+     "count": 5
+    },
+    {
+     "name": "Emocje",
+     "count": 1
+    },
+    {
+     "name": "Godzenie",
+     "count": 2
+    },
+    {
+     "name": "Granice",
+     "count": 1
+    },
+    {
+     "name": "Idiomy",
+     "count": 1
+    },
+    {
+     "name": "Kolokacje",
+     "count": 3
+    },
+    {
+     "name": "Konflikt",
+     "count": 1
+    },
+    {
+     "name": "Konflikty",
+     "count": 14
+    },
+    {
+     "name": "Kradzież",
+     "count": 1
+    },
+    {
+     "name": "Ludzie",
+     "count": 7
+    },
+    {
+     "name": "Marzenia",
+     "count": 2
+    },
+    {
+     "name": "Narodowości",
+     "count": 13
+    },
+    {
+     "name": "Ogólne",
+     "count": 12
+    },
+    {
+     "name": "Reakcje",
+     "count": 1
+    },
+    {
+     "name": "Rejestr",
+     "count": 11
+    },
+    {
+     "name": "Relacje",
+     "count": 30
+    },
+    {
+     "name": "Rodzina",
+     "count": 39
+    },
+    {
+     "name": "Rozmowa",
+     "count": 3
+    },
+    {
+     "name": "Sąsiedzi",
+     "count": 1
+    },
+    {
+     "name": "Troska",
+     "count": 35
+    }
+   ]
+  },
+  {
+   "id": "cat-11",
+   "name": "Miejsca i orientacja",
+   "icon": "map",
+   "count": 374,
+   "subcategories": [
+    {
+     "name": "Cel",
+     "count": 66
+    },
+    {
+     "name": "Kierunki",
+     "count": 9
+    },
+    {
+     "name": "Miasto",
+     "count": 7
+    },
+    {
+     "name": "Obiekty",
+     "count": 14
+    },
+    {
+     "name": "Odkrycia",
+     "count": 66
+    },
+    {
+     "name": "Orientacja",
+     "count": 67
+    },
+    {
+     "name": "Plany",
+     "count": 30
+    },
+    {
+     "name": "Podróże",
+     "count": 3
+    },
+    {
+     "name": "Położenie",
+     "count": 8
+    },
+    {
+     "name": "Przyroda",
+     "count": 21
+    },
+    {
+     "name": "Pytanie o drogę",
+     "count": 6
+    },
+    {
+     "name": "Rejestr",
+     "count": 5
+    },
+    {
+     "name": "Ruch",
+     "count": 18
+    },
+    {
+     "name": "Sąsiedzi",
+     "count": 1
+    },
+    {
+     "name": "Turystyka",
+     "count": 21
+    },
+    {
+     "name": "Usługi",
+     "count": 21
+    },
+    {
+     "name": "W okolicy",
+     "count": 7
+    },
+    {
+     "name": "Wskazówki",
+     "count": 2
+    },
+    {
+     "name": "Wypoczynek",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "cat-12",
+   "name": "Podstawy i grzeczność",
+   "icon": "hello",
+   "count": 521,
+   "subcategories": [
+    {
+     "name": "Granice",
+     "count": 2
+    },
+    {
+     "name": "Komunikacja",
+     "count": 12
+    },
+    {
+     "name": "Konflikt",
+     "count": 3
+    },
+    {
+     "name": "Niewiedza",
+     "count": 14
+    },
+    {
+     "name": "Odmowa",
+     "count": 8
+    },
+    {
+     "name": "Odmowy stopniowane",
+     "count": 45
+    },
+    {
+     "name": "Parafraza",
+     "count": 5
+    },
+    {
+     "name": "Partykuły",
+     "count": 2
+    },
+    {
+     "name": "Podziękowania",
+     "count": 1
+    },
+    {
+     "name": "Powitania",
+     "count": 1
+    },
+    {
+     "name": "Poznawanie",
+     "count": 1
+    },
+    {
+     "name": "Pożegnania",
+     "count": 2
+    },
+    {
+     "name": "Prowadzenie rozmowy",
+     "count": 4
+    },
+    {
+     "name": "Prośby",
+     "count": 28
+    },
+    {
+     "name": "Prośby stopniowane",
+     "count": 46
+    },
+    {
+     "name": "Przeprosiny",
+     "count": 52
+    },
+    {
+     "name": "Przypomnienia",
+     "count": 60
+    },
+    {
+     "name": "Reakcje",
+     "count": 25
+    },
+    {
+     "name": "Rejestr",
+     "count": 31
+    },
+    {
+     "name": "Rozmowa",
+     "count": 8
+    },
+    {
+     "name": "Slang",
+     "count": 1
+    },
+    {
+     "name": "Sugestie",
+     "count": 3
+    },
+    {
+     "name": "Tak i nie",
+     "count": 5
+    },
+    {
+     "name": "Telefon",
+     "count": 1
+    },
+    {
+     "name": "Uprzejmości",
+     "count": 32
+    },
+    {
+     "name": "Uprzejmość",
+     "count": 43
+    },
+    {
+     "name": "Zaimki",
+     "count": 18
+    },
+    {
+     "name": "Zgoda",
+     "count": 8
+    },
+    {
+     "name": "Zwroty grzecznościowe",
+     "count": 14
+    },
+    {
+     "name": "Łagodzenie",
+     "count": 46
+    }
+   ]
+  },
+  {
+   "id": "cat-13",
+   "name": "Pogoda i przyroda",
+   "icon": "weather",
+   "count": 61,
+   "subcategories": [
+    {
+     "name": "Podróże",
+     "count": 1
+    },
+    {
+     "name": "Pogoda",
+     "count": 27
+    },
+    {
+     "name": "Pory roku",
+     "count": 2
+    },
+    {
+     "name": "Przyroda",
+     "count": 15
+    },
+    {
+     "name": "Reakcje",
+     "count": 1
+    },
+    {
+     "name": "Woda",
+     "count": 1
+    },
+    {
+     "name": "Zwierzęta",
+     "count": 14
+    }
+   ]
+  },
+  {
+   "id": "cat-14",
+   "name": "Praca i nauka",
+   "icon": "work",
+   "count": 1248,
+   "subcategories": [
+    {
+     "name": "Argumentacja",
+     "count": 45
+    },
+    {
+     "name": "Braki",
+     "count": 35
+    },
+    {
+     "name": "Codzienność",
+     "count": 2
+    },
+    {
+     "name": "Deklaracje",
+     "count": 36
+    },
+    {
+     "name": "Delegowanie",
+     "count": 9
+    },
+    {
+     "name": "Dokumenty",
+     "count": 3
+    },
+    {
+     "name": "Formalności",
+     "count": 9
+    },
+    {
+     "name": "Godzenie",
+     "count": 1
+    },
+    {
+     "name": "Granice",
+     "count": 5
+    },
+    {
+     "name": "Informacje",
+     "count": 70
+    },
+    {
+     "name": "Internet",
+     "count": 2
+    },
+    {
+     "name": "Klient",
+     "count": 9
+    },
+    {
+     "name": "Kolokacje",
+     "count": 17
+    },
+    {
+     "name": "Komunikacja",
+     "count": 13
+    },
+    {
+     "name": "Konflikt",
+     "count": 10
+    },
+    {
+     "name": "Kontakt",
+     "count": 2
+    },
+    {
+     "name": "Ludzie",
+     "count": 6
+    },
+    {
+     "name": "Marzenia",
+     "count": 5
+    },
+    {
+     "name": "Miasto",
+     "count": 1
+    },
+    {
+     "name": "Możliwości",
+     "count": 16
+    },
+    {
+     "name": "Nauka",
+     "count": 4
+    },
+    {
+     "name": "Negocjacje",
+     "count": 21
+    },
+    {
+     "name": "Obciążenie",
+     "count": 1
+    },
+    {
+     "name": "Obiekty",
+     "count": 21
+    },
+    {
+     "name": "Obsługa",
+     "count": 2
+    },
+    {
+     "name": "Odmowy stopniowane",
+     "count": 5
+    },
+    {
+     "name": "Odpowiedzialność",
+     "count": 36
+    },
+    {
+     "name": "Ogólne",
+     "count": 3
+    },
+    {
+     "name": "Opinia zwrotna",
+     "count": 7
+    },
+    {
+     "name": "Parafraza",
+     "count": 3
+    },
+    {
+     "name": "Plany",
+     "count": 4
+    },
+    {
+     "name": "Poczta",
+     "count": 2
+    },
+    {
+     "name": "Podatki",
+     "count": 2
+    },
+    {
+     "name": "Postęp",
+     "count": 26
+    },
+    {
+     "name": "Potwierdzanie",
+     "count": 36
+    },
+    {
+     "name": "Praca",
+     "count": 50
+    },
+    {
+     "name": "Priorytety",
+     "count": 36
+    },
+    {
+     "name": "Procedury",
+     "count": 46
+    },
+    {
+     "name": "Prowadzenie rozmowy",
+     "count": 56
+    },
+    {
+     "name": "Prośby",
+     "count": 46
+    },
+    {
+     "name": "Prośby stopniowane",
+     "count": 1
+    },
+    {
+     "name": "Przeprosiny",
+     "count": 3
+    },
+    {
+     "name": "Przeszłość",
+     "count": 2
+    },
+    {
+     "name": "Przygotowanie",
+     "count": 73
+    },
+    {
+     "name": "Przymus",
+     "count": 35
+    },
+    {
+     "name": "Punktualność",
+     "count": 1
+    },
+    {
+     "name": "Reakcje",
+     "count": 2
+    },
+    {
+     "name": "Rejestr",
+     "count": 51
+    },
+    {
+     "name": "Rozmowa",
+     "count": 3
+    },
+    {
+     "name": "Rozwój",
+     "count": 36
+    },
+    {
+     "name": "Spotkania",
+     "count": 16
+    },
+    {
+     "name": "Sugestie",
+     "count": 78
+    },
+    {
+     "name": "Szkoła",
+     "count": 13
+    },
+    {
+     "name": "Telefon",
+     "count": 17
+    },
+    {
+     "name": "Terminy",
+     "count": 41
+    },
+    {
+     "name": "Umiejętności",
+     "count": 31
+    },
+    {
+     "name": "Uprzejmość",
+     "count": 2
+    },
+    {
+     "name": "Urlop",
+     "count": 1
+    },
+    {
+     "name": "Urząd",
+     "count": 6
+    },
+    {
+     "name": "Ustalenia",
+     "count": 56
+    },
+    {
+     "name": "Usługi",
+     "count": 3
+    },
+    {
+     "name": "Weryfikacja",
+     "count": 36
+    },
+    {
+     "name": "Wiza",
+     "count": 9
+    },
+    {
+     "name": "Wyjaśnianie",
+     "count": 7
+    },
+    {
+     "name": "Wątpliwości",
+     "count": 4
+    },
+    {
+     "name": "Zastrzeżenia",
+     "count": 4
+    },
+    {
+     "name": "Zawody",
+     "count": 4
+    },
+    {
+     "name": "Zebrania",
+     "count": 9
+    },
+    {
+     "name": "Łagodzenie",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "cat-15",
+   "name": "Pytania",
+   "icon": "question",
+   "count": 429,
+   "subcategories": [
+    {
+     "name": "Ciekawość",
+     "count": 54
+    },
+    {
+     "name": "Doświadczenie",
+     "count": 18
+    },
+    {
+     "name": "Godziny",
+     "count": 1
+    },
+    {
+     "name": "Instrukcje",
+     "count": 16
+    },
+    {
+     "name": "Kolory",
+     "count": 1
+    },
+    {
+     "name": "Komunikacja",
+     "count": 2
+    },
+    {
+     "name": "Konieczność",
+     "count": 16
+    },
+    {
+     "name": "Liczby",
+     "count": 10
+    },
+    {
+     "name": "Miejsce",
+     "count": 20
+    },
+    {
+     "name": "Odległość",
+     "count": 18
+    },
+    {
+     "name": "Osoby",
+     "count": 14
+    },
+    {
+     "name": "Porównania",
+     "count": 18
+    },
+    {
+     "name": "Powody",
+     "count": 12
+    },
+    {
+     "name": "Propozycje",
+     "count": 17
+    },
+    {
+     "name": "Prośby",
+     "count": 52
+    },
+    {
+     "name": "Rada",
+     "count": 18
+    },
+    {
+     "name": "Reakcje",
+     "count": 4
+    },
+    {
+     "name": "Rodzina",
+     "count": 12
+    },
+    {
+     "name": "Rozmowa",
+     "count": 47
+    },
+    {
+     "name": "Sprawdzanie",
+     "count": 17
+    },
+    {
+     "name": "Słowa pytające",
+     "count": 22
+    },
+    {
+     "name": "Wynajem",
+     "count": 8
+    },
+    {
+     "name": "Własność",
+     "count": 20
+    },
+    {
+     "name": "Zasady",
+     "count": 12
+    }
+   ]
+  },
+  {
+   "id": "cat-16",
+   "name": "Restauracja",
+   "icon": "resto",
+   "count": 205,
+   "subcategories": [
+    {
+     "name": "Dieta",
+     "count": 3
+    },
+    {
+     "name": "Dokładka",
+     "count": 13
+    },
+    {
+     "name": "Ludzie",
+     "count": 5
+    },
+    {
+     "name": "Menu",
+     "count": 4
+    },
+    {
+     "name": "Na wynos",
+     "count": 2
+    },
+    {
+     "name": "Obiekty",
+     "count": 7
+    },
+    {
+     "name": "Obsługa",
+     "count": 5
+    },
+    {
+     "name": "Opinie",
+     "count": 4
+    },
+    {
+     "name": "Ostrość",
+     "count": 14
+    },
+    {
+     "name": "Preferencje",
+     "count": 4
+    },
+    {
+     "name": "Problemy",
+     "count": 4
+    },
+    {
+     "name": "Płatności",
+     "count": 2
+    },
+    {
+     "name": "Płatność",
+     "count": 6
+    },
+    {
+     "name": "Rachunek",
+     "count": 8
+    },
+    {
+     "name": "Reakcje",
+     "count": 2
+    },
+    {
+     "name": "Rejestr",
+     "count": 4
+    },
+    {
+     "name": "Reklamacje",
+     "count": 2
+    },
+    {
+     "name": "Rezerwacja",
+     "count": 8
+    },
+    {
+     "name": "Skład dania",
+     "count": 12
+    },
+    {
+     "name": "Sztućce",
+     "count": 25
+    },
+    {
+     "name": "Zamawianie",
+     "count": 37
+    },
+    {
+     "name": "Zamówienie",
+     "count": 16
+    },
+    {
+     "name": "Zastawa",
+     "count": 18
+    }
+   ]
+  },
+  {
+   "id": "cat-17",
+   "name": "Small talk",
+   "icon": "chat",
+   "count": 525,
+   "subcategories": [
+    {
+     "name": "Argumenty",
+     "count": 10
+    },
+    {
+     "name": "Czas wolny",
+     "count": 3
+    },
+    {
+     "name": "Godzenie",
+     "count": 1
+    },
+    {
+     "name": "Hobby",
+     "count": 18
+    },
+    {
+     "name": "Idiomy",
+     "count": 1
+    },
+    {
+     "name": "Komunikacja",
+     "count": 9
+    },
+    {
+     "name": "Nieporozumienia",
+     "count": 1
+    },
+    {
+     "name": "Opinie",
+     "count": 96
+    },
+    {
+     "name": "Opowiadanie",
+     "count": 3
+    },
+    {
+     "name": "Podtrzymywanie",
+     "count": 11
+    },
+    {
+     "name": "Pojęcia",
+     "count": 7
+    },
+    {
+     "name": "Potoczne",
+     "count": 8
+    },
+    {
+     "name": "Poznawanie ludzi",
+     "count": 20
+    },
+    {
+     "name": "Pożegnania",
+     "count": 6
+    },
+    {
+     "name": "Propozycje",
+     "count": 59
+    },
+    {
+     "name": "Prowadzenie rozmowy",
+     "count": 14
+    },
+    {
+     "name": "Prośby stopniowane",
+     "count": 1
+    },
+    {
+     "name": "Reakcje",
+     "count": 159
+    },
+    {
+     "name": "Rejestr",
+     "count": 6
+    },
+    {
+     "name": "Relaks",
+     "count": 1
+    },
+    {
+     "name": "Rozmowa",
+     "count": 45
+    },
+    {
+     "name": "Slang",
+     "count": 1
+    },
+    {
+     "name": "Sprawdzanie",
+     "count": 1
+    },
+    {
+     "name": "Umawianie się",
+     "count": 26
+    },
+    {
+     "name": "Wyjścia",
+     "count": 5
+    },
+    {
+     "name": "Wypełniacze",
+     "count": 10
+    },
+    {
+     "name": "Zwroty grzecznościowe",
+     "count": 1
+    },
+    {
+     "name": "Święta",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "cat-18",
+   "name": "Transport",
+   "icon": "transport",
+   "count": 202,
+   "subcategories": [
+    {
+     "name": "Autobus",
+     "count": 1
+    },
+    {
+     "name": "Bilety",
+     "count": 4
+    },
+    {
+     "name": "Dworzec",
+     "count": 1
+    },
+    {
+     "name": "Kierunki",
+     "count": 5
+    },
+    {
+     "name": "Lotnisko",
+     "count": 1
+    },
+    {
+     "name": "Ludzie",
+     "count": 4
+    },
+    {
+     "name": "Miejsca",
+     "count": 3
+    },
+    {
+     "name": "Obiekty",
+     "count": 28
+    },
+    {
+     "name": "Paliwo",
+     "count": 1
+    },
+    {
+     "name": "Parkowanie",
+     "count": 2
+    },
+    {
+     "name": "Plany",
+     "count": 1
+    },
+    {
+     "name": "Podróż",
+     "count": 30
+    },
+    {
+     "name": "Podróże",
+     "count": 13
+    },
+    {
+     "name": "Pojazdy",
+     "count": 50
+    },
+    {
+     "name": "Problemy",
+     "count": 3
+    },
+    {
+     "name": "Rejestr",
+     "count": 1
+    },
+    {
+     "name": "Rozkład",
+     "count": 8
+    },
+    {
+     "name": "Ruch",
+     "count": 1
+    },
+    {
+     "name": "Ruch drogowy",
+     "count": 1
+    },
+    {
+     "name": "Taksówka",
+     "count": 5
+    },
+    {
+     "name": "Taxi",
+     "count": 10
+    },
+    {
+     "name": "Trasa",
+     "count": 1
+    },
+    {
+     "name": "Uprzejmości",
+     "count": 1
+    },
+    {
+     "name": "W autobusie",
+     "count": 1
+    },
+    {
+     "name": "Wynajem",
+     "count": 8
+    },
+    {
+     "name": "Wypadek",
+     "count": 6
+    },
+    {
+     "name": "Wyposażenie",
+     "count": 12
+    }
+   ]
+  },
+  {
+   "id": "cat-19",
+   "name": "Zakupy i pieniądze",
+   "icon": "shop",
+   "count": 526,
+   "subcategories": [
+    {
+     "name": "Akcesoria",
+     "count": 2
+    },
+    {
+     "name": "Bank",
+     "count": 16
+    },
+    {
+     "name": "Cena",
+     "count": 25
+    },
+    {
+     "name": "Ceny",
+     "count": 33
+    },
+    {
+     "name": "Formalności",
+     "count": 2
+    },
+    {
+     "name": "Klient",
+     "count": 3
+    },
+    {
+     "name": "Kolokacje",
+     "count": 3
+    },
+    {
+     "name": "Kosmetyki",
+     "count": 6
+    },
+    {
+     "name": "Koszty",
+     "count": 36
+    },
+    {
+     "name": "Marzenia",
+     "count": 1
+    },
+    {
+     "name": "Materiały",
+     "count": 2
+    },
+    {
+     "name": "Naprawy",
+     "count": 1
+    },
+    {
+     "name": "Negocjacje",
+     "count": 42
+    },
+    {
+     "name": "Obiekty",
+     "count": 56
+    },
+    {
+     "name": "Odmowa",
+     "count": 2
+    },
+    {
+     "name": "Oglądanie",
+     "count": 15
+    },
+    {
+     "name": "Ogólne",
+     "count": 12
+    },
+    {
+     "name": "Opłaty",
+     "count": 24
+    },
+    {
+     "name": "Oszustwo",
+     "count": 1
+    },
+    {
+     "name": "Pieniądze",
+     "count": 8
+    },
+    {
+     "name": "Płatności",
+     "count": 42
+    },
+    {
+     "name": "Płatność",
+     "count": 3
+    },
+    {
+     "name": "Rachunki",
+     "count": 2
+    },
+    {
+     "name": "Rejestr",
+     "count": 14
+    },
+    {
+     "name": "Reklamacje",
+     "count": 22
+    },
+    {
+     "name": "Sklep",
+     "count": 4
+    },
+    {
+     "name": "Slang",
+     "count": 2
+    },
+    {
+     "name": "Targowanie",
+     "count": 7
+    },
+    {
+     "name": "Ubezpieczenie",
+     "count": 36
+    },
+    {
+     "name": "Ubrania",
+     "count": 62
+    },
+    {
+     "name": "Wybór",
+     "count": 38
+    },
+    {
+     "name": "Zakup",
+     "count": 3
+    },
+    {
+     "name": "Zakupy",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "cat-20",
+   "name": "Zdrowie",
+   "icon": "health",
+   "count": 288,
+   "subcategories": [
+    {
+     "name": "Alergie",
+     "count": 16
+    },
+    {
+     "name": "Apteka",
+     "count": 43
+    },
+    {
+     "name": "Bezpieczeństwo",
+     "count": 1
+    },
+    {
+     "name": "Ciało",
+     "count": 2
+    },
+    {
+     "name": "Części ciała",
+     "count": 23
+    },
+    {
+     "name": "Dieta",
+     "count": 1
+    },
+    {
+     "name": "Dolegliwości",
+     "count": 3
+    },
+    {
+     "name": "Emocje",
+     "count": 1
+    },
+    {
+     "name": "Formalności",
+     "count": 9
+    },
+    {
+     "name": "Lekarz",
+     "count": 19
+    },
+    {
+     "name": "Leki",
+     "count": 5
+    },
+    {
+     "name": "Ludzie",
+     "count": 7
+    },
+    {
+     "name": "Miejsca",
+     "count": 1
+    },
+    {
+     "name": "Nagłe wypadki",
+     "count": 3
+    },
+    {
+     "name": "Obiekty",
+     "count": 28
+    },
+    {
+     "name": "Objawy",
+     "count": 69
+    },
+    {
+     "name": "Opieka",
+     "count": 8
+    },
+    {
+     "name": "Ratunek",
+     "count": 9
+    },
+    {
+     "name": "Reakcje",
+     "count": 2
+    },
+    {
+     "name": "Rejestr",
+     "count": 4
+    },
+    {
+     "name": "Samopoczucie",
+     "count": 17
+    },
+    {
+     "name": "Ubezpieczenie",
+     "count": 4
+    },
+    {
+     "name": "Urazy",
+     "count": 6
+    },
+    {
+     "name": "Używki",
+     "count": 1
+    },
+    {
+     "name": "Wypadki",
+     "count": 2
+    },
+    {
+     "name": "Wywiad lekarski",
+     "count": 4
+    }
+   ]
+  }
+ ]
+}
